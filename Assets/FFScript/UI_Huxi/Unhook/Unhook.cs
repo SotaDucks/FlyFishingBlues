@@ -25,27 +25,27 @@ public class Unhook : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) moveY = -1f; // 按下 S 向下
 
         // 计算移动向量
-        Vector2 moveDirection = new Vector2(moveX, moveY).normalized;
+        Vector3 moveDirection = new Vector3(moveX, moveY, 0).normalized;
 
-        // 移动物体
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+        // 使用世界坐标进行移动
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
 
+        if (Input.GetKey(KeyCode.Space)) return;
         float mouseX = Input.mousePosition.x; // 获取鼠标 X 位置
         float distanceFromCenter = mouseX - screenCenterX; // 计算鼠标偏移量
         float percentFromCenter = Mathf.Clamp(distanceFromCenter / screenCenterX, -1f, 1f); // 归一化到 [-1, 1]
 
-        // 计算旋转角度（最大 ±40°）
+        // 计算目标旋转角度（最大 ±40°）
         float targetRotation = percentFromCenter * maxRotation;
 
         // 计算旋转速度，鼠标越远，旋转越快（最大 maxSpeed）
-        float rotationSpeed = Mathf.Abs(percentFromCenter) * maxSpeed;
+        float rotationSpeed = Mathf.Abs(percentFromCenter) * maxSpeed * Time.deltaTime;
 
-        // 平滑旋转
-        transform.rotation = Quaternion.RotateTowards(
-            transform.rotation,
-            Quaternion.Euler(0, 0, targetRotation),
-            rotationSpeed * Time.deltaTime
-        );
+        // 平滑插值旋转（限制在 Z 轴）
+        float newZRotation = Mathf.LerpAngle(transform.eulerAngles.z, targetRotation, rotationSpeed);
+
+        // 应用旋转，只允许 Z 轴旋转
+        transform.rotation = Quaternion.Euler(0, 180, newZRotation);
     }
 }
 
