@@ -14,6 +14,8 @@ public class BitePauser : MonoBehaviour
     public GameObject uiComponent2;
     public GameObject uiComponent3; // 新增的UI组件
 
+
+
     // 防止多次触发冻结
     private bool isFrozen = false;
 
@@ -25,7 +27,8 @@ public class BitePauser : MonoBehaviour
         if (uiComponent2 != null)
             uiComponent2.SetActive(false);
         if (uiComponent3 != null)
-            uiComponent3.SetActive(false); // 确保第三个UI组件初始为未激活
+            uiComponent3.SetActive(false);
+
     }
 
     void Update()
@@ -35,6 +38,7 @@ public class BitePauser : MonoBehaviour
         {
             StartCoroutine(HandleFreeze());
         }
+    
     }
 
     IEnumerator HandleFreeze()
@@ -87,8 +91,12 @@ public class BitePauser : MonoBehaviour
                     uiComponent2.SetActive(false);
 
                 // 激活第三个UI组件
-                if (uiComponent3 != null)
+
+              
                     uiComponent3.SetActive(true);
+             
+                
+               
 
                 // 禁用该组件，防止再次冻结
                 this.enabled = false;
