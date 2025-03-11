@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Unhook : MonoBehaviour
 {
-
+    public quaternion hookPosition;
     public float maxRotation = 40f; // 最大旋转角度
     public float maxSpeed = 100f; // 最大旋转速度
     private float screenCenterX;
     public float moveSpeed = 5f; // 移动速度
     void Start()
     {
+        transform.rotation = hookPosition;
         screenCenterX = Screen.width / 2; // 获取屏幕中心 X 坐标
     }
     void Update()

@@ -11,6 +11,7 @@ public class Create_Dialogue : MonoBehaviour
     public void CreateDialogue()
     {
         ConversationManager.Instance.StartConversation(Conversation);
+        Debug.Log("qwe");
     }
 
 
