@@ -16,12 +16,13 @@ public class GameController : MonoBehaviour
     private bool fishmoving = true;
     public bool EnableStruggleWhileUnhook;
     private Rigidbody rb;
+    private Rigidbody Hookrb;
     private void Start()
     {
         
        ConversationManager.Instance.StartConversation(Conversation);
         rb = Fish.GetComponent<Rigidbody>();
-
+        Hookrb=Hook.GetComponent<Rigidbody>();
         if (EnableStruggleWhileUnhook)
         {
             StartCoroutine(AddForceEveryThreeSeconds());
@@ -41,9 +42,13 @@ public class GameController : MonoBehaviour
                 SetObjectVisibility();
                 DisableFishStrugglingScript();
                 EnableUnhookScript();
-               
+               Invoke(nameof(EnableKinematic), 1f);
             }
         }
+    }
+  private  void EnableKinematic()
+    {
+        Hookrb.isKinematic = false;
     }
     public void SetObjectVisibility()
     {
@@ -99,12 +104,13 @@ public class GameController : MonoBehaviour
         {
             // 每隔三秒添加一个向上的力
             rb.AddForce(Vector3.up * 20f, ForceMode.Impulse);
-            yield return new WaitForSeconds(1f); // 等待3秒
+            yield return new WaitForSeconds(0.2f); // 等待3秒
         }
     }
     public void EnableFish()
     { 
     Fish.SetActive(true);
+      
     }
         
     
