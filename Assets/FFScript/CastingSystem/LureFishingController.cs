@@ -7,12 +7,6 @@ public class LureFishingController : MonoBehaviour
     private Animator animator;
     private bool isControlling = false;
     private bool isCharging = false;
-    private bool isSideCast = true; // true为侧抛，false为顺抛
-
-    [Header("UI Settings")]
-    public TextMeshProUGUI castingModeText; // 显示当前抛投模式的文本
-    public float castingModeDisplayTime = 2f; // 模式提示显示时间
-    private float modeDisplayTimer = 0f;
 
     [Header("Casting Settings")]
     public float maxChargeTime = 2f; // 最大蓄力时间
@@ -21,17 +15,10 @@ public class LureFishingController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        UpdateCastingModeUI();
     }
 
     void Update()
     {
-        // 切换抛投模式
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            ToggleCastingMode();
-        }
-
         // 更新PressingSpace参数
         animator.SetBool("PressingSpace", Input.GetKey(KeyCode.Space));
 
@@ -57,6 +44,10 @@ public class LureFishingController : MonoBehaviour
             {
                 ExecuteCast();
             }
+            else if (Input.GetKeyUp(KeyCode.A) && isCharging)
+            {
+                ResetCharging();
+            }
         }
         else
         {
@@ -66,52 +57,14 @@ public class LureFishingController : MonoBehaviour
                 ResetCharging();
             }
         }
-
-        // 更新UI显示时间
-        UpdateModeDisplay();
-    }
-
-    private void ToggleCastingMode()
-    {
-        isSideCast = !isSideCast;
-        UpdateCastingModeUI();
-        modeDisplayTimer = castingModeDisplayTime;
-    }
-
-    private void UpdateCastingModeUI()
-    {
-        if (castingModeText != null)
-        {
-            castingModeText.text = isSideCast ? "侧抛模式" : "顺抛模式";
-            castingModeText.gameObject.SetActive(true);
-        }
-    }
-
-    private void UpdateModeDisplay()
-    {
-        if (modeDisplayTimer > 0)
-        {
-            modeDisplayTimer -= Time.deltaTime;
-            if (modeDisplayTimer <= 0 && castingModeText != null)
-            {
-                castingModeText.gameObject.SetActive(false);
-            }
-        }
     }
 
     private void StartCharging()
     {
         isCharging = true;
         currentChargeTime = 0f;
-        // 播放相应的蓄力动画
-        if (isSideCast)
-        {
-            animator.SetTrigger("SideCastCharge");
-        }
-        else
-        {
-            animator.SetTrigger("OverheadCastCharge");
-        }
+        // 设置蓄力状态
+        animator.SetBool("SideCastCharge", true);
     }
 
     private void ContinueCharging()
@@ -119,7 +72,9 @@ public class LureFishingController : MonoBehaviour
         if (currentChargeTime < maxChargeTime)
         {
             currentChargeTime += Time.deltaTime;
-            // 可以在这里添加蓄力进度的视觉反馈
+            // 更新动画播放速度以反映蓄力进度
+            float chargeProgress = currentChargeTime / maxChargeTime;
+            animator.SetFloat("ChargeProgress", chargeProgress);
         }
     }
 
@@ -129,15 +84,8 @@ public class LureFishingController : MonoBehaviour
         // 设置动画参数，控制抛投力度
         animator.SetFloat("CastPower", chargePercentage);
         
-        // 播放相应的抛投动画
-        if (isSideCast)
-        {
-            animator.SetTrigger("SideCastRelease");
-        }
-        else
-        {
-            animator.SetTrigger("OverheadCastRelease");
-        }
+        // 播放侧抛动画
+        animator.SetTrigger("SideCastRelease");
 
         ResetCharging();
     }
@@ -146,6 +94,8 @@ public class LureFishingController : MonoBehaviour
     {
         isCharging = false;
         currentChargeTime = 0f;
+        animator.SetBool("SideCastCharge", false);
+        animator.SetFloat("ChargeProgress", 0f);
         animator.SetFloat("CastPower", 0f);
     }
 } 
