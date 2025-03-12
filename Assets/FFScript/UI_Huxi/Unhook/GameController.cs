@@ -98,7 +98,7 @@ public class GameController : MonoBehaviour
         while (true) // 无限循环
         {
             // 每隔三秒添加一个向上的力
-            rb.AddForce(Vector3.up * 2f, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * 20f, ForceMode.Impulse);
             yield return new WaitForSeconds(1f); // 等待3秒
         }
     }
