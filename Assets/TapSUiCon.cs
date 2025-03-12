@@ -4,7 +4,6 @@ using TMPro;
 public class TapSUiCon : MonoBehaviour
 {
     public GameObject uiElement; // Reference to the UI element to show or hide
-
     private FlyhookMassController flyhookMassController;
     private TextMeshProUGUI textMeshPro;
     public Animator characterAnimator;
