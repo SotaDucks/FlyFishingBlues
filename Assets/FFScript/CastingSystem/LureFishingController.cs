@@ -1,101 +1,43 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class LureFishingController : MonoBehaviour
 {
     private Animator animator;
-    private bool isControlling = false;
-    private bool isCharging = false;
-
-    [Header("Casting Settings")]
-    public float maxChargeTime = 2f; // 最大蓄力时间
-    private float currentChargeTime = 0f;
+    private bool isFishing = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("找不到Animator组件！");
+        }
+        else
+        {
+            Debug.Log("Animator组件已找到");
+        }
     }
 
     void Update()
     {
-        // 更新PressingSpace参数
-        animator.SetBool("PressingSpace", Input.GetKey(KeyCode.Space));
-
-        // 只有在按住空格键时才能操作
-        if (Input.GetKey(KeyCode.Space))
+        // 处理空格键按下的状态切换
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            isControlling = true;
-
-            // 蓄力
-            if (Input.GetKey(KeyCode.A))
+            Debug.Log("空格键被按下");
+            if (!isFishing)
             {
-                if (!isCharging)
-                {
-                    StartCharging();
-                }
-                else
-                {
-                    ContinueCharging();
-                }
+                // 切换到钓鱼状态
+                isFishing = true;
+                Debug.Log("尝试播放Fishing动画");
+                animator.Play("Fishing");
             }
-            // 释放蓄力，执行抛投
-            else if (Input.GetKeyDown(KeyCode.D) && isCharging)
+            else
             {
-                ExecuteCast();
-            }
-            else if (Input.GetKeyUp(KeyCode.A) && isCharging)
-            {
-                ResetCharging();
+                // 切换回准备状态
+                isFishing = false;
+                Debug.Log("尝试播放LureCastReady动画");
+                animator.Play("LureCastReady");
             }
         }
-        else
-        {
-            isControlling = false;
-            if (isCharging)
-            {
-                ResetCharging();
-            }
-        }
-    }
-
-    private void StartCharging()
-    {
-        isCharging = true;
-        currentChargeTime = 0f;
-        // 设置蓄力状态
-        animator.SetBool("SideCastCharge", true);
-    }
-
-    private void ContinueCharging()
-    {
-        if (currentChargeTime < maxChargeTime)
-        {
-            currentChargeTime += Time.deltaTime;
-            // 更新动画播放速度以反映蓄力进度
-            float chargeProgress = currentChargeTime / maxChargeTime;
-            animator.SetFloat("ChargeProgress", chargeProgress);
-        }
-    }
-
-    private void ExecuteCast()
-    {
-        float chargePercentage = currentChargeTime / maxChargeTime;
-        // 设置动画参数，控制抛投力度
-        animator.SetFloat("CastPower", chargePercentage);
-        
-        // 播放侧抛动画
-        animator.SetTrigger("SideCastRelease");
-
-        ResetCharging();
-    }
-
-    private void ResetCharging()
-    {
-        isCharging = false;
-        currentChargeTime = 0f;
-        animator.SetBool("SideCastCharge", false);
-        animator.SetFloat("ChargeProgress", 0f);
-        animator.SetFloat("CastPower", 0f);
     }
 } 
