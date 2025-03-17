@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine;
 
 public class Unhook : MonoBehaviour
-{
+{  
+   
     public quaternion hookPosition;
     public float maxRotation = 40f; // 最大旋转角度
     public float maxSpeed = 100f; // 最大旋转速度
     private float screenCenterX;
     public float moveSpeed = 5f; // 移动速度
+    private bool Fisdown;
     void Start()
     {
         transform.rotation = hookPosition;
@@ -17,7 +20,12 @@ public class Unhook : MonoBehaviour
     }
     void Update()
     {
-        // 获取水平（A/D）和垂直（W/S）输入
+        if (Input.GetKeyDown(KeyCode.F))
+        { Fisdown = true; }
+            if (Fisdown)
+        {
+
+       // 获取水平（A/D）和垂直（W/S）输入
         float moveX = 0f;
         float moveY = 0f;
 
@@ -48,7 +56,9 @@ public class Unhook : MonoBehaviour
 
         // 应用旋转，只允许 Z 轴旋转
         transform.rotation = Quaternion.Euler(0, 180, newZRotation);
+        }
     }
+
 }
 
 

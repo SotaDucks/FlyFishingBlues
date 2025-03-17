@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DialogueEditor;
 using UnityEngine;
+using VHACD.Unity;
 
 public class GameController : MonoBehaviour
 {
@@ -17,9 +18,10 @@ public class GameController : MonoBehaviour
     public bool EnableStruggleWhileUnhook;
     private Rigidbody rb;
     private Rigidbody Hookrb;
+    private ComplexCollider Hookcollider;
     private void Start()
     {
-        
+        Hookcollider = Hook.GetComponent<ComplexCollider>();
        ConversationManager.Instance.StartConversation(Conversation);
         rb = Fish.GetComponent<Rigidbody>();
         Hookrb=Hook.GetComponent<Rigidbody>();
@@ -49,6 +51,7 @@ public class GameController : MonoBehaviour
   private  void EnableKinematic()
     {
         Hookrb.isKinematic = false;
+        Hookcollider.enabled = true;
     }
     public void SetObjectVisibility()
     {
