@@ -15,7 +15,7 @@ public class Unhook : MonoBehaviour
     private bool Fisdown;
     void Start()
     {
-        transform.rotation = hookPosition;
+      //  transform.rotation = hookPosition;
         screenCenterX = Screen.width / 2; // 获取屏幕中心 X 坐标
     }
     void Update()

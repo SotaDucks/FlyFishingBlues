@@ -6,7 +6,8 @@ using VHACD.Unity;
 
 public class GameController : MonoBehaviour
 {
-    public Vector3 FshiPosition;
+    public GameObject CameraOBJ;
+    //public Vector3 FshiPosition;
     public NPCConversation Conversation;
     public Rigidbody fishRigidbody; // 需要停止移动的物体
     public Vector3 fixedRotation; // 要保持的固定旋转角度（用欧拉角表示）
@@ -39,7 +40,7 @@ public class GameController : MonoBehaviour
             {
                 fishmoving = false;
                 Debug.Log("Btn F");
-                
+                CameraOBJ.SetActive(true);
                 StopObjectAndSetRotation();
                 SetObjectVisibility();
                 DisableFishStrugglingScript();
@@ -69,7 +70,8 @@ public class GameController : MonoBehaviour
     }
     void DisableFishStrugglingScript()
     {
-        FishStruggling.SetActive(false);
+        FishStruggling.GetComponent<NewStrug>().enabled = false;
+       FishStruggling.GetComponent<FishTransform>().enabled = true;
     }
     private void StopObjectAndSetRotation()
     {
@@ -79,7 +81,7 @@ public class GameController : MonoBehaviour
             fishRigidbody.velocity = Vector3.zero;
             fishRigidbody.angularVelocity = Vector3.zero;
              // 停止所有物理交互
-            Fish.transform.position= FshiPosition;
+          //  Fish.transform.position= FshiPosition;
             // 保持固定的旋转角度
             Fish.transform.rotation = Quaternion.Euler(fixedRotation);
         }
