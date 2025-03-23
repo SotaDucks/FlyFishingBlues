@@ -33,8 +33,8 @@ public class NewStrug : MonoBehaviour
         timer = 0f;
 
         // 添加一定的空气阻力，防止无限累积速度
-        ParentRb.drag = 100f;
-        ParentRb.angularDrag = 100000f;
+        ParentRb.drag = 10f;
+        ParentRb.angularDrag = 100f;
     }
 
     void Update()
@@ -52,13 +52,40 @@ public class NewStrug : MonoBehaviour
                 struggleFrequency = UnityEngine.Random.Range(0.2f, 1.5f);
             }
         }
+        //else
+        //{
+        //    Struggle2();
+        //}
 
         // 限制鱼的高度
-        Vector3 clampedPosition = ParentRb.transform.position;
-        clampedPosition.y = Mathf.Clamp(clampedPosition.y, groundLevel, groundLevel + maxJumpHeight);
-        ParentRb.transform.position = clampedPosition;
+        //Vector3 clampedPosition = ParentRb.transform.position;
+        //clampedPosition.y = Mathf.Clamp(clampedPosition.y, groundLevel, groundLevel + maxJumpHeight);
+        //ParentRb.transform.position = clampedPosition;
     }
+    void Struggle2()
+    {
+        // 添加一个随机的垂直力（挣扎跳跃）
+        ParentRb.AddForce(Vector3.up * UnityEngine.Random.Range(0.5f, struggleForce), ForceMode.Impulse);
 
+        // 添加一个随机的水平力（左右挣扎移动）
+        float randomDirection = UnityEngine.Random.Range(-0.2f, 0.9f);
+        float randomZdirection = UnityEngine.Random.Range(-0.1f, 0.1f);
+        Vector3 horizontalForce = new Vector3(randomDirection * horizontalMoveForce, 0, randomZdirection * horizontalMoveForce);
+        ParentRb.AddForce(horizontalForce, ForceMode.Impulse);
+
+        // 限制鱼的水平移动范围
+        Vector3 clampedPosition = ParentRb.transform.position;
+        clampedPosition.x = Mathf.Clamp(clampedPosition.x, initialPosition.x - maxHorizontalMovement, initialPosition.x + maxHorizontalMovement);
+        ParentRb.transform.position = clampedPosition;
+        float randomNum = UnityEngine.Random.Range(15f, 120f);
+        // 初始化包含 -90f 和 90f 的数组
+        float[] Orientationside = { -90f, 90f };
+        System.Random random = new System.Random();
+
+        // 随机选择 -90f 或 90f
+        float randomOrientation = Orientationside[random.Next(0, 2)];
+        ParentRb.transform.rotation = Quaternion.Euler(0, randomNum, randomOrientation);
+    }
     // 挣扎行为
     void Struggle()
     {

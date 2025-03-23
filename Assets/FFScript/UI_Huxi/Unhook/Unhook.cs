@@ -5,23 +5,29 @@ using Unity.Mathematics;
 using UnityEngine;
 
 public class Unhook : MonoBehaviour
-{  
-   
+{
+    public bool Fishfreehook;
     public quaternion hookPosition;
     public float maxRotation = 40f; // 最大旋转角度
     public float maxSpeed = 100f; // 最大旋转速度
     private float screenCenterX;
     public float moveSpeed = 5f; // 移动速度
     private bool Fisdown;
+   
     void Start()
     {
-      //  transform.rotation = hookPosition;
+    
+        //  transform.rotation = hookPosition;
         screenCenterX = Screen.width / 2; // 获取屏幕中心 X 坐标
+       
     }
     void Update()
     {
+         HookPosition(); 
         if (Input.GetKeyDown(KeyCode.F))
         { Fisdown = true; }
+
+       
             if (Fisdown)
         {
 
@@ -58,7 +64,17 @@ public class Unhook : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 180, newZRotation);
         }
     }
+    private void HookPosition()
+    {
 
+        if(Fishfreehook)
+        {
+            GetComponentInParent<FishFree>().enabled = true;
+
+        }
+
+
+    }
 }
 
 

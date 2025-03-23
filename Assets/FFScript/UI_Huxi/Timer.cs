@@ -14,10 +14,10 @@ public class ColliderTimes : MonoBehaviour
     public GameObject Blood;
 
     [Header("≤Œ ˝≈‰÷√")]
-    [Range(1, 60)] public float totalTime = 30f;
+    [Range(1, 120)] public float totalTime = 120f;
     public Color startColor = Color.green;
     public Color endColor = Color.red;
-    public Text Ltime;
+    public TextMeshProUGUI Ltime;
 
     private float currentTime;
     private bool isCounting;
@@ -36,7 +36,7 @@ public class ColliderTimes : MonoBehaviour
             Ltime.text=currentTime.ToString();
             UpdateVisuals();
             
-            if (currentTime <= 27   && !isBlooding) {
+            if (currentTime <= 30   && !isBlooding) {
                 Debug.Log("132123");      isBlooding = true;  Blood.SetActive(true); }
             if (currentTime <= 0)
             {
