@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
             if (Input.GetKey(KeyCode.F))
             {
                 fishmoving = false;
-                Debug.Log("Btn F");
+               
                 CameraOBJ.SetActive(true);
                 StopObjectAndSetRotation();
                 SetObjectVisibility();
