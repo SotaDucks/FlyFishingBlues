@@ -4,83 +4,83 @@ using UnityEngine;
 
 public class FlyhookMassController : MonoBehaviour
 {
-    public BoxCollider waterSurfaceCollider;  // ÒýÓÃWaterSurfaceColliderµÄBox Collider
-    public float defaultMass = 1.0f;          // flyhookµÄÄ¬ÈÏÖÊÁ¿
-    public float waterMass = 0.5f;            // flyhookÔÚË®ÖÐµÄÖÊÁ¿
-    public float castingMass = 0.8f;          // flyhookÔÚÅ×¸ÍÊ±µÄÖÊÁ¿
-    private Rigidbody flyhookRigidbody;       // flyhookµÄ¸ÕÌå×é¼þ
-    public bool isInWater = false;           // ±ê¼ÇflyhookÊÇ·ñÔÚË®ÖÐ
-    private Animator characterAnimator;       // CharacterµÄ¶¯»­×é¼þ
+    public BoxCollider waterSurfaceCollider;  // ï¿½ï¿½ï¿½ï¿½WaterSurfaceColliderï¿½ï¿½Box Collider
+    public float defaultMass = 1.0f;          // flyhookï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public float waterMass = 0.5f;            // flyhookï¿½ï¿½Ë®ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½
+    public float castingMass = 0.8f;          // flyhookï¿½ï¿½ï¿½×¸ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private Rigidbody flyhookRigidbody;       // flyhookï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public bool isInWater = false;           // ï¿½ï¿½ï¿½flyhookï¿½Ç·ï¿½ï¿½ï¿½Ë®ï¿½ï¿½
+    private Animator characterAnimator;       // Characterï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     void Start()
     {
-        // »ñÈ¡flyhookµÄ¸ÕÌå×é¼þ
+        // ï¿½ï¿½È¡flyhookï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         flyhookRigidbody = GetComponent<Rigidbody>();
         if (flyhookRigidbody == null)
         {
-            Debug.LogError("FlyhookÉÏÈ±ÉÙRigidbody×é¼þ£¡");
+            Debug.LogError("Flyhookï¿½ï¿½È±ï¿½ï¿½Rigidbodyï¿½ï¿½ï¿½ï¿½ï¿½");
         }
 
-        // ÉèÖÃ³õÊ¼ÖÊÁ¿ÎªÄ¬ÈÏÖÊÁ¿
+        // ï¿½ï¿½ï¿½Ã³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ÎªÄ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         flyhookRigidbody.mass = defaultMass;
 
-        // »ñÈ¡ÃûÎª"Character"µÄGameObject²¢»ñÈ¡ÆäAnimator×é¼þ
-        GameObject characterObject = GameObject.Find("Character");
+        // ï¿½ï¿½È¡ï¿½ï¿½Îª"Character"ï¿½ï¿½GameObjectï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½Animatorï¿½ï¿½ï¿½
+        GameObject characterObject = GameObject.Find("autoriggedmainch");
         if (characterObject != null)
         {
             characterAnimator = characterObject.GetComponent<Animator>();
             if (characterAnimator == null)
             {
-                Debug.LogError("Character¶ÔÏóÉÏÈ±ÉÙAnimator×é¼þ£¡");
+                Debug.LogError("Characterï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È±ï¿½ï¿½Animatorï¿½ï¿½ï¿½ï¿½ï¿½");
             }
         }
         else
         {
-            Debug.LogError("³¡¾°ÖÐÎ´ÕÒµ½ÃûÎª'Character'µÄGameObject£¡");
+            Debug.LogError("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½Òµï¿½ï¿½ï¿½Îª'Character'ï¿½ï¿½GameObjectï¿½ï¿½");
         }
     }
 
     void Update()
     {
-        // Èç¹ûflyhookÔÚË®ÖÐ£¬ÓÅÏÈÊ¹ÓÃwaterMass
+        // ï¿½ï¿½ï¿½flyhookï¿½ï¿½Ë®ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½waterMass
         if (isInWater)
         {
             flyhookRigidbody.mass = waterMass;
         }
-        // Èç¹ûCharacterÕýÔÚ²¥·Å"CastIntoWater"¶¯»­£¬Ê¹ÓÃcastingMass
+        // ï¿½ï¿½ï¿½Characterï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½"CastIntoWater"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½castingMass
         else if (characterAnimator != null && characterAnimator.GetCurrentAnimatorStateInfo(0).IsName("CastIntoWater"))
         {
             flyhookRigidbody.mass = castingMass;
-            Debug.Log($"Flyhook ÕýÔÚÅ×¸Í£¬ÖÊÁ¿ÉèÖÃÎª {castingMass}");
+            Debug.Log($"Flyhook ï¿½ï¿½ï¿½ï¿½ï¿½×¸Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª {castingMass}");
         }
-        // ·ñÔò£¬Ê¹ÓÃÄ¬ÈÏÖÊÁ¿
+        // ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         else
         {
             flyhookRigidbody.mass = defaultMass;
         }
     }
 
-    // ´¥·¢Æ÷¼ì²â½øÈëË®ÖÐ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½
     private void OnTriggerEnter(Collider other)
     {
-        // ÅÐ¶ÏflyhookÊÇ·ñ½øÈëWaterSurfaceCollider
+        // ï¿½Ð¶ï¿½flyhookï¿½Ç·ï¿½ï¿½ï¿½ï¿½WaterSurfaceCollider
         if (other == waterSurfaceCollider)
         {
             isInWater = true;
             flyhookRigidbody.mass = waterMass;
-            Debug.Log($"Flyhook ½øÈëË®ÖÐ£¬ÖÊÁ¿ÉèÖÃÎª {waterMass}");
+            Debug.Log($"Flyhook ï¿½ï¿½ï¿½ï¿½Ë®ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª {waterMass}");
         }
     }
 
-    // ´¥·¢Æ÷¼ì²âÀë¿ªË®Ãæ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¿ªË®ï¿½ï¿½
     private void OnTriggerExit(Collider other)
     {
-        // ÅÐ¶ÏflyhookÊÇ·ñÀë¿ªWaterSurfaceCollider
+        // ï¿½Ð¶ï¿½flyhookï¿½Ç·ï¿½ï¿½ë¿ªWaterSurfaceCollider
         if (other == waterSurfaceCollider)
         {
             isInWater = false;
             flyhookRigidbody.mass = defaultMass;
-            Debug.Log($"Flyhook Àë¿ªË®ÖÐ£¬ÖÊÁ¿»Ö¸´ÎªÄ¬ÈÏÖµ {defaultMass}");
+            Debug.Log($"Flyhook ï¿½ë¿ªË®ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ÎªÄ¬ï¿½ï¿½Öµ {defaultMass}");
         }
     }
 }

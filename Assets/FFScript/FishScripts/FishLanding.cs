@@ -1,23 +1,23 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement; // ÒýÈë SceneManager ÃüÃû¿Õ¼ä
+using UnityEngine.SceneManagement; // ï¿½ï¿½ï¿½ï¿½ SceneManager ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½
 
 public class FishLanding : MonoBehaviour
 {
-    public float activationDelay = 2f; // ¼¤»î½Å±¾ºóµÄÑÓ³ÙÊ±¼ä
-    public GameObject fishStaminaCanvas; // FishStaminaCanvas ×é¼þ
-    public Transform escapePoint; // ³·ÀëµãµÄÎ»ÖÃ
-    public float moveSpeed = 5f; // ÓãÒÆ¶¯µÄËÙ¶È
+    public float activationDelay = 2f; // ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½Ê±ï¿½ï¿½
+    public GameObject fishStaminaCanvas; // FishStaminaCanvas ï¿½ï¿½ï¿½
+    public Transform escapePoint; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+    public float moveSpeed = 5f; // ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
 
     private Rigidbody fishRigidbody;
     private FishStaminaBar staminaBar;
-    private Canvas canvasComponent; // FishStaminaCanvas ÉÏµÄ Canvas ×é¼þ
-    private FishDragLine fishDragLine; // FishDragLine ×é¼þ
-    private Animator characterAnimator; // ³¡¾°ÖÐ Character µÄ Animator ×é¼þ 
+    private Canvas canvasComponent; // FishStaminaCanvas ï¿½Ïµï¿½ Canvas ï¿½ï¿½ï¿½
+    private FishDragLine fishDragLine; // FishDragLine ï¿½ï¿½ï¿½
+    private Animator characterAnimator; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Character ï¿½ï¿½ Animator ï¿½ï¿½ï¿½ 
 
-    private Collider waterSurfaceTriggerCollider; // WaterSurfaceTrigger µÄÅö×²Ìå
-    private Collider fishLandPointCollider; // FishLandPoint µÄÅö×²Ìå
-    private bool isInWater = false; // ÓãÊÇ·ñÔÚË®ÖÐ
+    private Collider waterSurfaceTriggerCollider; // WaterSurfaceTrigger ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½
+    private Collider fishLandPointCollider; // FishLandPoint ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½
+    private bool isInWater = false; // ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ë®ï¿½ï¿½
 
     private void Start()
     {
@@ -30,14 +30,14 @@ public class FishLanding : MonoBehaviour
             return;
         }
 
-        // »ñÈ¡ FishDragLine ×é¼þ
+        // ï¿½ï¿½È¡ FishDragLine ï¿½ï¿½ï¿½
         fishDragLine = GameObject.Find("FlyLine").GetComponent<FishDragLine>();
         if (fishDragLine == null)
         {
             Debug.LogError("FishDragLine component not found on 'FlyLine' GameObject.");
         }
 
-        // »ñÈ¡ WaterSurfaceTrigger µÄÅö×²Ìå
+        // ï¿½ï¿½È¡ WaterSurfaceTrigger ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½
         GameObject waterSurfaceTrigger = GameObject.Find("WaterSurfaceTrigger");
         if (waterSurfaceTrigger != null)
         {
@@ -52,7 +52,7 @@ public class FishLanding : MonoBehaviour
             Debug.LogError("'WaterSurfaceTrigger' GameObject not found in the scene.");
         }
 
-        // »ñÈ¡ FishLandPoint µÄÅö×²Ìå
+        // ï¿½ï¿½È¡ FishLandPoint ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½
         GameObject fishLandPoint = GameObject.Find("FishLandPoint");
         if (fishLandPoint != null)
         {
@@ -67,7 +67,7 @@ public class FishLanding : MonoBehaviour
             Debug.LogError("'FishLandPoint' GameObject not found in the scene.");
         }
 
-        // »ñÈ¡ FishStaminaCanvas ÉÏµÄ Canvas ×é¼þ
+        // ï¿½ï¿½È¡ FishStaminaCanvas ï¿½Ïµï¿½ Canvas ï¿½ï¿½ï¿½
         if (fishStaminaCanvas != null)
         {
             canvasComponent = fishStaminaCanvas.GetComponent<Canvas>();
@@ -77,7 +77,7 @@ public class FishLanding : MonoBehaviour
             }
             else
             {
-                canvasComponent.enabled = false; // ¿ªÊ¼Ê±½ûÓÃ Canvas ×é¼þ
+                canvasComponent.enabled = false; // ï¿½ï¿½Ê¼Ê±ï¿½ï¿½ï¿½ï¿½ Canvas ï¿½ï¿½ï¿½
             }
         }
         else
@@ -85,8 +85,8 @@ public class FishLanding : MonoBehaviour
             Debug.LogError("FishStaminaCanvas is not assigned in the inspector.");
         }
 
-        // »ñÈ¡ Character µÄ Animator ×é¼þ
-        GameObject character = GameObject.Find("Character");
+        // ï¿½ï¿½È¡ Character ï¿½ï¿½ Animator ï¿½ï¿½ï¿½
+        GameObject character = GameObject.Find("autoriggedmainch");
         if (character != null)
         {
             characterAnimator = character.GetComponent<Animator>();
@@ -100,16 +100,16 @@ public class FishLanding : MonoBehaviour
             Debug.LogError("'Character' GameObject not found in the scene.");
         }
 
-        // ¿ªÊ¼ÑÓ³ÙÐ­³Ì
+        // ï¿½ï¿½Ê¼ï¿½Ó³ï¿½Ð­ï¿½ï¿½
         StartCoroutine(ActivateStaminaBar());
     }
 
     private IEnumerator ActivateStaminaBar()
     {
-        // ÑÓ³ÙÖ¸¶¨µÄÊ±¼ä
+        // ï¿½Ó³ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
         yield return new WaitForSeconds(activationDelay);
 
-        // ÆôÓÃ FishStaminaCanvas ÉÏµÄ Canvas ×é¼þ
+        // ï¿½ï¿½ï¿½ï¿½ FishStaminaCanvas ï¿½Ïµï¿½ Canvas ï¿½ï¿½ï¿½
         if (canvasComponent != null)
         {
             canvasComponent.enabled = true;
@@ -119,7 +119,7 @@ public class FishLanding : MonoBehaviour
             Debug.LogError("Canvas component is null. Cannot enable.");
         }
 
-        // ¿ªÊ¼¼ì²âÄÍÁ¦ÖµµÄÐ­³Ì
+        // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ð­ï¿½ï¿½
         StartCoroutine(CheckStamina());
     }
 
@@ -141,21 +141,21 @@ public class FishLanding : MonoBehaviour
 
             if (staminaBar.currentStamina > 0 && isInWater)
             {
-                // ÄÍÁ¦Öµ²»Îª0 ÇÒ ÓãÔÚË®ÖÐ
+                // ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Îª0 ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½
                 fishRigidbody.isKinematic = true;
 
-                // µ÷ÓÃ fishDragLine.StartStruggling() Éì³¤Éþ×Ó
+                // ï¿½ï¿½ï¿½ï¿½ fishDragLine.StartStruggling() ï¿½ì³¤ï¿½ï¿½ï¿½ï¿½
                 fishDragLine.StartStruggling();
 
-                // µ÷Õû·½ÏòÃæ¶Ô³·Àëµã
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô³ï¿½ï¿½ï¿½ï¿½
                 Vector3 direction = (escapePoint.position - transform.position).normalized;
                 Quaternion lookRotation = Quaternion.LookRotation(direction);
                 transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
 
-                // ³¯³·ÀëµãÒÆ¶¯
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½
                 transform.position += direction * moveSpeed * Time.deltaTime;
 
-                // ÉèÖÃ Character ¶¯»­²ÎÊýÎª true
+                // ï¿½ï¿½ï¿½ï¿½ Character ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª true
                 if (characterAnimator != null)
                 {
                     characterAnimator.SetBool("IsDraging", true);
@@ -163,13 +163,13 @@ public class FishLanding : MonoBehaviour
             }
             else
             {
-                // ÄÍÁ¦ÖµÎª0 »ò Óã²»ÔÚË®ÖÐ
+                // ï¿½ï¿½ï¿½ï¿½ÖµÎª0 ï¿½ï¿½ ï¿½ã²»ï¿½ï¿½Ë®ï¿½ï¿½
                 fishRigidbody.isKinematic = false;
 
-                // µ÷ÓÃ fishDragLine.StopStruggling() Í£Ö¹Éì³¤Éþ×Ó
+                // ï¿½ï¿½ï¿½ï¿½ fishDragLine.StopStruggling() Í£Ö¹ï¿½ì³¤ï¿½ï¿½ï¿½ï¿½
                 fishDragLine.StopStruggling();
 
-                // ÉèÖÃ Character ¶¯»­²ÎÊýÎª false
+                // ï¿½ï¿½ï¿½ï¿½ Character ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª false
                 if (characterAnimator != null)
                 {
                     characterAnimator.SetBool("IsDraging", false);
@@ -180,7 +180,7 @@ public class FishLanding : MonoBehaviour
         }
     }
 
-    // µ±ÓãµÄÅö×²Ìå½øÈë´¥·¢Æ÷Ê±µ÷ÓÃ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ë´¥ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
     private void OnTriggerEnter(Collider other)
     {
         if (other == waterSurfaceTriggerCollider)
@@ -188,14 +188,14 @@ public class FishLanding : MonoBehaviour
             isInWater = true;
         }
 
-        // ÐÂÔöÅÐ¶¨£º¼ì²âÊÇ·ñÓë FishLandPoint ·¢ÉúÅö×²
+        // ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ FishLandPoint ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×²
         if (other == fishLandPointCollider)
         {
             LoadNextScene();
         }
     }
 
-    // µ±ÓãµÄÅö×²ÌåÍË³ö´¥·¢Æ÷Ê±µ÷ÓÃ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
     private void OnTriggerExit(Collider other)
     {
         if (other == waterSurfaceTriggerCollider)
@@ -204,22 +204,10 @@ public class FishLanding : MonoBehaviour
         }
     }
 
-    // ¼ÓÔØÏÂÒ»¸ö³¡¾°µÄ·½·¨
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
     private void LoadNextScene()
     {
-        // »ñÈ¡µ±Ç°»î¶¯³¡¾°
-        Scene currentScene = SceneManager.GetActiveScene();
-        // ¼ÆËãÏÂÒ»¸ö³¡¾°µÄË÷Òý
-        int nextSceneIndex = currentScene.buildIndex + 1;
-
-        // ¼ì²éÏÂÒ»¸ö³¡¾°ÊÇ·ñ´æÔÚÓÚ¹¹½¨ÉèÖÃÖÐ
-        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(nextSceneIndex);
-        }
-        else
-        {
-            Debug.LogError("No next scene found. Please ensure the next scene is added to the Build Settings.");
-        }
+        Debug.Log("Done")
+        SceneManager.LoadScene("CuttingFish");
     }
 }

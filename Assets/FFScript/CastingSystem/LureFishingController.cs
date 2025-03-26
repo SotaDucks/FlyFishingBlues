@@ -40,7 +40,6 @@ public class LureFishingController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-                // animator.SetTrigger(RETRIEVE);
             animator.SetBool(RETRIEVE, true);
             StartCoroutine(ResetRetrieveParameter(RETRIEVE));
             
@@ -64,7 +63,7 @@ public class LureFishingController : MonoBehaviour
 
     private System.Collections.IEnumerator ResetSwingParameter(string parameter)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(3.24f);
         animator.SetBool(parameter, false);
     }
 

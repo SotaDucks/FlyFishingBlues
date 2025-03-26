@@ -3,19 +3,19 @@ using Obi;
 
 public class FishBiteHook : MonoBehaviour
 {
-    public Transform flyhook; // ·É¹³µÄ Transform ÒýÓÃ
-    public Transform exit1; // Exit1 µÄ Transform ÒýÓÃ
-    public float moveSpeed = 3f; // ÓãÏò·É¹³ÒÆ¶¯µÄËÙ¶È
-    public float stopDistance = 0.5f; // ÓãÍ£Ö¹ÒÆ¶¯µÄ×îÐ¡¾àÀë
-    public float waitTime = 1f; // µÈ´ýÊ±¼ä
-    public float escapeSpeed = 5f; // ÓãÌÓÅÜµÄËÙ¶È
-    public bool isFishBite = false; // ÓãÊÇ·ñÒ§¹³
+    public Transform flyhook; // ï¿½É¹ï¿½ï¿½ï¿½ Transform ï¿½ï¿½ï¿½ï¿½
+    public Transform exit1; // Exit1 ï¿½ï¿½ Transform ï¿½ï¿½ï¿½ï¿½
+    public float moveSpeed = 3f; // ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½Ù¶ï¿?
+    public float stopDistance = 0.5f; // ï¿½ï¿½Í£Ö¹ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½
+    public float waitTime = 1f; // ï¿½È´ï¿½Ê±ï¿½ï¿½
+    public float escapeSpeed = 5f; // ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½Ù¶ï¿½
+    public bool isFishBite = false; // ï¿½ï¿½ï¿½Ç·ï¿½Ò§ï¿½ï¿½
 
-    private Animator fishAnimator; // ÓãµÄ Animator ×é¼þ
-    private Animator characterAnimator; // ³¡¾°ÖÐ Character µÄ Animator ×é¼þ 
-    private bool isMovingToHook = true; // ±ê¼ÇÊÇ·ñÔÚÏò·É¹³ÒÆ¶¯
-    private float waitTimer = 0f; // µÈ´ý¼ÆÊ±Æ÷
-    private FishDragLine fishDragLine; // ÒýÓÃ FishDragLine ½Å±¾
+    private Animator fishAnimator; // ï¿½ï¿½ï¿? Animator ï¿½ï¿½ï¿?
+    private Animator characterAnimator; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Character ï¿½ï¿½ Animator ï¿½ï¿½ï¿? 
+    private bool isMovingToHook = true; // ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½Æ¶ï¿½
+    private float waitTimer = 0f; // ï¿½È´ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    private FishDragLine fishDragLine; // ï¿½ï¿½ï¿½ï¿½ FishDragLine ï¿½Å±ï¿½
 
     void Start()
     {
@@ -26,33 +26,33 @@ public class FishBiteHook : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Î´ÕÒµ½ÃûÎª 'flyhook' µÄ GameObject£¡");
+            Debug.LogError("Î´ï¿½Òµï¿½ï¿½ï¿½Îª 'flyhook' ï¿½ï¿½ GameObjectï¿½ï¿½");
         }
 
-        fishAnimator = GetComponent<Animator>(); // ×Ô¶¯²éÕÒÓãµÄ Animator ×é¼þ
+        fishAnimator = GetComponent<Animator>(); // ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿? Animator ï¿½ï¿½ï¿?
         if (fishAnimator == null)
         {
-            Debug.LogError("Î´ÕÒµ½ÓãµÄ Animator ×é¼þ£¡");
+            Debug.LogError("Î´ï¿½Òµï¿½ï¿½ï¿½ï¿? Animator ï¿½ï¿½ï¿½ï¿½ï¿?");
         }
 
-        GameObject characterObject = GameObject.Find("Character"); // ×Ô¶¯²éÕÒ³¡¾°ÖÐµÄ Character
+        GameObject characterObject = GameObject.Find("autoriggedmainch"); // ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½Ðµï¿½ Character
         if (characterObject != null)
         {
             characterAnimator = characterObject.GetComponent<Animator>();
             if (characterAnimator == null)
             {
-                Debug.LogError("Î´ÕÒµ½ Character µÄ Animator ×é¼þ£¡");
+                Debug.LogError("Î´ï¿½Òµï¿½ Character ï¿½ï¿½ Animator ï¿½ï¿½ï¿½ï¿½ï¿?");
             }
         }
         else
         {
-            Debug.LogError("Î´ÕÒµ½ÃûÎª 'Character' µÄ GameObject£¡");
+            Debug.LogError("Î´ï¿½Òµï¿½ï¿½ï¿½Îª 'Character' ï¿½ï¿½ GameObjectï¿½ï¿½");
         }
 
-        fishDragLine = GameObject.Find("FlyLine").GetComponent<FishDragLine>(); // »ñÈ¡ FishDragLine ×é¼þ
+        fishDragLine = GameObject.Find("FlyLine").GetComponent<FishDragLine>(); // ï¿½ï¿½È¡ FishDragLine ï¿½ï¿½ï¿?
         if (fishDragLine == null)
         {
-            Debug.LogError("Î´ÕÒµ½ FishDragLine ×é¼þ£¬ÇëÈ·ÈÏ¸Ã½Å±¾¸½¼ÓÔÚ FlyLine ÉÏ£¡");
+            Debug.LogError("Î´ï¿½Òµï¿½ FishDragLine ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½Ï¸Ã½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿? FlyLine ï¿½Ï£ï¿½");
         }
     }
 
@@ -78,11 +78,11 @@ public class FishBiteHook : MonoBehaviour
         }
         else
         {
-            AttachFishToFlyline(); // °ó¶¨Óãµ½ FlyLine
-            isMovingToHook = false; // µ½´ï×îÐ¡¾àÀë£¬¿ªÊ¼µÈ´ý
-            waitTimer = waitTime; // ÖØÖÃµÈ´ý¼ÆÊ±Æ÷
+            AttachFishToFlyline(); // ï¿½ï¿½ï¿½ãµ½ FlyLine
+            isMovingToHook = false; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½Ê¼ï¿½È´ï¿½
+            waitTimer = waitTime; // ï¿½ï¿½ï¿½ÃµÈ´ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
-            // ´¥·¢¡°TroutBite¡±¶¯»­
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½TroutBiteï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             if (fishAnimator != null)
             {
                 fishAnimator.SetTrigger("TroutBite");
@@ -96,11 +96,11 @@ public class FishBiteHook : MonoBehaviour
         isFishBite = true;
         if (waitTimer > 0)
         {
-            waitTimer -= Time.deltaTime; // ¼õÉÙµÈ´ýÊ±¼ä
+            waitTimer -= Time.deltaTime; // ï¿½ï¿½ï¿½ÙµÈ´ï¿½Ê±ï¿½ï¿½
         }
         else
         {
-            // ¼ì²é Character ÊÇ·ñ²¥·ÅÁË "SetTheHook" ¶¯»­
+            // ï¿½ï¿½ï¿? Character ï¿½Ç·ñ²¥·ï¿½ï¿½ï¿½ "SetTheHook" ï¿½ï¿½ï¿½ï¿½
             if (characterAnimator.GetCurrentAnimatorStateInfo(0).IsName("SetTheHook"))
             {
                 if (fishDragLine != null)
@@ -108,24 +108,24 @@ public class FishBiteHook : MonoBehaviour
                     fishDragLine.StopDragging();
                 }
 
-                // ÉèÖÃÓãµÄ Rigidbody µÄ IsKinematic Îª false
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿? Rigidbody ï¿½ï¿½ IsKinematic Îª false
                 Rigidbody rb = GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    rb.isKinematic = false; // ½â³ý Kinematic ×´Ì¬
+                    rb.isKinematic = false; // ï¿½ï¿½ï¿? Kinematic ×´Ì¬
                 }
 
-                this.enabled = false; // ½ûÓÃµ±Ç°½Å±¾
-                GetComponent<FishLanding>().enabled = true; // ¼¤»î FishLanding ½Å±¾
-                return; // ½áÊøµ±Ç°·½·¨
+                this.enabled = false; // ï¿½ï¿½ï¿½Ãµï¿½Ç°ï¿½Å±ï¿½
+                GetComponent<FishLanding>().enabled = true; // ï¿½ï¿½ï¿½ï¿½ FishLanding ï¿½Å±ï¿½
+                return; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½
             }
 
-            // ÌÓÅÜ¿ªÊ¼Ê±ÇÐ»»¶¯»­
+            // ï¿½ï¿½ï¿½Ü¿ï¿½Ê¼Ê±ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½
             
-            characterAnimator.SetBool("FishOn", true); // ÉèÖÃ Character ¶¯»­µÄ FishOn Îª true
+            characterAnimator.SetBool("FishOn", true); // ï¿½ï¿½ï¿½ï¿½ Character ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ FishOn Îª true
   
 
-            // ¿ªÊ¼À­³öÓãÏß
+            // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             if (fishDragLine != null)
             {
                 fishDragLine.StartDragging();
@@ -133,14 +133,14 @@ public class FishBiteHook : MonoBehaviour
 
             Vector3 direction = (exit1.position - transform.position).normalized;
             transform.position = Vector3.MoveTowards(transform.position, exit1.position, escapeSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.LookRotation(direction); // ³¯Ïò Exit1
+            transform.rotation = Quaternion.LookRotation(direction); // ï¿½ï¿½ï¿½ï¿½ Exit1
 
-            // ¼ì²éÊÇ·ñµ½´ï Exit1
+            // ï¿½ï¿½ï¿½ï¿½Ç·ñµ½´ï¿? Exit1
             if (Vector3.Distance(transform.position, exit1.position) < stopDistance)
             {
-                Destroy(transform.parent.gameObject); // Ïú»ÙÓãµÄ¸¸ÎïÌå
-                Debug.Log("ÓãµÄ¸¸ÎïÌå 'Trout1SpawnPrefab2' ÒÑ±»Ïú»Ù£¡");
-                // ½â³ýÓãÏßµÄÑÓ³¤
+                Destroy(transform.parent.gameObject); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿?
+                Debug.Log("ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿? 'Trout1SpawnPrefab2' ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½Ù£ï¿½");
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßµï¿½ï¿½Ó³ï¿?
                 if (fishDragLine != null)
                 {
                     fishDragLine.StopDragging();
@@ -151,28 +151,28 @@ public class FishBiteHook : MonoBehaviour
 
     private void AttachFishToFlyline()
     {
-        // ×Ô¶¯²éÕÒÃûÎª "FlyLine" µÄ¶ÔÏó
+        // ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª "FlyLine" ï¿½Ä¶ï¿½ï¿½ï¿½
         GameObject flyLine = GameObject.Find("FlyLine");
 
         if (flyLine != null)
         {
-            // »ñÈ¡ FlyLine ¶ÔÏóÉÏµÄËùÓÐ ObiParticleAttachment ×é¼þ
+            // ï¿½ï¿½È¡ FlyLine ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ ObiParticleAttachment ï¿½ï¿½ï¿?
             ObiParticleAttachment[] attachments = flyLine.GetComponents<ObiParticleAttachment>();
 
-            if (attachments.Length >= 3) // È·±£ÓÐÖÁÉÙÈý¸ö Obi Particle Attachment
+            if (attachments.Length >= 3) // È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Obi Particle Attachment
             {
-                // ¸øµÚÈý¸ö Obi Particle Attachment ÉèÖÃÄ¿±êÎªÓã×ÔÉí
-                attachments[2].target = this.transform; // ½«ÓãµÄ Transform ×÷ÎªÄ¿±ê
-                Debug.Log("ÓãÒÑ¾­±»°ó¶¨µ½ FlyLine µÄµÚÈý¸ö Obi Particle Attachment£¡");
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Obi Particle Attachment ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                attachments[2].target = this.transform; // ï¿½ï¿½ï¿½ï¿½ï¿? Transform ï¿½ï¿½ÎªÄ¿ï¿½ï¿½
+                Debug.Log("ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ó¶¨µï¿½ FlyLine ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ Obi Particle Attachmentï¿½ï¿½");
             }
             else
             {
-                Debug.LogError("FlyLine ÉÏÃ»ÓÐ×ã¹»µÄ Obi Particle Attachment ×é¼þ£¡");
+                Debug.LogError("FlyLine ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ã¹»ï¿½ï¿½ Obi Particle Attachment ï¿½ï¿½ï¿½ï¿½ï¿?");
             }
         }
         else
         {
-            Debug.LogError("Î´ÕÒµ½ÃûÎª 'FlyLine' µÄ¶ÔÏó£¡");
+            Debug.LogError("Î´ï¿½Òµï¿½ï¿½ï¿½Îª 'FlyLine' ï¿½Ä¶ï¿½ï¿½ï¿½");
         }
     }
 }
