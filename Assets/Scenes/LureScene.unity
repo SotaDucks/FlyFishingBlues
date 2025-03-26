@@ -27930,7 +27930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717f78cc0cb7c3f4c9793ada11211d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyhook: {fileID: 0}
+  flyhook: {fileID: 1936239780}
   exit1: {fileID: 298350537}
   moveSpeed: 7
   stopDistance: 0.1

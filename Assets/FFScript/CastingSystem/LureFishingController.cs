@@ -3,7 +3,9 @@ using UnityEngine;
 public class LureFishingController : MonoBehaviour
 {
     private Animator animator;
-    private bool isFishing = false;
+    private readonly string RETRIEVE = "Retrieve";
+    private readonly string SETTHEHOOK = "SetTheHook";
+    private readonly string ISFISHING = "isFishing";
 
     void Start()
     {
@@ -20,24 +22,56 @@ public class LureFishingController : MonoBehaviour
 
     void Update()
     {
+        HandleInput();
+    }
+
+    private void HandleInput()
+    {
+        if (animator == null)
+            return;
+
         // 处理空格键按下的状态切换
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("空格键被按下");
-            if (!isFishing)
-            {
-                // 切换到钓鱼状态
-                isFishing = true;
-                Debug.Log("尝试播放Fishing动画");
-                animator.Play("Fishing");
-            }
-            else
-            {
-                // 切换回准备状态
-                isFishing = false;
-                Debug.Log("尝试播放LureCastReady动画");
-                animator.Play("LureCastReady");
-            }
+            animator.SetBool(ISFISHING, true);
+            StartCoroutine(ResetSwingParameter(ISFISHING));
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+                // animator.SetTrigger(RETRIEVE);
+            animator.SetBool(RETRIEVE, true);
+            StartCoroutine(ResetRetrieveParameter(RETRIEVE));
+            
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.W) && animator.GetBool("FishOn"))
+        {
+            
+            animator.SetTrigger(SETTHEHOOK);
+
+
         }
     }
+
+        // if (Input.GetKey(KeyCode.A))
+        // {
+
+        //     animator.SetBool(LIFT_ROD, true);
+        // }
+
+    private System.Collections.IEnumerator ResetSwingParameter(string parameter)
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool(parameter, false);
+    }
+
+    private System.Collections.IEnumerator ResetRetrieveParameter(string parameter)
+    {
+        yield return new WaitForSeconds(0.1f);
+        animator.SetBool(parameter, false);
+    }
+
 } 
