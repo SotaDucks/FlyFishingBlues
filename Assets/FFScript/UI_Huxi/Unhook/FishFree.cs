@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using DialogueEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,13 +13,15 @@ public class FishFree : MonoBehaviour
     public GameObject Hook;
     public GameObject Hand;
     public Camera MainCamera;
- 
+    public NPCConversation FreeConversation;
+
     // Start is called before the first frame update
     void Start()
     {
     }
     private void OnEnable()
     {
+        ConversationManager.Instance.StartConversation(FreeConversation);
         StuggleBone.GetComponent<NewStrug>().enabled = false;
      StuggleBone.GetComponent<FishPath>().enabled=true;
         StuggleBone.GetComponent<FishTransform>().enabled = false;
