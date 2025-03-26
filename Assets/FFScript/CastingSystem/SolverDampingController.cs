@@ -52,29 +52,28 @@ public class SolverDampingController : MonoBehaviour
         // 如果没有找到 ObiSolver，则不继续执行
         if (solver == null) return;
 
-        // 检查空格键是否被按下
-        bool isSpacePressed = Input.GetKey(KeyCode.Space);
+        // // 检查空格键是否被按下
+        // bool isSpacePressed = Input.GetKey(KeyCode.Space);
 
-        if (!isSpacePressed)
-        {
-            // 空格键未被按下，应用最高优先级的 damping 和 gravity 设置
-            ApplyCastingDampingAndGravity();
-        }
-        else
-        {
+        // if (!isSpacePressed)
+        // {
+        //     // 空格键未被按下，应用最高优先级的 damping 和 gravity 设置
+        //     ApplyCastingDampingAndGravity();
+        // }
+        // else
+        // {
             // 空格键被按下，继续原有的根据绳子长度控制 damping 和 gravity 的逻辑
             // 获取关联的第一个 ObiRope 的长度
-            ObiRope rope = GetFirstRope();
-            if (rope == null) return;
+        ObiRope rope = GetFirstRope();
+        if (rope == null) return;
 
-            float currentLength = rope.restLength;
+        float currentLength = rope.restLength;
 
             // 调试信息：输出当前绳子的长度
-            Debug.Log($"Current Rope Length: {currentLength}");
+        Debug.Log($"Current Rope Length: {currentLength}");
 
             // 根据绳子长度设置 damping 和 gravity
-            UpdateDampingAndGravityBasedOnLength(currentLength);
-        }
+        UpdateDampingAndGravityBasedOnLength(currentLength);
     }
 
     // 获取第一个 ObiRope 实例
