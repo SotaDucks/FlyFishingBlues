@@ -19,6 +19,7 @@ public class FishRunRelease : MonoBehaviour
 
     void Start()
     {
+       
         rb = GetComponent<Rigidbody>();
         if (rb == null)
         {

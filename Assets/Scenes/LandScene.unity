@@ -455,6 +455,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 10312016}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &12401693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 12401695}
+  - component: {fileID: 12401694}
+  m_Layer: 0
+  m_Name: btnSimulator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &12401694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12401693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219b44a8f1e181f41b9af283311fda65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonToSimulate: {fileID: 1132269892}
+--- !u!4 &12401695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12401693}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 130.56763, y: 28.389385, z: -0.5439078}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &19958387 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7953085446890567447, guid: 011b790ca932d4fc4af90dc4abe671c6,
@@ -31428,3 +31473,4 @@ SceneRoots:
   - {fileID: 263773129}
   - {fileID: 1014958049}
   - {fileID: 1595325251}
+  - {fileID: 12401695}

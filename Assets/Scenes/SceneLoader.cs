@@ -8,6 +8,14 @@ public class SceneLoader : MonoBehaviour
    public void CutFish() { 
         SceneManager.LoadScene("CuttingFish");
     }
-    
+    public void DelayLoad()
+    {
+        Invoke("FishFree", 0.5f);
+    }
+    public void FishFree()
+    {
+
+        SceneManager.LoadScene("LandScene");
+    }
 
 }

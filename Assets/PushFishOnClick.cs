@@ -14,6 +14,7 @@ public class PushFishOnClick : MonoBehaviour
 
     void Start()
     {
+        
         if (fish != null)
         {
             fishRigidbody = fish.GetComponent<Rigidbody>();

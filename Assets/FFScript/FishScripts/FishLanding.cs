@@ -207,7 +207,7 @@ public class FishLanding : MonoBehaviour
     // ������һ�������ķ���
     private void LoadNextScene()
     {
-        Debug.Log("Done")
+        Debug.Log("Done");
         SceneManager.LoadScene("CuttingFish");
     }
 }
