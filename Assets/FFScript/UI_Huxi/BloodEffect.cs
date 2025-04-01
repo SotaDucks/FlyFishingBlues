@@ -18,7 +18,7 @@ public class BloodEffect : MonoBehaviour
     void Update()
     {
         // 检测空格键按下事件[1,2](@ref)
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             // 切换物体激活状态[3](@ref)
             if (targetObject.activeSelf == false)

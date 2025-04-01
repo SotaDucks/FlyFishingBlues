@@ -10,7 +10,7 @@ public class SceneLoader : MonoBehaviour
     }
     public void DelayLoad()
     {
-        Invoke("FishFree", 0.5f);
+        Invoke("FishFree", 1.5f);
     }
     public void FishFree()
     {
