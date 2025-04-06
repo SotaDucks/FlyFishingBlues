@@ -1,4 +1,5 @@
 using System.Collections;
+using DialogueEditor;
 using UnityEngine;
 
 namespace DynamicMeshCutter
@@ -14,7 +15,7 @@ namespace DynamicMeshCutter
         public GameObject Bucket;
         public GameObject BloodEffectPrefab;
         private Transform bloodTransform;
-
+        public NPCConversation Conversation;
         public void Start()
         {
             
@@ -29,6 +30,7 @@ namespace DynamicMeshCutter
                     Cut(target, transform.position, transform.forward, null, OnCreated);
                     Debug.Log("!!!!!!!");
                     Debug.Log($"Cutting target: {target.gameObject.name}");
+                    ConversationManager.Instance.StartConversation(Conversation);
 
                 }
             }
