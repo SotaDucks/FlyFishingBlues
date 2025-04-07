@@ -1,6 +1,10 @@
 using System.Collections;
+using DG.Tweening;
 using DialogueEditor;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace DynamicMeshCutter
 {
@@ -16,6 +20,8 @@ namespace DynamicMeshCutter
         public GameObject BloodEffectPrefab;
         private Transform bloodTransform;
         public NPCConversation Conversation;
+        public Image targetImage; // 在Inspector中拖入你的Image组件
+        public TextMeshProUGUI Dialogue;
         public void Start()
         {
             
@@ -30,7 +36,8 @@ namespace DynamicMeshCutter
                     Cut(target, transform.position, transform.forward, null, OnCreated);
                     Debug.Log("!!!!!!!");
                     Debug.Log($"Cutting target: {target.gameObject.name}");
-                    ConversationManager.Instance.StartConversation(Conversation);
+                    StartCoroutine(FadeIn());
+
 
                 }
             }
@@ -87,6 +94,25 @@ namespace DynamicMeshCutter
                 yield return null;
             }
             KnifeController.deleteTHeknife();
+        }
+        IEnumerator FadeIn()
+        {
+            yield return targetImage.DOFade(1f, 2)
+           .SetEase(Ease.Linear) // 线性渐变
+           .WaitForCompletion(); // 等待动画完成
+
+            // 动画完成后执行
+            PlayText();
+        }
+
+        private void PlayText()
+        {
+            Sequence seq = DOTween.Sequence();
+            seq.Append(Dialogue.DOFade(1f, 1f).SetEase(Ease.Linear)); // 1秒渐变
+            seq.AppendInterval(3f); // 等待3秒
+            seq.OnComplete(() => SceneManager.LoadScene("LureScene"));
+            seq.Play();
+
         }
     }
 }
