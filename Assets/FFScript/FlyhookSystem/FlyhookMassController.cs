@@ -31,12 +31,12 @@ public class FlyhookMassController : MonoBehaviour
             characterAnimator = characterObject.GetComponent<Animator>();
             if (characterAnimator == null)
             {
-                Debug.LogError("Character������ȱ��Animator�����");
+                Debug.Log("Character������ȱ��Animator�����");
             }
         }
         else
         {
-            Debug.LogError("������δ�ҵ���Ϊ'Character'��GameObject��");
+            Debug.Log("������δ�ҵ���Ϊ'Character'��GameObject��");
         }
     }
 
