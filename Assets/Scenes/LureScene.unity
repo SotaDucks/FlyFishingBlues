@@ -14508,24 +14508,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstDamping:
-    length: 4
-    damping: 0.2
-    gravityY: -3.75
+    length: 3
+    damping: 0.5
+    gravityY: -5.25
   secondDamping:
     length: 5
-    damping: 0.3
-    gravityY: -3.75
+    damping: 0.5
+    gravityY: -5.25
   thirdDamping:
     length: 8
-    damping: 0.3
-    gravityY: -5.75
+    damping: 0.5
+    gravityY: -5.25
   fourthDamping:
     length: 10
     damping: 0.5
-    gravityY: -5.75
+    gravityY: -8.75
   fifthDamping:
     length: 12
-    damping: 0.98
+    damping: 0.9
     gravityY: -3.75
   castingDamping: 0.5
   castingGravityY: -5.75
@@ -17796,7 +17796,7 @@ MonoBehaviour:
   growthAmount: 12
   growthSpeed: 5
   RetrieveSpeed: 2
-  RetrieveAmount: 1
+  RetrieveAmount: 2
   MinLength: 1
   landingSpeed: 2
   landingAmount: 2
@@ -28502,7 +28502,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 011b790ca932d4fc4af90dc4abe671c6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -65.11578
+      value: -67.57
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 011b790ca932d4fc4af90dc4abe671c6,
         type: 3}
