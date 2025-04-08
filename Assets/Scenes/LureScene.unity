@@ -7925,7 +7925,7 @@ MonoBehaviour:
   settings: {fileID: 0}
   useVolumeBlending: 0
   startDistance: 0
-  fogDensity: 0.7
+  fogDensity: 5.08
   heightFogDepth: 25
   heightFogDensity: 1
   heightFogBrightness: 0.5
@@ -9876,7 +9876,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.22930863, g: 0.4528302, b: 0.21573514, a: 1}
+  m_Color: {r: 0.9622642, g: 0.91808474, b: 0.74136704, a: 1}
   m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
@@ -13816,8 +13816,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " \"Space\"   rolling   rod      \n        \"D\"         Release  line               
-    \"S\" retrieve"
+  m_text: "\"Space\"   rolling   rod      \n\n        \"D\"         Release  line               
+    \"S\" retrieve\n "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1460f763d647ae47990876634675f68, type: 2}
   m_sharedMaterial: {fileID: -5457807120523524375, guid: e1460f763d647ae47990876634675f68,
