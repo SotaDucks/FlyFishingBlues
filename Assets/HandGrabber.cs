@@ -35,7 +35,9 @@ public class HandGrabber : MonoBehaviour
             if (grabbable != null)
             {
                 GrabObject(grabbable);
+                Debug.LogError("123");
                 break;
+
             }
         }
     }
@@ -48,6 +50,7 @@ public class HandGrabber : MonoBehaviour
         Rigidbody rb = grabbedObject.GetComponent<Rigidbody>();
         if (rb != null)
         {
+            Debug.LogError("1111");
             rb.isKinematic = true;
         }
 
