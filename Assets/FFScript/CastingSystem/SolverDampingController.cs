@@ -53,28 +53,29 @@ public class SolverDampingController : MonoBehaviour
         if (solver == null) return;
 
         // // ���ո���Ƿ񱻰���
-        // bool isSpacePressed = Input.GetKey(KeyCode.Space);
+        bool isSpacePressed = Input.GetKey(KeyCode.Space);
 
-        // if (!isSpacePressed)
-        // {
-        //     //     // �ո��δ�����£�Ӧ��������ȼ��� damping �� gravity ����
-        //     ApplyCastingDampingAndGravity();
-        // }
-        // else
-        // {
-        //     // �ո�������£�����ԭ�еĸ������ӳ��ȿ��� damping �� gravity ���߼�
-        //     // ��ȡ�����ĵ�һ�� ObiRope �ĳ���
-        ObiRope rope = GetFirstRope();
-        if (rope == null) return;
+        if (!isSpacePressed)
+        {
+            //     // �ո��δ�����£�Ӧ��������ȼ��� damping �� gravity ����
+            ApplyCastingDampingAndGravity();
+        }
+        else
+        {
 
-        float currentLength = rope.restLength;
+            //     // �ո�������£�����ԭ�еĸ������ӳ��ȿ��� damping �� gravity ���߼�
+            //     // ��ȡ�����ĵ�һ�� ObiRope �ĳ���
+            ObiRope rope = GetFirstRope();
+            if (rope == null) return;
+
+            float currentLength = rope.restLength;
 
             // ������Ϣ�������ǰ���ӵĳ���
-        Debug.Log($"Current Rope Length: {currentLength}");
+            Debug.Log($"Current Rope Length: {currentLength}");
 
             // �������ӳ������� damping �� gravity
-        UpdateDampingAndGravityBasedOnLength(currentLength);
-        
+            UpdateDampingAndGravityBasedOnLength(currentLength);
+        }
     }
 
     // ��ȡ��һ�� ObiRope ʵ��
