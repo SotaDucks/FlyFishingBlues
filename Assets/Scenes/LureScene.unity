@@ -22175,7 +22175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1049168017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32578,7 +32578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RigLayers:
   - m_Rig: {fileID: 1049168017}
-    m_Active: 1
+    m_Active: 0
   m_Effectors: []
 --- !u!95 &1591637866
 Animator:
@@ -32680,7 +32680,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.6958352, y: 2.7091575, z: 5.9360642}
-  m_Center: {x: -0.10277403, y: -0.17116074, z: -2.4680703}
+  m_Center: {x: -0.01, y: -0.11, z: 5.94}
 --- !u!114 &1591637875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42880,6 +42880,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: man (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489618056210604681, guid: b7bb9d12aa81e6a498444c322e251f80,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6721012216601190652, guid: b7bb9d12aa81e6a498444c322e251f80,
         type: 3}
