@@ -12,7 +12,10 @@ public class BitePauser : MonoBehaviour
     // 三个需要激活/失活的UI组件，请在Inspector中进行赋值
     public GameObject uiComponent1;
     public GameObject uiComponent2;
-    public GameObject uiComponent3; // 新增的UI组件
+    public GameObject FishOn;
+    
+
+    // 新增的UI组件
 
     // 防止多次触发冻结
     private bool isFrozen = false;
@@ -22,10 +25,7 @@ public class BitePauser : MonoBehaviour
         // 在游戏开始时确保所有UI组件处于未激活状态
         if (uiComponent1 != null)
             uiComponent1.SetActive(false);
-        if (uiComponent2 != null)
-            uiComponent2.SetActive(false);
-        if (uiComponent3 != null)
-            uiComponent3.SetActive(false); // 确保第三个UI组件初始为未激活
+// 确保第三个UI组件初始为未激活
     }
 
     void Update()
@@ -58,8 +58,8 @@ public class BitePauser : MonoBehaviour
         // 激活两个UI组件，立即显示
         if (uiComponent1 != null)
             uiComponent1.SetActive(true);
-        if (uiComponent2 != null)
-            uiComponent2.SetActive(true);
+             FishOn.SetActive(true);
+             uiComponent2.SetActive(false);
 
         // 等待剩余的0.1秒再冻结游戏
         float remainingDelay = delayDuration - uiActivationDelay;
@@ -81,16 +81,13 @@ public class BitePauser : MonoBehaviour
                 Time.timeScale = 1f;
 
                 // 失活两个UI组件
-                if (uiComponent1 != null)
-                    uiComponent1.SetActive(false);
-                if (uiComponent2 != null)
-                    uiComponent2.SetActive(false);
+
+                WhenBtnPressed2.isFishTired = true;
 
                 // 激活第三个UI组件
-                if (uiComponent3 != null)
-                    uiComponent3.SetActive(true);
 
-                // 禁用该组件，防止再次冻结
+
+                    // 禁用该组件，防止再次冻结
                 this.enabled = false;
 
                 // 结束协程
