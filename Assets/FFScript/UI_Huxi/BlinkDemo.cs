@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using Beautify.Universal;
 using DG.Tweening;
+using DialogueEditor;
 public class Demo : MonoBehaviour {
 
 
@@ -14,12 +15,29 @@ public class Demo : MonoBehaviour {
     [Header("眨眼参数")]
     public float blinkDuration = 0.2f; // 单次眨眼时长
     public int blinkLoops = 3; // 眨眼来回次数
+    public float delayTime;
+    public NPCConversation Conversation;
+
 
     void Start()
     {
         StartDizzyEffect();
+        ExecuteAfterDelay(delayTime);
+    }
+    public void ExecuteAfterDelay(float delay)
+    {
+        DOVirtual.DelayedCall(delay, () =>
+        {
+           
+            YourCommand(); // 替换成你自己的方法
+        });
     }
 
+    private void YourCommand()
+    {
+        // 在这里写你要执行的命令
+        ConversationManager.Instance.StartConversation(Conversation);
+    }
     public void StartDizzyEffect()
     {
         // 确保一开始模糊效果被激活
@@ -51,6 +69,7 @@ public class Demo : MonoBehaviour {
         DOVirtual.DelayedCall(0f, BlinkOnce) // 立即开始第一次 Blink
             .OnComplete(() =>
             {
+              
                 // 循环调用 Blink
                 DOTween.Sequence()
                     .AppendInterval(blinkInterval)
@@ -62,6 +81,6 @@ public class Demo : MonoBehaviour {
     private void BlinkOnce()
     {
         BeautifySettings.Blink(blinkDuration);
-        Debug.Log("眨眼一次");
+       
     }
 }
