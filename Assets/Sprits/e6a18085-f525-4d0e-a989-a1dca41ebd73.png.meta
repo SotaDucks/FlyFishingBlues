@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d55cf9097c768bc4c966ae778209b41c
+guid: 4fc8a972cd8f550418816eb3fc7661fe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,159 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: emoji_0
+      name: e6a18085-f525-4d0e-a989-a1dca41ebd73_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 652
-        width: 283
+        x: 0
+        y: 666.6666
+        width: 368
+        height: 333.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de14282358770654785320ea002b24ff
+      internalID: -828186657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: e6a18085-f525-4d0e-a989-a1dca41ebd73_1
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 666.6666
+        width: 368
+        height: 333.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4648f5402614906458471868d54ddefb
+      internalID: -1482022174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: e6a18085-f525-4d0e-a989-a1dca41ebd73_2
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 666.6666
+        width: 368
+        height: 333.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fcfea89406476489520599a072b5a6
+      internalID: -710115164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: e6a18085-f525-4d0e-a989-a1dca41ebd73_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 344
+        width: 362
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60338114055973540bd1d45fad011563
+      internalID: 1115635044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: e6a18085-f525-4d0e-a989-a1dca41ebd73_4
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 344
+        width: 362
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7768a612f3aecf347ba58e32b5632056
+      internalID: -1045123412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: e6a18085-f525-4d0e-a989-a1dca41ebd73_5
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 344
+        width: 359
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ae73f17d62f4341963356fe97f2133
+      internalID: 123214464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: e6a18085-f525-4d0e-a989-a1dca41ebd73_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 353
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab90c9724c4fa984caafce9185adc64f
+      internalID: -60235470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: e6a18085-f525-4d0e-a989-a1dca41ebd73_7
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 23
+        width: 356
         height: 319
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -124,62 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ff4d7d15fbbfd04cacbced7c81a068f
-      internalID: -322270689
+      spriteID: 67ebc091fea83984aa608aa4f367cf16
+      internalID: -1264708812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emoji_1
+      name: e6a18085-f525-4d0e-a989-a1dca41ebd73_8
       rect:
         serializedVersion: 2
-        x: 342
-        y: 663
-        width: 309
-        height: 308
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 17, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e954dcc24fcf8f4fbafad89bb7b9401
-      internalID: -1323071971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoji_2
-      rect:
-        serializedVersion: 2
-        x: 624
-        y: 663
-        width: 295
-        height: 310
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 21, w: 11}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbef71fd88832aa40bbeadd01b0a9bfc
-      internalID: 1201190328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoji_3
-      rect:
-        serializedVersion: 2
-        x: 914
-        y: 660
-        width: 269
-        height: 293
+        x: 742
+        y: 22
+        width: 353
+        height: 320
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,176 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c69580b18c1f0e4fa07a08199494a6b
-      internalID: 117842196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoji_4
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 346
-        width: 278
-        height: 303
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3b34e011afa87f4a9c591da8c1a61a4
-      internalID: -940876801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoji_5
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 346
-        width: 285
-        height: 302
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e99a68fc651a92499f716e3d3cee9d5
-      internalID: -1813535312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoji_6
-      rect:
-        serializedVersion: 2
-        x: 638
-        y: 344
-        width: 261
-        height: 305
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbe4d304d1f10844795857776013bcc6
-      internalID: -1595082421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoji_7
-      rect:
-        serializedVersion: 2
-        x: 912
-        y: 344
-        width: 289
-        height: 303
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a25eee23ba05c5f4b928eb5a053aeb70
-      internalID: -1962066362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoji_8
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 28
-        width: 278
-        height: 301
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad78a6cd095c5da4cb2ec106b0e1d356
-      internalID: 1951207397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoji_9
-      rect:
-        serializedVersion: 2
-        x: 324
-        y: 0
-        width: 309
-        height: 340
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 21, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cc191cf1a4d10148aebe9dab5c8013d
-      internalID: -118669623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoji_10
-      rect:
-        serializedVersion: 2
-        x: 618
-        y: 27
-        width: 309
-        height: 305
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 13, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2404d5c7eedc6b44f8024c1147fbd6bf
-      internalID: 654919771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: emoji_11
-      rect:
-        serializedVersion: 2
-        x: 925
-        y: 26
-        width: 261
-        height: 308
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6042ec54eb2f2e449bb7a2fcdea0d514
-      internalID: -1831003496
+      spriteID: ca956c516411b1946ba9087d2c0e15e3
+      internalID: 1794383350
       vertices: []
       indices: 
       edges: []
@@ -364,7 +301,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c7d00e31648885f4aae0e98cbdfeb9a8
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -372,18 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      emoji_0: -322270689
-      emoji_1: -1323071971
-      emoji_10: 654919771
-      emoji_11: -1831003496
-      emoji_2: 1201190328
-      emoji_3: 117842196
-      emoji_4: -940876801
-      emoji_5: -1813535312
-      emoji_6: -1595082421
-      emoji_7: -1962066362
-      emoji_8: 1951207397
-      emoji_9: -118669623
+      e6a18085-f525-4d0e-a989-a1dca41ebd73_0: -828186657
+      e6a18085-f525-4d0e-a989-a1dca41ebd73_1: -1482022174
+      e6a18085-f525-4d0e-a989-a1dca41ebd73_2: -710115164
+      e6a18085-f525-4d0e-a989-a1dca41ebd73_3: 1115635044
+      e6a18085-f525-4d0e-a989-a1dca41ebd73_4: -1045123412
+      e6a18085-f525-4d0e-a989-a1dca41ebd73_5: 123214464
+      e6a18085-f525-4d0e-a989-a1dca41ebd73_6: -60235470
+      e6a18085-f525-4d0e-a989-a1dca41ebd73_7: -1264708812
+      e6a18085-f525-4d0e-a989-a1dca41ebd73_8: 1794383350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

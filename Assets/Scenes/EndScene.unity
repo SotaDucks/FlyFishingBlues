@@ -11204,8 +11204,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946955270}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -767}
+  m_LocalRotation: {x: -0.0000000037252894, y: -0.08423064, z: -0, w: 0.99644625}
+  m_LocalPosition: {x: 0, y: 0, z: -505.29462}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11213,7 +11213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0, y: -0}
+  m_AnchoredPosition: {x: 0.8121948, y: -48.111115}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &946955272
@@ -12196,7 +12196,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 0}
   Icon: {fileID: -118669623, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 85efa8527a388374a8904481acf2902d, type: 3}
 --- !u!114 &994258178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12226,8 +12226,8 @@ MonoBehaviour:
         m_CallState: 2
   NodeID: 12
   TMPFont: {fileID: 0}
-  Icon: {fileID: -1831003496, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Icon: {fileID: 117842196, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
+  Audio: {fileID: 8300000, guid: 3e870f7da16a9ed43820d738d2746bb8, type: 3}
 --- !u!114 &994258179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12257,8 +12257,8 @@ MonoBehaviour:
         m_CallState: 2
   NodeID: 15
   TMPFont: {fileID: 0}
-  Icon: {fileID: -1962066362, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Icon: {fileID: -940876801, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
+  Audio: {fileID: 8300000, guid: 60a0e3925181bb6448e1112d5666778e, type: 3}
 --- !u!114 &994258180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12288,8 +12288,8 @@ MonoBehaviour:
         m_CallState: 2
   NodeID: 19
   TMPFont: {fileID: 0}
-  Icon: {fileID: -1831003496, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Icon: {fileID: -1962066362, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
+  Audio: {fileID: 8300000, guid: 9b15734e80fbc1247a1e4da7dda8dce5, type: 3}
 --- !u!1001 &998973502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14473,7 +14473,7 @@ MonoBehaviour:
   waterLevel: 2.13
   waterLevelTransform: {fileID: 0}
   waterLevelPadding: 0.5
-  waterMaterial: {fileID: 2100000, guid: ed0416582c0e8af4c95f12cde52ed507, type: 2}
+  waterMaterial: {fileID: 2100000, guid: 95c23b07e0b7785478cfdd78cd6a4f5f, type: 2}
   dynamicMaterial: 0
   settings: {fileID: 0}
   useVolumeBlending: 0
@@ -15506,18 +15506,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 20
-  json: "{\"Options\":[],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"isFree\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":416,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nothing
-    left out there. No fish, no life\u2014just junk and a whole lotta regret. Didn\u2019t
-    think I\u2019d live to see it this bad.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman
-    (now old)\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":418.5,\"yPos\":172},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"That\u2019s
-    me back then, learning from him. Now I\u2019m the old man, talking to myself\u2014and
-    to you.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman
-    (now old)\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":417.5,\"yPos\":326},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Don\u2019t
-    wait \u2018til it\u2019s too late, \u2018til there\u2019s nothing left but trash
-    and echoes. \",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman
-    (now old)\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":416,\"yPos\":483},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"The
-    ocean\u2019s crying out\u2014protect it, starting right now. \\nPlease.\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman
-    (now old)\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+  json: "{\"Options\":[],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"isFree\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":440.8,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nothing
+    is left out there. No fish, no life\u2014just junk and a whole lotta regret.
+    Didn\u2019t think I\u2019d live to see it this bad.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":441.699982,\"yPos\":167.200012},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
+    Now I\u2019m the old man, talking to myself\u2014and to you.\\r\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":439.9,\"yPos\":313.2},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Wish
+    I'd cared more ...it's too late, too late...\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":438.4,\"yPos\":435.000031},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Now
+    the fisherman got old, the fish gone quiet, and the river only sings the blues.\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1}]}"
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
@@ -15537,7 +15531,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1481800446}
         m_TargetAssemblyTypeName: EndSceneController, Assembly-CSharp
-        m_MethodName: EndConversation
+        m_MethodName: SwitchConversation
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26804,7 +26798,7 @@ PrefabInstance:
     - target: {fileID: 3852935656990629450, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 56.2
+      value: 24.6
       objectReference: {fileID: 0}
     - target: {fileID: 3900108754347413305, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
@@ -26826,6 +26820,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConversationManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
+        type: 3}
+      propertyPath: OptionImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 92d4953fb2ac47f4dbb5c2abc1f86e97,
+        type: 3}
+    - target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
+        type: 3}
+      propertyPath: BackgroundImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 92d4953fb2ac47f4dbb5c2abc1f86e97,
+        type: 3}
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
       propertyPath: m_Pivot.x
@@ -26983,8 +26989,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
+      propertyPath: m_fontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
+        type: 3}
       propertyPath: m_textAlignment
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
