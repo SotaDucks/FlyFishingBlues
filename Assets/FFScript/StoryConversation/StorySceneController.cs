@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DialogueEditor;
+using UnityEngine.SceneManagement;
 
 public class StorySceneController : MonoBehaviour
 {
@@ -84,5 +85,10 @@ public class StorySceneController : MonoBehaviour
                 oldFishermanAnimator.SetTrigger("OldTalk");
             }
         }
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene("FFInstructionScene");
     }
 } 

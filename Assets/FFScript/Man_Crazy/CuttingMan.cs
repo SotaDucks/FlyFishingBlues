@@ -4,6 +4,7 @@ using DG.Tweening;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CuttingMan : MonoBehaviour
@@ -56,8 +57,10 @@ public class CuttingMan : MonoBehaviour
         {
             // 动画完成后，调用 EnableFollowLine 方法
             textMeshProUGUI1.DOFade(1f, 1f);
-            Debug.Log("这里切换场景");
+            Invoke("LoadScene", 1f); 
         });;
         
     }
+    private void LoadScene()
+    { SceneManager.LoadScene("WakeUp"); }
 }

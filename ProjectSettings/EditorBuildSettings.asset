@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CuttingFish.unity
     guid: 385012da4b821234a92cc6d597bffcfd
+  - enabled: 1
+    path: Assets/Scenes/Unhook Man.unity
+    guid: f610f4ec179909e4193241627cfc51a1
+  - enabled: 1
+    path: Assets/Scenes/CuttingDianMan.unity
+    guid: d5a6e2213cd46c54891e096625eae1db
+  - enabled: 1
+    path: Assets/Scenes/WakeUp.unity
+    guid: fbab7c5d2675c674f9beb346ce76848e
+  - enabled: 1
+    path: Assets/Scenes/SharkScene.unity
+    guid: 4d6a5226bfa0363488b82dd32588db93
   m_configObjects: {}

@@ -8,6 +8,10 @@ public class SceneLoader : MonoBehaviour
    public void CutFish() { 
         SceneManager.LoadScene("CuttingFish");
     }
+    public void CutEel()
+    {
+        SceneManager.LoadScene("CuttingDianMan");
+    }
     public void DelayLoad()
     {
         Invoke("FishFree", 1.5f);
@@ -17,5 +21,8 @@ public class SceneLoader : MonoBehaviour
 
         SceneManager.LoadScene("LandScene");
     }
-
+    public void LoadSharkScene()
+    {
+        SceneManager.LoadScene("SharkScene");
+    }
 }
