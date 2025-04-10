@@ -8,24 +8,51 @@ public class ManGoWithShark : MonoBehaviour
 {
     public Transform objectA;  // 待移动的物体 A
     public Transform objectB;  // 目标物体 B
+    public GameObject Child;
 
     [Tooltip("前5米的运动时间，建议保持较短")]
     public float fastMoveDuration = 0.1f;
     [Tooltip("剩余每5米所消耗的时间，数值越大减速越明显")]
     public float slowMoveDurationPer5Meters = 1.0f;
     public NPCConversation Conversation;
-    private void LoadConversation()
+    public void LoadConversation()
     {
         ConversationManager.Instance.StartConversation(Conversation);
 
     }
+    private Animator animator;
+    private bool animationComplete = false;
+    private void Start()
+    {
+        animator = Child.GetComponent<Animator>();
+        
+    }
     void Update()
     {
-       
-        // 按下空格键时，启动运动 tween
         if (Input.GetKeyDown(KeyCode.V))
         {
-            Invoke("LoadConversation", 1f);
+            animator.SetTrigger("TriggerV");
+            Invoke("GoShark", 0.5f);
+        }
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
+        // 检查动画是否播放完成
+        if (stateInfo.normalizedTime >= 1f && !animationComplete)
+        {
+            animationComplete = true;
+            Debug.Log("动画播放完毕，执行命令123123！");
+            // 在这里执行你的命令
+           
+        }
+       
+    }
+    public void GoShark()
+    {
+        Debug.Log("动画播放完毕，执行命令！");
+        // 按下空格键时，启动运动 tween
+
+
+        Invoke("LoadConversation", 1f);
             // 取消 objectA 现有的 Tween，防止冲突
             objectA.DOKill();
 
@@ -52,7 +79,7 @@ public class ManGoWithShark : MonoBehaviour
                                   .SetEase(Ease.Linear));
                 seq.Append(objectA.DOMove(objectB.position, slowDuration)
                                   .SetEase(Ease.OutQuad));
-            }
+            
         }
     }
 }

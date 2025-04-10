@@ -12,10 +12,13 @@ public class SharkController : MonoBehaviour
     public Ease moveEaseType = Ease.InOutSine; // ª∫∂Ø¿‡–Õ
     public GameObject Hook;
    public  Rigidbody rb;
+   
     private void Start()
     {
-     rb=Hook.GetComponent<Rigidbody>();
+       
+        rb =Hook.GetComponent<Rigidbody>();
     }
+    
     public void MoveFish()
     {
         objectToMove.DOMove(targetPosition.position, moveDuration)

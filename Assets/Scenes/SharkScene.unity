@@ -19210,52 +19210,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 554539448}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &921972240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 921972242}
-  - component: {fileID: 921972241}
-  m_Layer: 0
-  m_Name: BurstCollisionWorld
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &921972241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921972240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1a161c4294214a4fbcb7e9e94800494, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cellSpans:
-    m_AlignBytes: 16
---- !u!4 &921972242
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921972240}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &921988295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37069,7 +37023,7 @@ GameObject:
   - component: {fileID: 1829636570}
   - component: {fileID: 1829636571}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Character123
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37109,7 +37063,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectA: {fileID: 1829636570}
   objectB: {fileID: 543450652116979901}
-  fastMoveDuration: 0.1
+  Child: {fileID: 919132148848886868}
+  fastMoveDuration: 1.48
   slowMoveDurationPer5Meters: 0.5
   Conversation: {fileID: 864191244}
 --- !u!1001 &1830865974
@@ -42072,6 +42027,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2114725484}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2120571508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2120571510}
+  - component: {fileID: 2120571509}
+  m_Layer: 0
+  m_Name: BurstCollisionWorld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2120571509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120571508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a161c4294214a4fbcb7e9e94800494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellSpans:
+    m_AlignBytes: 16
+--- !u!4 &2120571510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120571508}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2123843888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43287,6 +43288,7 @@ GameObject:
   - component: {fileID: 5866666021142267028}
   - component: {fileID: 902478089}
   - component: {fileID: 902478088}
+  - component: {fileID: 5866666021142267029}
   m_Layer: 0
   m_Name: autoriggedmainch
   m_TagString: Untagged
@@ -46018,6 +46020,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5866666021142267029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148848886868}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09e499443f218f14f9f39d5298289721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shark: {fileID: 0}
 --- !u!4 &6007383848154212312
 Transform:
   m_ObjectHideFlags: 0
@@ -48738,4 +48753,4 @@ SceneRoots:
   - {fileID: 5006512735203713796}
   - {fileID: 5006512736141211418}
   - {fileID: 543450653388501203}
-  - {fileID: 921972242}
+  - {fileID: 2120571510}
