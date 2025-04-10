@@ -6701,7 +6701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &414680841
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21670,7 +21670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1001406118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24690,7 +24690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1212301793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26564,7 +26564,7 @@ MonoBehaviour:
   delayDuration: 2
   uiComponent1: {fileID: 1448194112}
   uiComponent2: {fileID: 414680840}
-  uiComponent3: {fileID: 1212301792}
+  FishOn: {fileID: 0}
 --- !u!4 &1308327744
 Transform:
   m_ObjectHideFlags: 0
@@ -29104,7 +29104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1448194113
 RectTransform:
   m_ObjectHideFlags: 0

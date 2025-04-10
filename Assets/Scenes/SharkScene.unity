@@ -10382,12 +10382,12 @@ MonoBehaviour:
   dynamicMaterial: 0
   settings: {fileID: 0}
   useVolumeBlending: 0
-  startDistance: 0
-  fogDensity: 5.08
-  heightFogDepth: 25
-  heightFogDensity: 1
-  heightFogBrightness: 0.5
-  fogBrightness: 1
+  startDistance: -2.51
+  fogDensity: 9.1
+  heightFogDepth: 0
+  heightFogDensity: 0
+  heightFogBrightness: 0.231
+  fogBrightness: 0.1
   subsurfaceStrength: 0.5
   causticsStrength: 1
   distortionStrength: 0.25
@@ -27868,7 +27868,7 @@ MonoBehaviour:
   delayDuration: 2
   uiComponent1: {fileID: 1448194112}
   uiComponent2: {fileID: 414680840}
-  uiComponent3: {fileID: 1212301792}
+  FishOn: {fileID: 0}
 --- !u!4 &1308327744
 Transform:
   m_ObjectHideFlags: 0
