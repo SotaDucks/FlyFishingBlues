@@ -33,14 +33,14 @@ public class Attract_Shark : MonoBehaviour
             // 获取鱼钩的Y位置，确保小于-4
             if ( shark.eulerAngles.y < Max && shark.transform.eulerAngles.y > Min)
             {
-                Debug.LogWarning("角度合适了");
-                if (Working)
-                {
+                
+              
+                
                     Working = true;
                     BanFollowLine();
                     MoveTowardsObject(moveDistance);
                     Debug.LogWarning("移动了");
-                }
+                
                
                    
     
