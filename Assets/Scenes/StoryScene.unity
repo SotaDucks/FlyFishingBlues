@@ -7201,7 +7201,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.52
+      value: 11.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
         type: 3}
@@ -7211,12 +7211,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.4
+      value: 14.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5859712
+      value: 0.49024743
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
         type: 3}
@@ -7226,7 +7226,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.81033194
+      value: -0.8715833
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
         type: 3}
@@ -7241,7 +7241,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -108.257
+      value: -121.286
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
         type: 3}
@@ -16694,25 +16694,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 21
-  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":79.66669,\"yPos\":1124.3324},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Go
-    to fishing practice !\",\"parentUIDs\":[18],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"isFree\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":87.33334,\"yPos\":119.333145},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"My
+  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":408.0001,\"yPos\":568.332642},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Go
+    to fishing practice !\",\"parentUIDs\":[18],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"isFree\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":415.666748,\"yPos\":-436.6667},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"My
     grandpa used to talk about fly fishing all the time. Said it was like painting
     with the wind. Today\u2019s my first real shot at it.I hope I don\u2019t mess
-    it up!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":91.70001,\"yPos\":285.333221},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hey
+    it up!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.5,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":420.033417,\"yPos\":-270.666656},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hey
     there! Fly fishing, huh? That\u2019s a rare sight these days, most kids your
     age are glued to their phones, not a rod.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Old
-    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":89.83328,\"yPos\":430.332855},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"My
+    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.5,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":418.1667,\"yPos\":-125.666992},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"My
     grandpa say it\u2019s not just fishing....it\u2019s a way to connect with nature,
-    you know? Respect it.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":86.16666,\"yPos\":561.333},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
+    you know? Respect it.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.5,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":414.500061,\"yPos\":5.333267},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
     You\u2019ve got a good start already.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Old
-    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":87.16666,\"yPos\":706.333252},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Alright,
+    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.5,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":415.500061,\"yPos\":151.000122},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Alright,
     you know how to cast, right?\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Old
-    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":84.16666,\"yPos\":845.3329},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Like
+    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.5,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":412.500061,\"yPos\":289.3329},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Like
     this? It feels kinda awkward.\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Young
-    Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":102.5,\"yPos\":967.666},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Imagine
+    Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.5,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":402.8334,\"yPos\":411.66568},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Imagine
     you\u2019re teasing the fish, not chasing \u2018em. You\u2019ll get it, just
     keep practicing.\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Old
-    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1}]}"
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
@@ -16736,8 +16736,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1481800444}
         m_TargetAssemblyTypeName: StorySceneController, Assembly-CSharp
-        m_MethodName: LoadNextScene
-        m_Mode: 1
+        m_MethodName: SwitchCharacter
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18443,7 +18443,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440450511}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: a92144322de209c4eb93fb23c528674b, type: 3}
+  m_Avatar: {fileID: 9000000, guid: b4bf47dc0e93ca14a90cc508199b94ec, type: 3}
   m_Controller: {fileID: 9100000, guid: 2a9c9b7e848372f40a90373b10f8fd92, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0

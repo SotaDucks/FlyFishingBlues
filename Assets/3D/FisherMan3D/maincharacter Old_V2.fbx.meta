@@ -3,7 +3,12 @@ guid: a92144322de209c4eb93fb23c528674b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pants.001
+    second: {fileID: 2100000, guid: 0fb5e4890ad81824880c96712a4f71aa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -58,11 +58,12 @@ public class StorySceneController : MonoBehaviour
     }
     public void SetTalk()
     {
-        oldFishermanAnimator.SetTrigger("Talking"); Debug.Log("123");
+        oldFishermanAnimator.SetTrigger("Talking"); 
+        Debug.Log("123");
     }
     public void OnPlayButtonPressed()
     {
-        
+        Debug.Log("walk");
         oldFishermanAnimator.SetTrigger("Walk");
         isMoving = true;
         if (playButton != null)

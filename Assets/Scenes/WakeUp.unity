@@ -25295,10 +25295,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 4
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":316.000061,"yPos":395.000183},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":".........","parentUIDs":[1],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":315.000061,"yPos":29.3333588},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Welcome
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":207.666718,"yPos":450.3335},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":".........","parentUIDs":[1],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":206.666718,"yPos":84.66665},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Welcome
     back to the land of the living","parentUIDs":[],"AdvanceDialogueAutomatically":true,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Old
-    Man","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0.1,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":315.3335,"yPos":280.266785},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Maybe
-    that''s Mother Nature''s payback for what you''ve been doing to her?","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fisherman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":false,"xPos":312.200134,"yPos":147.200027},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"What
+    Man","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0.1,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":207.000153,"yPos":335.600037},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Maybe
+    that''s Mother Nature''s payback for what you''ve been doing to her?","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fisherman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":false,"xPos":204.533478,"yPos":203.866623},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"What
     the hell... Is this thing some freak of nature?! Eels never packed this much
     punch before..","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fisherman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -26207,7 +26207,7 @@ MonoBehaviour:
   NodeID: 3
   TMPFont: {fileID: 0}
   Icon: {fileID: 1115635044, guid: 4fc8a972cd8f550418816eb3fc7661fe, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 0ed06c753e63d654099a988fe26bc25f, type: 3}
 --- !u!1001 &1712511913
 PrefabInstance:
   m_ObjectHideFlags: 0
