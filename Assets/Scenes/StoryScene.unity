@@ -7190,6 +7190,78 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 594948225}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &596647340
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 825650566}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.52
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.662
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5859712
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.81033194
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -108.257
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      propertyPath: m_Name
+      value: maincharacter Old_V2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a92144322de209c4eb93fb23c528674b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1440450513}
+  m_SourcePrefab: {fileID: 100100000, guid: a92144322de209c4eb93fb23c528674b, type: 3}
 --- !u!1 &605842872
 GameObject:
   m_ObjectHideFlags: 0
@@ -10479,6 +10551,7 @@ Transform:
   m_Children:
   - {fileID: 1081144156}
   - {fileID: 1497092458}
+  - {fileID: 1440450512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &853524225
@@ -12248,7 +12321,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 0}
   Icon: {fileID: -828186657, guid: 4fc8a972cd8f550418816eb3fc7661fe, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: c447a2b9ff76d224d82fdd28e91ec75d, type: 3}
 --- !u!114 &994258178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12276,10 +12349,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1481800444}
+        m_TargetAssemblyTypeName: StorySceneController, Assembly-CSharp
+        m_MethodName: SetTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 12
   TMPFont: {fileID: 0}
   Icon: {fileID: 1201190328, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: edde1fbb565b36b4887627598a49ca10, type: 3}
 --- !u!114 &994258179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12310,7 +12395,7 @@ MonoBehaviour:
   NodeID: 15
   TMPFont: {fileID: 0}
   Icon: {fileID: -1813535312, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: c0c5bc757b7ebb8499abef7c3f02b11f, type: 3}
 --- !u!114 &994258180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12341,7 +12426,7 @@ MonoBehaviour:
   NodeID: 13
   TMPFont: {fileID: 0}
   Icon: {fileID: -1482022174, guid: 4fc8a972cd8f550418816eb3fc7661fe, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: f3a6084f194e6c64ea0169a4c021d253, type: 3}
 --- !u!114 &994258181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12372,7 +12457,7 @@ MonoBehaviour:
   NodeID: 16
   TMPFont: {fileID: 0}
   Icon: {fileID: -1323071971, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 3e882a1e90001f94b9e3b9f67d219d49, type: 3}
 --- !u!114 &994258182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12403,7 +12488,7 @@ MonoBehaviour:
   NodeID: 18
   TMPFont: {fileID: 0}
   Icon: {fileID: -322270689, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: c4eba3de02c35374a8b0b60a54dd3b20, type: 3}
 --- !u!114 &994258183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12434,7 +12519,7 @@ MonoBehaviour:
   NodeID: 17
   TMPFont: {fileID: 0}
   Icon: {fileID: 1115635044, guid: 4fc8a972cd8f550418816eb3fc7661fe, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: b19a7cd2a8fb74a40a2ad639fc521f90, type: 3}
 --- !u!114 &994258184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16609,22 +16694,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 21
-  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":439.000061,\"yPos\":1007},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Go
-    to fishing practice !\",\"parentUIDs\":[18],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"isFree\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":448.000061,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"My
+  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":79.66669,\"yPos\":1124.3324},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Go
+    to fishing practice !\",\"parentUIDs\":[18],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"isFree\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":87.33334,\"yPos\":119.333145},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"My
     grandpa used to talk about fly fishing all the time. Said it was like painting
     with the wind. Today\u2019s my first real shot at it.I hope I don\u2019t mess
-    it up!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":449.700073,\"yPos\":168},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hey
+    it up!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":91.70001,\"yPos\":285.333221},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hey
     there! Fly fishing, huh? That\u2019s a rare sight these days, most kids your
     age are glued to their phones, not a rod.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Old
-    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":448.500061,\"yPos\":311},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"My
+    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":89.83328,\"yPos\":430.332855},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"My
     grandpa say it\u2019s not just fishing....it\u2019s a way to connect with nature,
-    you know? Respect it.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":445.500061,\"yPos\":444},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
+    you know? Respect it.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":86.16666,\"yPos\":561.333},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
     You\u2019ve got a good start already.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Old
-    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":446.500061,\"yPos\":589},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Alright,
+    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":87.16666,\"yPos\":706.333252},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Alright,
     you know how to cast, right?\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Old
-    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":443.500061,\"yPos\":728},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Like
+    Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":84.16666,\"yPos\":845.3329},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Like
     this? It feels kinda awkward.\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Young
-    Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":438.500061,\"yPos\":865},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Imagine
+    Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":102.5,\"yPos\":967.666},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Imagine
     you\u2019re teasing the fish, not chasing \u2018em. You\u2019ll get it, just
     keep practicing.\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Old
     Man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
@@ -16651,8 +16736,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1481800444}
         m_TargetAssemblyTypeName: StorySceneController, Assembly-CSharp
-        m_MethodName: SwitchCharacter
-        m_Mode: 6
+        m_MethodName: LoadNextScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18337,6 +18422,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1438968475}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1440450511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a92144322de209c4eb93fb23c528674b,
+    type: 3}
+  m_PrefabInstance: {fileID: 596647340}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1440450512 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a92144322de209c4eb93fb23c528674b,
+    type: 3}
+  m_PrefabInstance: {fileID: 596647340}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1440450513
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440450511}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a92144322de209c4eb93fb23c528674b, type: 3}
+  m_Controller: {fileID: 9100000, guid: 2a9c9b7e848372f40a90373b10f8fd92, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1452660367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18653,7 +18771,7 @@ MonoBehaviour:
   moveSpeed: 5
   playButton: {fileID: 1964668507}
   youngFishermanAnimator: {fileID: 1081144157}
-  oldFishermanAnimator: {fileID: 1497092459}
+  oldFishermanAnimator: {fileID: 1440450513}
   Conversation: {fileID: 1328354914}
 --- !u!4 &1481800445
 Transform:
@@ -19039,7 +19157,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 2a9c9b7e848372f40a90373b10f8fd92, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -19047,6 +19165,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1497092460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402910308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09123a0188fb5d0459ba5c0c4a55d4f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1498713670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24618,7 +24748,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 12d04c70dffabbb4aae086790c5fa3e6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.751766
+      value: -6.662
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12d04c70dffabbb4aae086790c5fa3e6,
         type: 3}
@@ -25185,6 +25315,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: old_Talking
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12d04c70dffabbb4aae086790c5fa3e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1139325989675019811, guid: 12d04c70dffabbb4aae086790c5fa3e6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -25698,6 +25833,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1497092459}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 12d04c70dffabbb4aae086790c5fa3e6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1497092460}
   m_SourcePrefab: {fileID: 100100000, guid: 12d04c70dffabbb4aae086790c5fa3e6, type: 3}
 --- !u!1001 &1810536753
 PrefabInstance:
@@ -29507,7 +29646,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964668505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29516,7 +29655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: 155}
+  m_AnchoredPosition: {x: -825, y: 484}
   m_SizeDelta: {x: 226.757, y: 102.552}
   m_Pivot: {x: 0.49999994, y: 0.5}
 --- !u!114 &1964668507
