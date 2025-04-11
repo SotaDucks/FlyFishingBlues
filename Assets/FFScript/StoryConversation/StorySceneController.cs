@@ -56,9 +56,14 @@ public class StorySceneController : MonoBehaviour
             hasStartedConversation = true;
         }
     }
-
+    public void SetTalk()
+    {
+        oldFishermanAnimator.SetTrigger("Talking"); Debug.Log("123");
+    }
     public void OnPlayButtonPressed()
     {
+        
+        oldFishermanAnimator.SetTrigger("Walk");
         isMoving = true;
         if (playButton != null)
         {
@@ -82,7 +87,7 @@ public class StorySceneController : MonoBehaviour
         {
             if (oldFishermanAnimator != null)
             {
-                oldFishermanAnimator.SetTrigger("OldTalk");
+               // oldFishermanAnimator.SetTrigger("OldTalk");
             }
         }
     }
