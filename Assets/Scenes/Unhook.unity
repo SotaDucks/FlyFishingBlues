@@ -1013,9 +1013,9 @@ RectTransform:
   - {fileID: 665349937}
   m_Father: {fileID: 1496630982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 12.5, y: -12.5}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &51463525
@@ -4654,9 +4654,9 @@ RectTransform:
   - {fileID: 672456485}
   m_Father: {fileID: 1496630982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 97.5, y: -12.5}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &249477363
@@ -14795,116 +14795,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1157640166}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &761938867
-MeshCollider:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761938852}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8289370840607172496, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
---- !u!64 &761938868
-MeshCollider:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761938852}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7516383214407590062, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
---- !u!64 &761938869
-MeshCollider:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761938852}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -9125192631029689332, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
---- !u!64 &761938870
-MeshCollider:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761938852}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1442617521718296308, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
---- !u!64 &761938871
-MeshCollider:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761938852}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8775040578442622603, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
 --- !u!64 &761938872
 MeshCollider:
   m_ObjectHideFlags: 2
@@ -14926,7 +14816,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4641212727019098412, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
+  m_Mesh: {fileID: -458864579801845637, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
 --- !u!64 &761938873
 MeshCollider:
   m_ObjectHideFlags: 2
@@ -14948,7 +14838,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1274870885542486509, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
+  m_Mesh: {fileID: 7060461198530059576, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
 --- !u!64 &761938874
 MeshCollider:
   m_ObjectHideFlags: 2
@@ -14970,7 +14860,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -2702503960334996210, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
+  m_Mesh: {fileID: 3667672010626943365, guid: 65a5befe503fd564cacc619a1a09161c, type: 2}
 --- !u!114 &761938875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15006,11 +14896,6 @@ MonoBehaviour:
   - {fileID: 761938874}
   - {fileID: 761938873}
   - {fileID: 761938872}
-  - {fileID: 761938871}
-  - {fileID: 761938870}
-  - {fileID: 761938869}
-  - {fileID: 761938868}
-  - {fileID: 761938867}
   _isTrigger: 0
   _material: {fileID: 0}
 --- !u!1 &764054892
@@ -15466,9 +15351,9 @@ RectTransform:
   - {fileID: 741353634}
   m_Father: {fileID: 976302970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 12.5, y: -12.5}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &791138220
@@ -15825,9 +15710,9 @@ RectTransform:
   - {fileID: 130052363}
   m_Father: {fileID: 976302970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 97.5, y: -12.5}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &824511519
@@ -17475,7 +17360,7 @@ MonoBehaviour:
   NodeID: 7
   TMPFont: {fileID: 0}
   Icon: {fileID: 1201190328, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 353a78eafe8dd0d4f84f37d21fa853e0, type: 3}
 --- !u!114 &902323468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17551,7 +17436,7 @@ MonoBehaviour:
   NodeID: 10
   TMPFont: {fileID: 0}
   Icon: {fileID: 1201190328, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 7272b40bb7098814782dd808c407bf8e, type: 3}
 --- !u!114 &902323472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17570,7 +17455,7 @@ MonoBehaviour:
   NodeID: 13
   TMPFont: {fileID: 0}
   Icon: {fileID: 117842196, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: c2c0266fcfb56f742949b65aabe420dc, type: 3}
 --- !u!114 &902323473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17608,7 +17493,7 @@ MonoBehaviour:
   NodeID: 11
   TMPFont: {fileID: 0}
   Icon: {fileID: -1323071971, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: c01e8b7b7d1720a4da18fc1247678b49, type: 3}
 --- !u!114 &902323475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17677,7 +17562,7 @@ MonoBehaviour:
   NodeID: 24
   TMPFont: {fileID: 0}
   Icon: {fileID: 117842196, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 14cc98f1d106cd749ad709da956493ba, type: 3}
 --- !u!114 &902323478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17746,7 +17631,7 @@ MonoBehaviour:
   NodeID: 20
   TMPFont: {fileID: 0}
   Icon: {fileID: 1951207397, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 8b11636d937836f4ba5c66f1bcff3ecd, type: 3}
 --- !u!114 &902323481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17784,7 +17669,7 @@ MonoBehaviour:
   NodeID: 18
   TMPFont: {fileID: 0}
   Icon: {fileID: 117842196, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 047f0475ac7d0164b813faa5c478c840, type: 3}
 --- !u!1001 &906641825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18877,9 +18762,9 @@ RectTransform:
   - {fileID: 824511518}
   m_Father: {fileID: 1944713881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -80.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976302971
@@ -21373,26 +21258,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 761938872}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a708e4f257356f147a2022a67a318275,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 761938871}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a708e4f257356f147a2022a67a318275,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 761938870}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a708e4f257356f147a2022a67a318275,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 761938869}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a708e4f257356f147a2022a67a318275,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 761938868}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a708e4f257356f147a2022a67a318275,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 761938867}
   m_SourcePrefab: {fileID: 100100000, guid: a708e4f257356f147a2022a67a318275, type: 3}
 --- !u!1001 &1161611454
 PrefabInstance:
@@ -23312,7 +23177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1228255987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25439,7 +25304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1450002307
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26783,33 +26648,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 26
-  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":108.133438,\"yPos\":1529.7998},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Kill\",\"parentUIDs\":[20],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":669.466248,\"yPos\":1391.4646},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Release
-    the trout\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":362.633575,\"yPos\":1731.79785},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Don't
-    wet your hands\",\"parentUIDs\":[7],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":717.6331,\"yPos\":1733.79761},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Wet
-    your hands\",\"parentUIDs\":[7],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":181.800232,\"yPos\":1232.465},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Kill
-    the trout\",\"parentUIDs\":[15],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"isFree\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":448.800049,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Whoa,
-    I got one! Look at that\u2014it\u2019s a trout, right?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":622.2994,\"yPos\":1526.13184},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nice!
+  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":131.666672,\"yPos\":647.1329},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Kill\",\"parentUIDs\":[20],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":692.9999,\"yPos\":508.797058},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Release
+    the trout\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":386.167,\"yPos\":849.1308},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Don't
+    wet your hands\",\"parentUIDs\":[7],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":741.166138,\"yPos\":851.130554},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Wet
+    your hands\",\"parentUIDs\":[7],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":205.333664,\"yPos\":349.795959},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Kill
+    the trout\",\"parentUIDs\":[15],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"isFree\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":464.3333,\"yPos\":-903.333435},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Whoa,
+    I got one! Look at that\u2014it\u2019s a trout, right?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":602.4994,\"yPos\":660.131165},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nice!
     Wet your hands first before you touch her. She won't feel good if your hands
     are too warm.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"old
-    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":546.13324,\"yPos\":2168.13062},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ready
+    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":569.6664,\"yPos\":1285.46265},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ready
     to start unhook\",\"parentUIDs\":[24,25],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"old
-    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":425.466858,\"yPos\":477.135376},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"She\u2019s
+    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":449.000183,\"yPos\":-405.53302},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"She\u2019s
     a beauty, and young\u2014 How about we let her go? \",\"parentUIDs\":[19],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"old
-    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":414.333374,\"yPos\":657.3336},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Let
-    it go? I mean..... I worked so hard to catch her.....\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":409.666779,\"yPos\":840.130737},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Not
+    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":439.200073,\"yPos\":-227.335648},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Let
+    it go? I mean..... I worked so hard to catch her.....\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":432.533569,\"yPos\":-41.2053528},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Not
     a waste, son. It\u2019s a gift\u2014to her and to the sea. Your call, though.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"old
-    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":390.466949,\"yPos\":1068.79736},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"What
-    shoudle I do with this fish?\\n\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":445.1333,\"yPos\":146.134033},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sure
+    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":438.6671,\"yPos\":201.461258},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"What
+    shoudle I do with this fish?\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":467.3333,\"yPos\":-760.5336},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sure
     is! Trout like this only swim in clean water, you know. \",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"old
-    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":435.133423,\"yPos\":282.135376},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"That\u2019s
-    so cool. Grandpa would\u2019ve loved this.\",\"parentUIDs\":[18],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":121.0002,\"yPos\":1391.33252},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\\\"That\u2019s
+    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":458.6667,\"yPos\":-600.531555},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"That\u2019s
+    so cool. Grandpa would\u2019ve loved this.\",\"parentUIDs\":[18],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":184.533432,\"yPos\":469.998352},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\\\"That\u2019s
     your choice. But you\u2019ll feel this one day.\",\"parentUIDs\":[21],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"old
-    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":722.3001,\"yPos\":1831.80029},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Like
-    this? I don\u2019t wanna mess it up\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":703.3001,\"yPos\":1960.79858},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"You\u2019re
+    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":744.499756,\"yPos\":949.1336},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Like
+    this? I don\u2019t wanna mess it up\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":726.8331,\"yPos\":1078.13318},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"You\u2019re
     doing fine\u2014just take it easy.\",\"parentUIDs\":[22],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"old
-    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":352.633362,\"yPos\":1904.13354},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"emmm...
+    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":376.16687,\"yPos\":1021.46759},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"emmm...
     you are not listening...\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"old
-    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    man\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":1}]}"
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 117842196, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
@@ -26840,7 +26705,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1490834201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26894,9 +26771,9 @@ RectTransform:
   - {fileID: 249477362}
   m_Father: {fileID: 1944713881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496630983
@@ -28859,7 +28736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1638838550
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29277,7 +29154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1667943102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29718,7 +29595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1678542879
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35553,7 +35430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1997849055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35801,7 +35678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2002320219
 RectTransform:
   m_ObjectHideFlags: 0
