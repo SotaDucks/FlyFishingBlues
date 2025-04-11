@@ -6,6 +6,7 @@ public class LureFishingController : MonoBehaviour
     private readonly string RETRIEVE = "Retrieve";
     private readonly string SETTHEHOOK = "SetTheHook";
     private readonly string ISFISHING = "isFishing";
+    private readonly string LIFT_ROD = "LiftRod";
 
     void Start()
     {
@@ -53,13 +54,14 @@ public class LureFishingController : MonoBehaviour
 
 
         }
+        if (Input.GetKey(KeyCode.A))
+        {
+
+            animator.SetBool(LIFT_ROD, true);
+        }
     }
 
-        // if (Input.GetKey(KeyCode.A))
-        // {
-
-        //     animator.SetBool(LIFT_ROD, true);
-        // }
+     
 
     private System.Collections.IEnumerator ResetSwingParameter(string parameter)
     {
