@@ -25295,12 +25295,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 4
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":207.666718,"yPos":450.3335},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":".........","parentUIDs":[1],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":206.666718,"yPos":84.66665},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Welcome
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":500.666626,"yPos":475.667},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":".........","parentUIDs":[1],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":505,"yPos":110},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Welcome
     back to the land of the living","parentUIDs":[],"AdvanceDialogueAutomatically":true,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Old
-    Man","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0.1,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":207.000153,"yPos":335.600037},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Maybe
-    that''s Mother Nature''s payback for what you''ve been doing to her?","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fisherman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":false,"xPos":204.533478,"yPos":203.866623},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"What
+    Man","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0.1,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":500.000122,"yPos":360.933472},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Maybe
+    that''s Mother Nature''s payback for what you''ve been doing to her?","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Old
+    Man","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":false,"xPos":497.533447,"yPos":228.199951},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"What
     the hell... Is this thing some freak of nature?! Eels never packed this much
-    punch before..","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fisherman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    punch before..","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fisherman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1}]}'
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 654919771, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
@@ -26138,7 +26139,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 0}
   Icon: {fileID: 654919771, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 784bc3cbd4dbe1b4bbc343d8a5c2c59f, type: 3}
 --- !u!114 &1706686503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26188,7 +26189,7 @@ MonoBehaviour:
   NodeID: 1
   TMPFont: {fileID: 0}
   Icon: {fileID: -940876801, guid: d55cf9097c768bc4c966ae778209b41c, type: 3}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: a3a37841590004141a69bba6bd31f880, type: 3}
 --- !u!114 &1706686505
 MonoBehaviour:
   m_ObjectHideFlags: 0
