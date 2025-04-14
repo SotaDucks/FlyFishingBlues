@@ -109,7 +109,7 @@ namespace DynamicMeshCutter
         {
             Sequence seq = DOTween.Sequence();
             seq.Append(Dialogue.DOFade(1f, 1f).SetEase(Ease.Linear)); // 1Ãë½¥±ä
-            seq.AppendInterval(3f); // µÈ´ý3Ãë
+            seq.AppendInterval(2f); // µÈ´ý3Ãë
             seq.OnComplete(() => SceneManager.LoadScene("LureScene"));
             seq.Play();
 
