@@ -80,7 +80,7 @@ public class FlyhookMassController : MonoBehaviour
         {
             isInWater = false;
             flyhookRigidbody.mass = defaultMass;
-            Debug.Log($"Flyhook �뿪ˮ�У������ָ�ΪĬ��ֵ {defaultMass}");
+           
         }
     }
 }

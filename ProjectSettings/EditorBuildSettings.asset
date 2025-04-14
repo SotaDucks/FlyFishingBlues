@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SharkScene.unity
     guid: 4d6a5226bfa0363488b82dd32588db93
+  - enabled: 1
+    path: Assets/Scenes/LureScene.unity
+    guid: f32e6ce102101ce49aa58ce4d873253c
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 8fab489b347584141a02b1fc7cfba088
   m_configObjects: {}
