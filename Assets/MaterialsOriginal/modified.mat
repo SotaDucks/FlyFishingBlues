@@ -20,7 +20,6 @@ Material:
   - _RECEIVE_SHADOWS_OFF
   - _REFRACTION
   - _SHARP_INERSECTION
-  - _UNLIT
   - _WAVES
   m_InvalidKeywords:
   - ADVANCED_LIGHTING
@@ -37,7 +36,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _WaveDirection
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -144,9 +143,9 @@ Material:
     - _Blend: 0
     - _BumpScale: 1
     - _CROSSPAN_INTERSECTIONOn: 1
-    - _CausticsBrightness: 5.66
-    - _CausticsChromance: 0.33
-    - _CausticsDistortion: 0.15
+    - _CausticsBrightness: 3.61
+    - _CausticsChromance: 0.387
+    - _CausticsDistortion: 0.4
     - _CausticsOn: 1
     - _CausticsSpeed: 0.1
     - _CausticsTiling: 0.07999989
@@ -203,7 +202,7 @@ Material:
     - _IntersectionTiling: 0.16999984
     - _IntersectionWaveDist: 33.28
     - _LightingMode: 0
-    - _LightingOn: 0
+    - _LightingOn: 1
     - _Metallic: 0
     - _Metallicness: 0.1
     - _NORMALMAPOn: 1
@@ -234,7 +233,7 @@ Material:
     - _RefractionAmount: 0.05
     - _RefractionChromaticAberration: 1
     - _RefractionOn: 1
-    - _RefractionStrength: 0.267
+    - _RefractionStrength: 0.058
     - _RimRize: 1
     - _RimTiling: 0.025
     - _RiverModeOn: 0
@@ -274,17 +273,17 @@ Material:
     - _TranslucencyReflectionMask: 0
     - _TranslucencyStrength: 1
     - _TranslucencyStrengthDirect: 0.05
-    - _UnderwaterRefractionOffset: 0.2
-    - _UnderwaterSurfaceSmoothness: 0.35
+    - _UnderwaterRefractionOffset: 0.139
+    - _UnderwaterSurfaceSmoothness: 0.166
     - _VertexColorDepth: 0
     - _VertexColorFoam: 0
     - _VertexColorWaveFlattening: 0
-    - _WaveCount: 1
-    - _WaveDistance: 0.87
-    - _WaveHeight: 0.2
-    - _WaveNormalStr: 0.291
-    - _WaveSpeed: 1
-    - _WaveSteepness: 0
+    - _WaveCount: 2
+    - _WaveDistance: 0.446
+    - _WaveHeight: 0.05
+    - _WaveNormalStr: 0.3
+    - _WaveSpeed: 3
+    - _WaveSteepness: 1.05
     - _WaveTint: 0.043
     - _WavesOn: 1
     - _WorkflowMode: 1
@@ -308,7 +307,7 @@ Material:
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _WaterColor: {r: 0.21176466, g: 0.6745098, b: 1, a: 1}
     - _WaterShallowColor: {r: 0, g: 0.9394503, b: 1, a: 1}
-    - _WaveDirection: {r: 1, g: 0.3, b: 1, a: 0.3}
+    - _WaveDirection: {r: 0.8, g: 0.5, b: 0.6, a: 0.5}
     - _WaveFadeDistance: {r: 150, g: 300, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6498140463000427223
