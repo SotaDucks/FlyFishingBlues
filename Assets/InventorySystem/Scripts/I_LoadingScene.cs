@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class I_LoadingScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string sceneToLoad;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadScene();
+        }
+    }
+
+    public void LoadScene()
+    {
+        if (!string.IsNullOrEmpty(sceneToLoad))
+        {
+            SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Additive);
+           
+        }
+        else
+        {
+            Debug.LogWarning("Scene name is empty! 请在 Inspector 中设置场景名称。");
+        }
     }
 }
