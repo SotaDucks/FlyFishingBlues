@@ -19,7 +19,7 @@ public class I_LoadingScene : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
-            SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Additive);
+            SceneManager.LoadScene(sceneToLoad);
            
         }
         else
