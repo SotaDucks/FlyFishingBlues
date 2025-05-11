@@ -5,23 +5,28 @@ using Obi;
 namespace HutongGames.PlayMaker.Actions
 {
     [ActionCategory("Obi")]
-    [HutongGames.PlayMaker.Tooltip("Extend an Obi rope by a fixed amount once when the state is entered, after an optional delay.")]
+    [HutongGames.PlayMaker.Tooltip("Extend or shorten an Obi rope by a fixed amount once when the state is entered, after an optional delay. Enforces min and max length.")]
     public class CastingLineGrow : FsmStateAction
     {
         [RequiredField]
         [HutongGames.PlayMaker.Tooltip("GameObject that owns ObiRope & ObiRopeCursor components (usually your fly line).")]
         public FsmOwnerDefault ropeObject;
 
-        [HutongGames.PlayMaker.Tooltip("How many metres to add to the rope each time this state is entered.")]
+        [HutongGames.PlayMaker.Tooltip("How many metres to add (positive) or remove (negative) each time this state is entered.")]
         public FsmFloat growAmount = 1f;
 
-        [HutongGames.PlayMaker.Tooltip("Extension speed in metres per second.")]
+        [HutongGames.PlayMaker.Tooltip("Extension/retraction speed in metres per second.")]
         public FsmFloat growSpeed = 4f;
 
-        [HutongGames.PlayMaker.Tooltip("Delay in seconds before beginning the rope extension. Can be fractional.")]
+        [HutongGames.PlayMaker.Tooltip("Delay in seconds before beginning the rope length change. Can be fractional.")]
         public FsmFloat delay = 0f;
 
-        // Internal fields
+        [HutongGames.PlayMaker.Tooltip("Minimum total rope length allowed in metres.")]
+        public FsmFloat minLength = 0f;
+
+        [HutongGames.PlayMaker.Tooltip("Optional: maximum total rope length allowed. Negative values will be clamped to zero.")]
+        public FsmFloat maxLength = float.PositiveInfinity;
+
         private ObiRopeCursor cursor;
         private ObiRope rope;
         private float targetLength;
@@ -34,6 +39,8 @@ namespace HutongGames.PlayMaker.Actions
             growAmount = 1f;
             growSpeed  = 4f;
             delay      = 0f;
+            minLength  = 0f;
+            maxLength  = float.PositiveInfinity;
         }
 
         public override void OnEnter()
@@ -55,17 +62,20 @@ namespace HutongGames.PlayMaker.Actions
                 return;
             }
 
-            // Compute goal length
-            targetLength = rope.restLength + Mathf.Max(0f, growAmount.Value);
+            // Compute desired total length: allow negative grow amount to shorten
+            float desired = rope.restLength + growAmount.Value;
+            // Clamp to [minLength, maxLength]
+            desired = Mathf.Clamp(desired, minLength.Value, maxLength.Value);
+            targetLength = desired;
 
-            // Initialize delay timer
+            // Initialize delay
             delayTimer = Mathf.Max(0f, delay.Value);
             waiting = delayTimer > 0f;
         }
 
         public override void OnUpdate()
         {
-            // Handle waiting period
+            // Handle delay
             if (waiting)
             {
                 delayTimer -= Time.deltaTime;
@@ -74,15 +84,21 @@ namespace HutongGames.PlayMaker.Actions
                 waiting = false;
             }
 
-            // Perform extension
-            if (rope.restLength < targetLength)
+            // Perform length change towards target
+            float current = rope.restLength;
+            if (!Mathf.Approximately(current, targetLength))
             {
-                float delta = Mathf.Min(growSpeed.Value * Time.deltaTime, targetLength - rope.restLength);
+                float diff  = targetLength - current;
+                float delta = Mathf.Sign(diff) * growSpeed.Value * Time.deltaTime;
+                // Do not overshoot
+                if (Mathf.Abs(delta) > Mathf.Abs(diff))
+                    delta = diff;
+
                 cursor.ChangeLength(delta);
             }
             else
             {
-                Finish(); // done
+                Finish();
             }
         }
     }
