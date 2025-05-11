@@ -14,14 +14,14 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - FishCollider
   - Obstructors
   - Reflections
   - WaterPostProcessing
   - Fish
   - WaterBody
-  - 
+  - FlyHook
   - 
   - 
   - 
