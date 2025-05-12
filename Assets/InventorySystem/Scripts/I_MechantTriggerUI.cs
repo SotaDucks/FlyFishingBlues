@@ -20,6 +20,7 @@ public class I_MechantTriggerUI : MonoBehaviour
     // 让按钮 OnClick 调用这个
     public void OpenShop()
     {
-        shopPanel.SmartOpen();
+        shopPanel.SmartToggle();
     }
 }
+
