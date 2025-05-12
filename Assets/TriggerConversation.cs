@@ -16,5 +16,9 @@ public class TriggerConversation : MonoBehaviour
         ConversationManager.Instance.StartConversation(conversation); // Æô¶¯¶Ô»° :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1}
         started = true;
     }
-
+    public void ContinueConversation()
+    {
+        if (ConversationManager.Instance.IsConversationActive)
+            ConversationManager.Instance.PressSelectedOption();
+    }
 }
