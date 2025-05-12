@@ -5,13 +5,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Transform = UnityEngine.Transform;
 
 namespace DynamicMeshCutter
 {
     public class PlaneBehaviour : CutterBehaviour
     {
-        public float DebugPlaneLength = 2;
+       
 
+        private CanvasGroup _canvasGroup;
+        private Vector3 _originalScale;
+        public float DebugPlaneLength = 2;
+        public Button PickUpBTN;
         public MeshTarget[] targetsToCut;
         public KnifeController KnifeController;
 
@@ -36,7 +41,7 @@ namespace DynamicMeshCutter
                     Cut(target, transform.position, transform.forward, null, OnCreated);
                     Debug.Log("!!!!!!!");
                     Debug.Log($"Cutting target: {target.gameObject.name}");
-                    StartCoroutine(FadeIn());
+                    PickUpBTN.gameObject.SetActive(true);
 
 
                 }
@@ -58,7 +63,7 @@ namespace DynamicMeshCutter
             GameObject instance = Instantiate(BloodEffectPrefab, position, rotation);
 
             // 手动设置缩放
-            instance.transform.localScale = new Vector3(0.05f, 0.05f, 1f); 
+            instance.transform.localScale = new Vector3(0.05f, 0.05f, 1f);
             bloodTransform = instance.transform;
             MeshCreation.TranslateCreatedObjects(info, cData.CreatedObjects, cData.CreatedTargets, Separation);
             // 启动协程，放大血迹效果
@@ -69,7 +74,7 @@ namespace DynamicMeshCutter
                 {
                     // 添加 Grabbable 脚本
                     target.gameObject.AddComponent<Grabbable>();
-                     
+
                 }
             }
             Bucket.SetActive(true);
@@ -80,7 +85,7 @@ namespace DynamicMeshCutter
             float duration = 3f; // 放大持续时间
             float elapsedTime = 0f;
             Vector3 initialScale = bloodTransform.localScale; // 初始大小为 0
-                                                                  // 目标大小，根据需要调整
+                                                              // 目标大小，根据需要调整
 
             // 将血迹效果的初始大小设置为 0
             bloodTransform.localScale = initialScale;
@@ -95,24 +100,8 @@ namespace DynamicMeshCutter
             }
             KnifeController.deleteTHeknife();
         }
-        IEnumerator FadeIn()
-        {
-            yield return targetImage.DOFade(1f, 2)
-           .SetEase(Ease.Linear) // 线性渐变
-           .WaitForCompletion(); // 等待动画完成
+       
 
-            // 动画完成后执行
-            PlayText();
-        }
 
-        private void PlayText()
-        {
-            Sequence seq = DOTween.Sequence();
-            seq.Append(Dialogue.DOFade(1f, 1f).SetEase(Ease.Linear)); // 1秒渐变
-            seq.AppendInterval(2f); // 等待3秒
-            seq.OnComplete(() => SceneManager.LoadScene("LureScene"));
-            seq.Play();
-
-        }
     }
 }
