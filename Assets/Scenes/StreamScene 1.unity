@@ -2837,12 +2837,12 @@ PrefabInstance:
     - target: {fileID: 3900108754347413311, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -319.4026
+      value: -97.565
       objectReference: {fileID: 0}
     - target: {fileID: 3900108754347413311, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -27.4657
+      value: 8.7176
       objectReference: {fileID: 0}
     - target: {fileID: 3900108754347413311, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
@@ -2908,12 +2908,12 @@ PrefabInstance:
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 620
+      value: 369.6682
       objectReference: {fileID: 0}
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 188
+      value: 152.4759
       objectReference: {fileID: 0}
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
@@ -2953,12 +2953,12 @@ PrefabInstance:
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -37
+      value: 98.5
       objectReference: {fileID: 0}
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 104
+      value: 91.9
       objectReference: {fileID: 0}
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
@@ -2974,6 +2974,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900108755395677323, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 372.6111
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900108755395677323, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -110.04695
       objectReference: {fileID: 0}
     - target: {fileID: 3900108755397112059, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca,
         type: 3}
@@ -4110,11 +4120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 3
-  json: "{\"Options\":[],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"FishedOn\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"FishedOn\",\"CheckType\":0,\"RequiredValue\":true}],\"NodeUID\":1},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"FishedOn\",\"CheckType\":0,\"RequiredValue\":false}],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":284,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"There!
-    just under the surface. Time to cast.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":452.000061,\"yPos\":167.199951},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"One
-    down\u2026 let\u2019s keep moving.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":154.400009,\"yPos\":163.199951},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Can\u2019t
-    go any closer\u2026 I might scare the fish away.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+  CurrentIDCounter: 9
+  json: "{\"Options\":[],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"FishedOn\",\"BoolValue\":false},{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"SecondPoint\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"FishedOn\",\"CheckType\":0,\"RequiredValue\":true}],\"NodeUID\":1},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":270.666626,\"yPos\":21.3333282},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"There!
+    just under the surface. Time to cast.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.5,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"SecondPoint\",\"CheckType\":0,\"RequiredValue\":true}],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":412.666718,\"yPos\":295.2},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"One
+    down\u2026 let\u2019s keep moving.\",\"parentUIDs\":[0,2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"FishedOn\",\"CheckType\":0,\"RequiredValue\":true}],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":133.0666,\"yPos\":293.866638},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Can\u2019t
+    go any closer\u2026 I might scare the fish away.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Fisherman\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.5,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":408.666656,\"yPos\":516},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
+    big one there! I should cast right here!\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Fisherman
   DefaultSprite: {fileID: 0}
@@ -4123,6 +4134,7 @@ MonoBehaviour:
   - {fileID: 1460202957}
   - {fileID: 1460202960}
   - {fileID: 1460202959}
+  - {fileID: 1460202961}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
@@ -5487,6 +5499,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1663393937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &855139602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855139604}
+  - component: {fileID: 855139603}
+  m_Layer: 0
+  m_Name: BurstCollisionWorld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &855139603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855139602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a161c4294214a4fbcb7e9e94800494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellSpans:
+    m_AlignBytes: 16
+--- !u!4 &855139604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855139602}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &861929724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4830432150019182282, guid: 97793a9b582a5f440b0bb7b0235afdbd,
@@ -5644,8 +5702,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.3227386, y: 4.9948807, z: 10.762695}
-  m_Center: {x: 1.1613693, y: 1.9974403, z: 0.8396454}
+  m_Size: {x: 3.247696, y: 4.9948807, z: 10.762695}
+  m_Center: {x: -3.913231, y: 1.9974403, z: 0.8396454}
 --- !u!4 &866999011
 Transform:
   m_ObjectHideFlags: 0
@@ -8742,125 +8800,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 566626500}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1176513797
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1176513800}
-  - component: {fileID: 1176513799}
-  - component: {fileID: 1176513798}
-  m_Layer: 0
-  m_Name: checkPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1176513798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176513797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9de5501e66ca10443b768cfca1bc1d26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dlgCtrl: {fileID: 0}
---- !u!65 &1176513799
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176513797}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.3227386, y: 4.9948807, z: 10.762695}
-  m_Center: {x: 1.1613693, y: 1.9974403, z: 0.8396454}
---- !u!4 &1176513800
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176513797}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 198.6, y: 14.6, z: 141.27}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1183111782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8841008927280559727, guid: 97793a9b582a5f440b0bb7b0235afdbd,
     type: 3}
   m_PrefabInstance: {fileID: 566626500}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1184432101
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1184432103}
-  - component: {fileID: 1184432102}
-  m_Layer: 0
-  m_Name: BurstCollisionWorld
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1184432102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184432101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1a161c4294214a4fbcb7e9e94800494, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cellSpans:
-    m_AlignBytes: 16
---- !u!4 &1184432103
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184432101}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1191608183 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7829544821128104084, guid: 97793a9b582a5f440b0bb7b0235afdbd,
@@ -11218,6 +11163,7 @@ GameObject:
   - component: {fileID: 1460202957}
   - component: {fileID: 1460202960}
   - component: {fileID: 1460202959}
+  - component: {fileID: 1460202961}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -11241,7 +11187,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
-  TMPFont: {fileID: 11400000, guid: e1460f763d647ae47990876634675f68, type: 2}
+  TMPFont: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!4 &1460202958
@@ -11275,7 +11221,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 2
-  TMPFont: {fileID: 11400000, guid: e1460f763d647ae47990876634675f68, type: 2}
+  TMPFont: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &1460202960
@@ -11294,7 +11240,26 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 1
-  TMPFont: {fileID: 11400000, guid: e1460f763d647ae47990876634675f68, type: 2}
+  TMPFont: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!114 &1460202961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460202956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 8
+  TMPFont: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!1 &1464823841 stripped
@@ -12515,10 +12480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca07f9fa41abad44c8decb7c9068777a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorA: {fileID: 6982812146986341292}
-  animatorB: {fileID: 0}
-  triggerName1: TestCastBack
-  triggerName2: TestCastForward
 --- !u!4 &1609969895 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7122103901011323367, guid: 97793a9b582a5f440b0bb7b0235afdbd,
@@ -17804,7 +17765,7 @@ Transform:
   m_GameObject: {fileID: 2070925442805889849}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -6.025467, y: 0.33568287, z: 17.830002}
+  m_LocalPosition: {x: -5.7360077, y: 0.33568287, z: 17.830002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24862,7 +24823,7 @@ Transform:
   m_GameObject: {fileID: 8944336655820752092}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -6.025467, y: 0.33568287, z: 17.830002}
+  m_LocalPosition: {x: -5.7360077, y: 0.33568287, z: 17.830002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25162,5 +25123,4 @@ SceneRoots:
   - {fileID: 1675716415}
   - {fileID: 1551909124}
   - {fileID: 866999011}
-  - {fileID: 1176513800}
-  - {fileID: 1184432103}
+  - {fileID: 855139604}

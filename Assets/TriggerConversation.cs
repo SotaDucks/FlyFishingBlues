@@ -17,17 +17,4 @@ public class TriggerConversation : MonoBehaviour
         started = true;
     }
 
-    // 供 Trigger2 调用
-    public void ContinueConversationAndSetFlag(bool value)
-    {
-        if (!ConversationManager.Instance.IsConversationActive) return;
-
-        // ① 更新参数
-        ConversationManager.Instance.SetBool("FishedOn", value);      // 设置对话参数 :contentReference[oaicite:2]{index=2}:contentReference[oaicite:3]{index=3}
-
-        // ② 模拟点“Continue”
-        ConversationManager.Instance.PressSelectedOption();           // 等同用户按继续 :contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}
-    }
-
-
 }
