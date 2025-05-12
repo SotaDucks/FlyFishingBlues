@@ -94,6 +94,24 @@
                     "processors": "",
                     "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "EndFishing",
+                    "type": "Button",
+                    "id": "874b34e3-a539-40f0-a3c5-5decd481cc69",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=1,pressPoint=0.5)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SetHook",
+                    "type": "Button",
+                    "id": "a6a8fee0-60ec-4bac-ab0e-b73b30e63851",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -512,6 +530,28 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "FlyRodRetrive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a11bf3d-9fce-42d2-aec7-50ef095dff4a",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EndFishing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "97083891-bfd1-4c3a-a13e-d9177faf71e5",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SetHook",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

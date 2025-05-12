@@ -155,9 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    renderRange: 200
+    renderRange: 1000
     fadePercentage: 10
-    texelsPerUnit: 8
+    texelsPerUnit: 16
     maxResolution: 4096
     highPrecision: 1
     enableDisplacement: 1

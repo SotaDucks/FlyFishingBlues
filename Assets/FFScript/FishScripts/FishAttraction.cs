@@ -6,12 +6,22 @@ public class FishAttraction : MonoBehaviour
     private Transform flyhook;
     public Transform exit1;
     public Transform exit2;
+
+    [Header("Movement Speeds")]
     public float moveSpeed = 2f;
     public float returnMoveSpeed = 3f;
+
+    [Header("Distances and Timing")]
     public float stopDistance = 0.5f;
+    public float maxFollowDistance = 5f;            // æœ€å¤§è·Ÿéšè·ç¦»é˜ˆå€¼
     public float attractionDuration = 5f;
-    public float waterSurfaceHeight = 1f; // Ë®Ãæ¸ß¶È
-    public float BiteChance = 0.5f; // ÓãÒ§¹³µÄ¸ÅÂÊ£¨·¶Î§£º0-1£©
+
+    [Header("Environment")]
+    public float waterSurfaceHeight = 1f;            // æ°´é¢é«˜åº¦
+
+    [Header("Bite Chance")]
+    [Range(0f, 1f)]
+    public float BiteChance = 0.5f;
 
     private SplineAnimate splineAnimate;
     public bool isAttracted = false;
@@ -28,7 +38,7 @@ public class FishAttraction : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Î´ÕÒµ½ÃûÎª 'flyhook' µÄ GameObject£¡");
+            Debug.LogError("æœªæ‰¾åˆ°åä¸º 'flyhook' çš„ GameObject");
         }
 
         splineAnimate = GetComponent<SplineAnimate>();
@@ -38,6 +48,14 @@ public class FishAttraction : MonoBehaviour
     {
         if (isAttracted && flyhook != null)
         {
+            // æ£€æµ‹æ˜¯å¦è¶…å‡ºæœ€å¤§è·Ÿéšè·ç¦»ï¼Œè‹¥æ˜¯åˆ™è§¦å‘é€ƒç¦»
+            float distanceToFlyhook = Vector3.Distance(transform.position, flyhook.position);
+            if (distanceToFlyhook > maxFollowDistance)
+            {
+                ExitAttraction();
+                return;
+            }
+
             attractionTimer += Time.deltaTime;
             if (attractionTimer >= attractionDuration)
             {
@@ -80,6 +98,7 @@ public class FishAttraction : MonoBehaviour
         }
         else
         {
+            // ä»…åšæœå‘è°ƒæ•´
             Vector3 direction = (flyhook.position - transform.position).normalized;
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * moveSpeed);
@@ -88,20 +107,19 @@ public class FishAttraction : MonoBehaviour
 
     private void CheckBite()
     {
-        float randomValue = Random.value; // »ñÈ¡0µ½1Ö®¼äµÄËæ»úÖµ
+        float randomValue = Random.value;
         if (randomValue < BiteChance)
         {
-            // ÓãÒ§¹³£¬¼¤»îFishBiteHook½Å±¾²¢Í£ÓÃ±¾½Å±¾
             FishBiteHook biteHook = GetComponent<FishBiteHook>();
             if (biteHook != null)
             {
                 biteHook.enabled = true;
             }
-            this.enabled = false; // Í£ÓÃ±¾½Å±¾
+            this.enabled = false;
         }
         else
         {
-            ExitAttraction(); // ²»Ò§¹³£¬¼ÌĞøÖ´ĞĞ½Å±¾
+            ExitAttraction();
         }
     }
 

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ac5fa5da8102b468a92c21620db0d0, type: 3}
+  m_Name: Rod2
+  m_EditorClassIdentifier: 
+  m_ID: 3465214048
+  m_Category: {fileID: 11400000, guid: 84d9754787e8ef9438b86f0073d1b163, type: 2}
+  m_Parent: {fileID: 0}
+  m_ChildrenData:
+    m_ObjectType: Opsive.Shared.Utility.ResizableArray`1[[Opsive.UltimateInventorySystem.Core.ItemDefinition,
+      Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+    m_ValueHashes: 
+    m_LongValueHashes: 4c1e4f8e62aa191ac2330064f10375df
+    m_ValuePositions: 0000000004000000
+    m_Values: 0000000000000000
+    m_UnityObjects: []
+    m_Version: 3.4
+  m_ItemDefinitionAttributeCollection:
+    m_AttributeCollectionData:
+    - m_ObjectType: Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.Sprite,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651af0255e014ce1cfaf3d4ee4cb64be1ae
+      m_ValuePositions: 0000000004000000050000000500000009000000090000000d00000011000000
+      m_Values: 49636f6e0101000000369f55410000000001000000
+      m_UnityObjects:
+      - {fileID: 21300000, guid: 8056402fb1163ca43a6a9e5c8a04b9f4, type: 3}
+      - {fileID: 21300000, guid: 8056402fb1163ca43a6a9e5c8a04b9f4, type: 3}
+      m_Version: 3.4
+    - m_ObjectType: Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[Opsive.UltimateInventorySystem.Exchange.CurrencyAmounts,
+        Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa65100874d327c4198d981651b55750893d4455884713e50a97346869dba8bce8847d091b7f85b06f0a24459e79e1dbf5c8ef550e43b00e55a60a1bfe96b966c58b7ea49dfe918db394e7c5ef5abc81341ab
+      m_ValuePositions: 000000000800000009000000090000000d0000000d00000011000000110000001500000015000000190000001d0000001d000000210000002100000025000000
+      m_Values: 42757950726963650101000000dc638c21010000000500000000000000010000000500000001000000
+      m_UnityObjects:
+      - {fileID: 11400000, guid: a10dd6e3caa75274cb9e6d2cabf11250, type: 2}
+      - {fileID: 11400000, guid: a10dd6e3caa75274cb9e6d2cabf11250, type: 2}
+      m_Version: 3.4
+    - m_ObjectType: Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[Opsive.UltimateInventorySystem.Exchange.CurrencyAmounts,
+        Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa65100874d327c4198d981651b55750893d4455884713e50a97346869dba8bce8847d091b7f85b06f0a24459e79e1dbf5c8ef550e43b00e55a60a1bfe96b966c58b7ea49dfe918db394e7c5ef5abc81341ab
+      m_ValuePositions: 00000000090000000a0000000a0000000e0000000e000000120000001200000016000000160000001a0000001e0000001e000000220000002200000026000000
+      m_Values: 53656c6c50726963650101000000f924b3cc010000000100000000000000010000000100000001000000
+      m_UnityObjects:
+      - {fileID: 11400000, guid: a10dd6e3caa75274cb9e6d2cabf11250, type: 2}
+      - {fileID: 11400000, guid: a10dd6e3caa75274cb9e6d2cabf11250, type: 2}
+      m_Version: 3.4
+  m_DefaultItem:
+    m_ID: 2405090781
+    m_Name: Rod2
+    m_ItemDefinitionID: 3465214048
+    m_ItemDefinition: {fileID: 11400000}
+    m_ItemAttributeCollection:
+      m_AttributeCollectionData: []
+  m_EditorIcon: {fileID: 21300000, guid: 8056402fb1163ca43a6a9e5c8a04b9f4, type: 3}
