@@ -21,10 +21,9 @@ public class TriggerConversation2 : MonoBehaviour
         ConversationManager.Instance.SetBool(secondPointParamName, true);
 
         // ② 如果对话仍开启，则模拟点击 Continue
-        if (ConversationManager.Instance.IsConversationActive)
-        {
+       
             dialogueController.ContinueConversation(); // 内部调用 PressSelectedOption()
-        }
+        
 
 
     }
