@@ -276,7 +276,7 @@ Material:
     - _TranslucencyReflectionMask: 1
     - _TranslucencyStrength: 1
     - _TranslucencyStrengthDirect: 0.05
-    - _UnderwaterRefractionOffset: 0.2
+    - _UnderwaterRefractionOffset: 0.493
     - _UnderwaterSurfaceSmoothness: 0.8
     - _VertexColorDepth: 0
     - _VertexColorFoam: 0
@@ -294,7 +294,7 @@ Material:
     - _ZClip: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.033239212, g: 0.06696109, b: 0.101960786, a: 1}
+    - _BaseColor: {r: 0.033239212, g: 0.06696109, b: 0.101960786, a: 0.63529414}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _DepthMapBounds: {r: -402.3, g: -459.43, b: 0.0012693577, a: 0}
     - _Direction: {r: 1, g: 1, b: 0, a: 0}

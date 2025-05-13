@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/StylizedWater2/Materials/SeaweedWave2D_Mat.mat.meta
+guid: fffcb7ee105edb54080e6a332bebb6e4
+NativeFormatImporter:
+========
 guid: f9949387419d4ac48ad9edd26f924ecb
 DefaultImporter:
+>>>>>>>> fd7775cc05bbaae9eb3aa0ce2f56e70c815e5c9f:Packages/com.opsive.ultimateinventorysystem/Documentation.pdf.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
