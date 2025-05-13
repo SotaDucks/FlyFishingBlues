@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Opsive.UltimateInventorySystem.Core;      // ItemDefinition
-using Opsive.UltimateInventorySystem;
+
 using Opsive.UltimateInventorySystem.Core.InventoryCollections; // Inventory
 
 public class GlobalPickupKey : MonoBehaviour
@@ -23,16 +23,14 @@ public class GlobalPickupKey : MonoBehaviour
 
     private void Awake()
     {
-        // 单例检查
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);  // 场景切换不销毁
+        DontDestroyOnLoad(gameObject);
 
-        // 自动查找 Inventory
         if (m_PlayerInventory == null)
         {
             m_PlayerInventory = FindObjectOfType<Inventory>();
