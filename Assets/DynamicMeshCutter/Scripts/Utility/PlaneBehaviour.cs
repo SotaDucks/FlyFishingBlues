@@ -41,7 +41,7 @@ namespace DynamicMeshCutter
                     Cut(target, transform.position, transform.forward, null, OnCreated);
                     Debug.Log("!!!!!!!");
                     Debug.Log($"Cutting target: {target.gameObject.name}");
-                    PickUpBTN.gameObject.SetActive(true);
+                   
 
 
                 }
@@ -99,6 +99,7 @@ namespace DynamicMeshCutter
                 yield return null;
             }
             KnifeController.deleteTHeknife();
+            PickUpBTN.gameObject.SetActive(true);
         }
        
 

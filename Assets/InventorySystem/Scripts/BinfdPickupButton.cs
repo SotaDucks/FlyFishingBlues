@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class BinfdPickupButton : MonoBehaviour
 {
     [SerializeField] private Button pickupButton;
-    private GlobalPickupKey _pickupKey;
+    private AddItemByIndex _pickupKey;
+    public int PickupNumber;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class BinfdPickupButton : MonoBehaviour
     public void Bind()
     {
         // 找到场景中唯一的 GlobalPickupKey 实例
-        _pickupKey = FindObjectOfType<GlobalPickupKey>();
+        _pickupKey = FindObjectOfType<AddItemByIndex>();
         if (_pickupKey == null)
         {
             Debug.LogError("BindPickupButton: 场景中找不到 GlobalPickupKey 组件！");
@@ -34,7 +35,7 @@ public class BinfdPickupButton : MonoBehaviour
         // 清除旧的监听，确保重复调用也不会累加
         pickupButton.onClick.RemoveAllListeners();
         // 绑定点击后执行一次 AddItemByIndex(0)
-        pickupButton.onClick.AddListener(() => _pickupKey.AddItemByIndex(0));
+        pickupButton.onClick.AddListener(() => _pickupKey.AddElement(PickupNumber));
     }
 
     /// <summary>
@@ -48,6 +49,6 @@ public class BinfdPickupButton : MonoBehaviour
             Bind();
         }
         // 触发一次点击逻辑（直接调用，不需用户点按钮）
-        _pickupKey.AddItemByIndex(0);
+        _pickupKey.AddElement(PickupNumber);
     }
 }
