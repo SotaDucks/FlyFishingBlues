@@ -24,9 +24,9 @@ public class FishBiteHook : MonoBehaviour
     void Start()
     {
         // 查找钩饵
-        GameObject flyhookObject = GameObject.Find("flyhook");
-        if (flyhookObject != null)
-            flyhook = flyhookObject.transform;
+        var flyhookObj = GameObject.Find("flyhook");
+        if (flyhookObj != null)
+            flyhook = flyhookObj.transform;
         else
             Debug.LogError("未找到名为 'flyhook' 的 GameObject");
 
@@ -35,12 +35,12 @@ public class FishBiteHook : MonoBehaviour
         if (fishAnimator == null)
             Debug.LogError("未找到鱼的 Animator 组件");
 
-        // 获取玩家角色 Animator 及 FSM
-        GameObject characterObject = GameObject.Find("PlayerArmature");
-        if (characterObject != null)
+        // 获取玩家角色 Animator 与 FSM
+        var charObj = GameObject.Find("PlayerArmature");
+        if (charObj != null)
         {
-            characterAnimator = characterObject.GetComponent<Animator>();
-            playerFsm = characterObject.GetComponent<PlayMakerFSM>();
+            characterAnimator = charObj.GetComponent<Animator>();
+            playerFsm = charObj.GetComponent<PlayMakerFSM>();
             if (playerFsm == null)
                 Debug.LogError("未找到 PlayerArmature 上的 PlayMakerFSM 组件");
         }
@@ -50,27 +50,31 @@ public class FishBiteHook : MonoBehaviour
         }
 
         // 获取鱼线拖拽组件与粒子附着列表
-        GameObject lineObj = GameObject.Find("FlyLine");
+        var lineObj = GameObject.Find("FlyLine");
         if (lineObj != null)
         {
             fishDragLine = lineObj.GetComponent<FishDragLine>();
             attachments = lineObj.GetComponents<ObiParticleAttachment>();
         }
         else
+        {
             Debug.LogError("未找到名为 'FlyLine' 的 GameObject");
+        }
     }
 
     void Update()
     {
         // 每帧检测第3个粒子附着组件是否已绑定鱼体
-        bool bound = attachments != null && attachments.Length >= 3 && attachments[2].target != null;
+        bool bound = attachments != null
+                  && attachments.Length >= 3
+                  && attachments[2].target != null;
         isFishBite = bound;
 
-        // 将绑定状态传给玩家 Animator
+        // 将绑定状态同步给玩家 Animator
         if (characterAnimator != null)
             characterAnimator.SetBool("FishHasBite", bound);
 
-        // 分阶段执行逻辑
+        // 分阶段执行
         if (isMovingToHook)
             MoveToHook();
         else
@@ -79,27 +83,26 @@ public class FishBiteHook : MonoBehaviour
 
     private void MoveToHook()
     {
-        // 如果钩子距离过远，直接放弃攻击，进入逃离阶段
-        float distanceToHook = Vector3.Distance(transform.position, flyhook.position);
-        if (distanceToHook > maxChaseDistance)
+        float dist = Vector3.Distance(transform.position, flyhook.position);
+        if (dist > maxChaseDistance)
         {
+            // 超出追逐范围，放弃攻击
             isMovingToHook = false;
             return;
         }
 
-        // 游向钩子逻辑
-        if (distanceToHook > stopDistance)
+        if (dist > stopDistance)
         {
+            // 向钩子移动
             transform.position = Vector3.MoveTowards(transform.position, flyhook.position, moveSpeed * Time.deltaTime);
         }
         else
         {
-            // 咬钩并附着到鱼线
+            // 到达钩子，附着并进入等待
             AttachFishToFlyline();
             isMovingToHook = false;
             waitTimer = waitTime;
 
-            // 播放鱼的咬钩动画
             if (fishAnimator != null)
                 fishAnimator.SetTrigger("TroutBite");
         }
@@ -107,33 +110,34 @@ public class FishBiteHook : MonoBehaviour
 
     private void EscapeToExit()
     {
-        if (waitTimer > 0)
+        if (waitTimer > 0f)
         {
             waitTimer -= Time.deltaTime;
             return;
         }
 
-        // 检测 PlayMaker FSM 状态
+        // 如果 PlayMaker FSM 处于上钩状态，则切换到 FishLanding
         if (playerFsm != null && playerFsm.Fsm.ActiveStateName == "FishOnSetTheHook")
         {
             if (fishDragLine != null)
                 fishDragLine.StopDragging();
 
-            Rigidbody rb = GetComponent<Rigidbody>();
+            var rb = GetComponent<Rigidbody>();
             if (rb != null)
                 rb.isKinematic = false;
 
             this.enabled = false;
-            FishLanding landing = GetComponent<FishLanding>();
+            var landing = GetComponent<FishLanding>();
             if (landing != null)
                 landing.enabled = true;
             return;
         }
 
-        // 未达到上钩状态则继续逃离
+        // 继续逃离：同步角色动画并开始拉线（仅当已咬钩）
         if (characterAnimator != null)
             characterAnimator.SetBool("FishOn", true);
-        if (fishDragLine != null)
+
+        if (fishDragLine != null && isFishBite)
             fishDragLine.StartDragging();
 
         Vector3 dir = (exit1.position - transform.position).normalized;

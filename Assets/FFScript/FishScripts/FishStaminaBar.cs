@@ -5,30 +5,28 @@ using UnityEngine.UI;
 
 public class FishStaminaBar : MonoBehaviour
 {
-    [Header("UI Components")]
     public Slider fishStaminaBar;
 
-    [Header("Stamina Settings")]
-    public int maxStamina = 100;
+    private int maxStamina = 100;
     public float currentStamina;
 
-    [Tooltip("Regeneration speed when stamina > 0")]
-    public float normalRegenSpeed = 2f;
-    [Tooltip("Delay before regenerating after reaching zero")]
-    public float zeroStaminaDelay = 2f;
-    [Tooltip("Regeneration speed when recovering from zero")]
-    public float staminaChargingSpeed = 5f;
+    // ���������ظ��ٶ�
+    public float normalRegenSpeed = 2f; // ÿ��ظ�������ֵ
 
-    [Header("Recharge Limits")]
-    public int rechargeTimes = 2;
-    private int currentRechargeTimes = 0;
+    // ����Ϊ0ʱ���ӳٺ��ض��ظ��ٶ�
+    public float zeroStaminaDelay = 2f; // �ӳ�ʱ��
+    public float staminaChargingSpeed = 5f; // �ض���ÿ��ظ��ٶ�
 
-    private bool isRegeneratingAfterZero = false;
-    private float zeroStaminaTimer = 0f;
+    private bool isRegeneratingAfterZero = false; // ����Ƿ����ض��ظ�״̬
+    private float zeroStaminaTimer = 0f; // �����ľ���ļ�ʱ��
 
     public static FishStaminaBar instance;
 
-    void Awake()
+    // �����ı���
+    public int rechargeTimes = 2; // �����������Ա����»ָ��Ĵ���
+    private int currentRechargeTimes = 0; // ��ǰ�Ѿ��ָ��Ĵ���
+
+    private void Awake()
     {
         instance = this;
     }
@@ -42,23 +40,19 @@ public class FishStaminaBar : MonoBehaviour
 
     void Update()
     {
-        // Merge TireFish functionality: Use stamina on W key
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            UseStamina(15);
-        }
-
-        // Regeneration and recharge logic
+        // ���ָ�����δ�ﵽ����ʱ�����������ظ�
         if (currentRechargeTimes < rechargeTimes)
         {
             if (currentStamina < maxStamina)
             {
                 if (currentStamina > 0 && !isRegeneratingAfterZero)
                 {
+                    // �����ظ�
                     RegenerateStamina(normalRegenSpeed);
                 }
                 else if (currentStamina <= 0)
                 {
+                    // �����ľ�����ӳټ�ʱ
                     zeroStaminaTimer += Time.deltaTime;
                     if (zeroStaminaTimer >= zeroStaminaDelay)
                     {
@@ -75,6 +69,7 @@ public class FishStaminaBar : MonoBehaviour
                 }
                 else if (currentStamina > 0 && isRegeneratingAfterZero)
                 {
+                    // ���ض��ظ�״̬�¼����ظ�
                     RegenerateStamina(staminaChargingSpeed);
 
                     if (currentStamina >= maxStamina)
@@ -88,15 +83,12 @@ public class FishStaminaBar : MonoBehaviour
         }
         else
         {
-            // Exhausted recharge times, stop regeneration
+            // �ָ������Ѵ����ޣ�ֹͣһ�������ظ�
             isRegeneratingAfterZero = false;
             zeroStaminaTimer = 0f;
         }
     }
 
-    /// <summary>
-    /// Regenerates stamina by given speed.
-    /// </summary>
     private void RegenerateStamina(float regenSpeed)
     {
         currentStamina += regenSpeed * Time.deltaTime;
@@ -104,14 +96,11 @@ public class FishStaminaBar : MonoBehaviour
         fishStaminaBar.value = currentStamina;
     }
 
-    /// <summary>
-    /// Attempt to use a specified amount of stamina.
-    /// </summary>
     public void UseStamina(int amount)
     {
         if (isRegeneratingAfterZero)
         {
-            // Cannot use stamina while recovering from zero
+            // ���ض��ظ��ڼ䣬�����޷�������
             return;
         }
 
@@ -125,27 +114,31 @@ public class FishStaminaBar : MonoBehaviour
             currentStamina = 0;
             fishStaminaBar.value = currentStamina;
 
-            // If out of recharge attempts, disable UI
+            // ����Ƿ��Ѵﵽ�����ܴ���
             if (currentRechargeTimes >= rechargeTimes)
             {
+                // ������������ UI ���
                 DisableStaminaBarUI();
             }
         }
     }
 
     /// <summary>
-    /// Disables the stamina bar UI when no more recharge attempts left.
+    /// ������������ UI �����ʹ������Ϸ�в�����ʾ��
     /// </summary>
     private void DisableStaminaBarUI()
     {
         if (fishStaminaBar != null)
         {
+            // ���� Slider ����� GameObject
             fishStaminaBar.gameObject.SetActive(false);
-            Debug.Log("Stamina UI disabled: no recharges left.");
+
+            // ��ѡ��������־�Ե���
+            Debug.Log("������ UI �ѱ����ã���Ϊ�ﵽ�����ܴ������������������㡣");
         }
         else
         {
-            Debug.LogWarning("fishStaminaBar reference is null.");
+            Debug.LogWarning("fishStaminaBar ��δ����ֵ��");
         }
     }
 }
