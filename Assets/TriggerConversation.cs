@@ -18,7 +18,7 @@ public class TriggerConversation : MonoBehaviour
     }
     public void ContinueConversation()
     {
-        if (ConversationManager.Instance.IsConversationActive)
+        
             ConversationManager.Instance.PressSelectedOption();
     }
 }
