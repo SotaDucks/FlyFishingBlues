@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53ac5fa5da8102b468a92c21620db0d0, type: 3}
-  m_Name: Trout Fish
+  m_Name: Trout
   m_EditorClassIdentifier: 
   m_ID: 42556063
   m_Category: {fileID: 11400000, guid: b445582a9a678f94abdf40122741a48b, type: 2}
@@ -58,7 +58,7 @@ MonoBehaviour:
       m_Version: 3.4
   m_DefaultItem:
     m_ID: 1881674100
-    m_Name: Trout Fish
+    m_Name: Trout
     m_ItemDefinitionID: 42556063
     m_ItemDefinition: {fileID: 11400000}
     m_ItemAttributeCollection:
