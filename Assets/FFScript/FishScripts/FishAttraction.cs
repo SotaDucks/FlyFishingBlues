@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.Splines;
+using UnityEngine.Events;
 
 public class FishAttraction : MonoBehaviour
 {
     [Header("References")]
-    // You can leave this unset in the Inspector; the script will pick it up at runtime
+    // 可以在 Inspector 留空，脚本会在运行时查找
     public Transform flyhook;
     public Transform exit1;
     public Transform exit2;
@@ -25,6 +26,9 @@ public class FishAttraction : MonoBehaviour
     [Range(0f, 1f)]
     public float BiteChance = 0.5f;         // 咬钩概率
 
+    [Header("Events")]
+    public UnityEvent onEscape;             // 鱼逃跑时触发的事件
+
     private SplineAnimate splineAnimate;
     public bool isAttracted = false;
     private bool isReturning = false;
@@ -33,14 +37,13 @@ public class FishAttraction : MonoBehaviour
 
     void Start()
     {
-        // Attempt an initial find; if flyhook isn't in the scene yet, we'll retry in Update()
+        // 初次查找钓饵，如果尚未实例化，后续会在 Update 中重试
         TryFindFlyhook();
         splineAnimate = GetComponent<SplineAnimate>();
     }
 
     void Update()
     {
-        // If we haven't got a reference to the flyhook yet, try again each frame
         if (flyhook == null)
             TryFindFlyhook();
 
@@ -48,7 +51,7 @@ public class FishAttraction : MonoBehaviour
         {
             float distanceToFlyhook = Vector3.Distance(transform.position, flyhook.position);
 
-            // If we've strayed too far, abandon and exit
+            // 超出最大跟随距离，触发逃跑
             if (distanceToFlyhook > maxFollowDistance)
             {
                 ExitAttraction();
@@ -75,7 +78,6 @@ public class FishAttraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Only trigger attraction if we've found the flyhook
         if (flyhook != null && other.transform == flyhook)
         {
             splineAnimate.enabled = false;
@@ -89,12 +91,10 @@ public class FishAttraction : MonoBehaviour
         float dist = Vector3.Distance(transform.position, flyhook.position);
         if (dist > stopDistance)
         {
-            // Rotate smoothly toward the hook
             Vector3 dir = (flyhook.position - transform.position).normalized;
             transform.rotation = Quaternion.Slerp(transform.rotation,
                                                  Quaternion.LookRotation(dir),
                                                  Time.deltaTime * moveSpeed);
-            // Move toward the hook, clamped to waterSurfaceHeight
             Vector3 target = Vector3.MoveTowards(transform.position,
                                                  flyhook.position,
                                                  moveSpeed * Time.deltaTime);
@@ -103,7 +103,6 @@ public class FishAttraction : MonoBehaviour
         }
         else
         {
-            // Only rotate, no translation
             Vector3 dir = (flyhook.position - transform.position).normalized;
             transform.rotation = Quaternion.Slerp(transform.rotation,
                                                  Quaternion.LookRotation(dir),
@@ -131,6 +130,10 @@ public class FishAttraction : MonoBehaviour
         isAttracted = false;
         isReturning = true;
         currentTarget = exit1;
+
+        // 触发逃跑事件
+        if (onEscape != null)
+            onEscape.Invoke();
     }
 
     private void MoveTowardsTarget()
