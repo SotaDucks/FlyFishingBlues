@@ -5,28 +5,30 @@ using UnityEngine.UI;
 
 public class FishStaminaBar : MonoBehaviour
 {
+    [Header("UI Components")]
     public Slider fishStaminaBar;
 
-    private int maxStamina = 100;
+    [Header("Stamina Settings")]
+    public int maxStamina = 100;
     public float currentStamina;
 
-    // 正常耐力回复速度
-    public float normalRegenSpeed = 2f; // 每秒回复的耐力值
+    [Tooltip("Regeneration speed when stamina > 0")]
+    public float normalRegenSpeed = 2f;
+    [Tooltip("Delay before regenerating after reaching zero")]
+    public float zeroStaminaDelay = 2f;
+    [Tooltip("Regeneration speed when recovering from zero")]
+    public float staminaChargingSpeed = 5f;
 
-    // 耐力为0时的延迟和特定回复速度
-    public float zeroStaminaDelay = 2f; // 延迟时间
-    public float staminaChargingSpeed = 5f; // 特定的每秒回复速度
+    [Header("Recharge Limits")]
+    public int rechargeTimes = 2;
+    private int currentRechargeTimes = 0;
 
-    private bool isRegeneratingAfterZero = false; // 标记是否在特定回复状态
-    private float zeroStaminaTimer = 0f; // 耐力耗尽后的计时器
+    private bool isRegeneratingAfterZero = false;
+    private float zeroStaminaTimer = 0f;
 
     public static FishStaminaBar instance;
 
-    // 新增的变量
-    public int rechargeTimes = 2; // 耐力条最多可以被重新恢复的次数
-    private int currentRechargeTimes = 0; // 当前已经恢复的次数
-
-    private void Awake()
+    void Awake()
     {
         instance = this;
     }
@@ -40,19 +42,23 @@ public class FishStaminaBar : MonoBehaviour
 
     void Update()
     {
-        // 当恢复次数未达到上限时，允许耐力回复
+        // Merge TireFish functionality: Use stamina on W key
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            UseStamina(15);
+        }
+
+        // Regeneration and recharge logic
         if (currentRechargeTimes < rechargeTimes)
         {
             if (currentStamina < maxStamina)
             {
                 if (currentStamina > 0 && !isRegeneratingAfterZero)
                 {
-                    // 正常回复
                     RegenerateStamina(normalRegenSpeed);
                 }
                 else if (currentStamina <= 0)
                 {
-                    // 耐力耗尽后的延迟计时
                     zeroStaminaTimer += Time.deltaTime;
                     if (zeroStaminaTimer >= zeroStaminaDelay)
                     {
@@ -69,7 +75,6 @@ public class FishStaminaBar : MonoBehaviour
                 }
                 else if (currentStamina > 0 && isRegeneratingAfterZero)
                 {
-                    // 在特定回复状态下继续回复
                     RegenerateStamina(staminaChargingSpeed);
 
                     if (currentStamina >= maxStamina)
@@ -83,12 +88,15 @@ public class FishStaminaBar : MonoBehaviour
         }
         else
         {
-            // 恢复次数已达上限，停止一切耐力回复
+            // Exhausted recharge times, stop regeneration
             isRegeneratingAfterZero = false;
             zeroStaminaTimer = 0f;
         }
     }
 
+    /// <summary>
+    /// Regenerates stamina by given speed.
+    /// </summary>
     private void RegenerateStamina(float regenSpeed)
     {
         currentStamina += regenSpeed * Time.deltaTime;
@@ -96,11 +104,14 @@ public class FishStaminaBar : MonoBehaviour
         fishStaminaBar.value = currentStamina;
     }
 
+    /// <summary>
+    /// Attempt to use a specified amount of stamina.
+    /// </summary>
     public void UseStamina(int amount)
     {
         if (isRegeneratingAfterZero)
         {
-            // 在特定回复期间，耐力无法被减少
+            // Cannot use stamina while recovering from zero
             return;
         }
 
@@ -114,31 +125,27 @@ public class FishStaminaBar : MonoBehaviour
             currentStamina = 0;
             fishStaminaBar.value = currentStamina;
 
-            // 检查是否已达到最大充能次数
+            // If out of recharge attempts, disable UI
             if (currentRechargeTimes >= rechargeTimes)
             {
-                // 禁用耐力条的 UI 组件
                 DisableStaminaBarUI();
             }
         }
     }
 
     /// <summary>
-    /// 禁用耐力条的 UI 组件，使其在游戏中不再显示。
+    /// Disables the stamina bar UI when no more recharge attempts left.
     /// </summary>
     private void DisableStaminaBarUI()
     {
         if (fishStaminaBar != null)
         {
-            // 禁用 Slider 组件的 GameObject
             fishStaminaBar.gameObject.SetActive(false);
-
-            // 可选：添加日志以调试
-            Debug.Log("耐力条 UI 已被禁用，因为达到最大充能次数并且耐力条被清零。");
+            Debug.Log("Stamina UI disabled: no recharges left.");
         }
         else
         {
-            Debug.LogWarning("fishStaminaBar 尚未被赋值。");
+            Debug.LogWarning("fishStaminaBar reference is null.");
         }
     }
 }

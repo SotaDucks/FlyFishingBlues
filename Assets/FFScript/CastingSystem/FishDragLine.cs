@@ -1,106 +1,79 @@
 using UnityEngine;
 using Obi;
+using HutongGames.PlayMaker;
 
 public class FishDragLine : MonoBehaviour
 {
-    public float dragSpeed = 1f; // ÍÏ¶¯Ê±Éş×ÓÔö³¤ËÙ¶È
-    public float retrieveSpeed = 1f; // ÊÕ»ØÊ±Éş×ÓËõ¶ÌËÙ¶È
-    public float struggleSpeed = 1f; // ÕõÔúÊ±Éş×ÓÔö³¤ËÙ¶È
-    public float pullSpeed = 1f; // À­¶¯Ê±Éş×ÓËõ¶ÌËÙ¶È
+    public float dragSpeed = 1f;       // æ‹‰åŠ¨æ—¶ç»³å­å»¶é•¿é€Ÿåº¦
+    public float retrieveSpeed = 1f;   // æ”¶çº¿æ—¶ç»³å­ç¼©çŸ­é€Ÿåº¦
+    public float struggleSpeed = 1f;   // æŒ£æ‰æ—¶ç»³å­å»¶é•¿é€Ÿåº¦
+    public float pullSpeed = 1f;       // è¢«æ‹‰æ—¶ç»³å­ç¼©çŸ­é€Ÿåº¦
 
-    private ObiRope rope; // ÒıÓÃ ObiRope ×é¼ş
-    private ObiRopeCursor ropeCursor; // ÒıÓÃ ObiRopeCursor ×é¼ş
-    public bool isDragging = false; // ±ê¼ÇÍÏ¶¯×´Ì¬
-    public bool isRetrieving = false; // ±ê¼ÇÊÕ»Ø×´Ì¬
-    public bool isStruggling = false; // ±ê¼ÇÕõÔú×´Ì¬
-    public bool isPulling = false; // ±ê¼ÇÀ­¶¯×´Ì¬
-    private Animator characterAnimator; // ÒıÓÃ½ÇÉ«¶¯»­
+    private ObiRope rope;              // ObiRope ç»„ä»¶ï¼Œç”¨äºæ§åˆ¶ç»³ç´¢
+    private ObiRopeCursor ropeCursor;  // ObiRopeCursor ç»„ä»¶ï¼Œç”¨äºç§»åŠ¨ç»³ç´¢æ¸¸æ ‡
+    public bool isDragging = false;
+    public bool isRetrieving = false;
+    public bool isStruggling = false;
+    public bool isPulling = false;
+
+    private FishDragLine fishDragLine;
+    private PlayMakerFSM playerFsm;    // å¼•ç”¨ç©å®¶è§’è‰²ä¸Šçš„ PlayMaker FSM
 
     void Start()
     {
-        // »ñÈ¡ ObiRope ×é¼ş
+        // è·å– ObiRope ä¸ ObiRopeCursor
         rope = GetComponent<ObiRope>();
-        // »ñÈ¡ ObiRopeCursor ×é¼ş
         ropeCursor = GetComponent<ObiRopeCursor>();
-
         if (rope == null || ropeCursor == null)
+            Debug.LogError("è¯·ç¡®è®¤ FlyLine ä¸ŠæŒ‚æœ‰ ObiRope å’Œ ObiRopeCursor ç»„ä»¶ã€‚");
+
+        // è·å–ç©å®¶è§’è‰²ä¸Šçš„ FSM
+        GameObject characterObject = GameObject.Find("PlayerArmature");
+        if (characterObject != null)
         {
-            Debug.LogError("Î´ÕÒµ½ ObiRope »ò ObiRopeCursor ×é¼ş£¬ÇëÈ·ÈÏ¸Ã½Å±¾¸½¼ÓÔÚ FlyLine ÉÏ£¡");
+            playerFsm = characterObject.GetComponent<PlayMakerFSM>();
+            if (playerFsm == null)
+                Debug.LogError("æœªæ‰¾åˆ° PlayerArmature ä¸Šçš„ PlayMakerFSM ç»„ä»¶ã€‚");
+        }
+        else
+        {
+            Debug.LogError("Scene ä¸­æ‰¾ä¸åˆ°åä¸º 'PlayerArmature' çš„ GameObjectã€‚");
         }
     }
 
     void Update()
     {
-        // ¸ù¾İ²»Í¬×´Ì¬À´ÑÓ³¤»òËõ¶ÌÉş×Ó
+        // æ ¹æ®çŠ¶æ€æ§åˆ¶ç»³ç´¢é•¿åº¦å˜åŒ–
         if (isDragging && rope != null && ropeCursor != null)
-        {
-            ExtendRope(dragSpeed); // ÍÏ¶¯Éş×Ó
-        }
+            ExtendRope(dragSpeed);
         if (isRetrieving && rope != null && ropeCursor != null)
-        {
-            ExtendRope(-retrieveSpeed); // ÊÕ»ØÉş×Ó
-        }
+            ExtendRope(-retrieveSpeed);
         if (isStruggling && rope != null && ropeCursor != null)
-        {
-            ExtendRope(struggleSpeed); // ÕõÔúÊ±Éş×ÓÔö³¤
-        }
+            ExtendRope(struggleSpeed);
         if (isPulling && rope != null && ropeCursor != null)
-        {
-            ExtendRope(-pullSpeed); // À­¶¯Éş×Ó
-        }
+            ExtendRope(-pullSpeed);
 
-        // ¼ì²é¡°SetTheHook¡±¶¯»­ÊÇ·ñÕıÔÚ²¥·Å£¬Èç¹ûÕıÔÚ²¥·ÅÔòÍ£Ö¹ËùÓĞ²Ù×÷
-        if (characterAnimator != null && characterAnimator.GetCurrentAnimatorStateInfo(0).IsName("SetTheHook"))
+        // è‡ªåŠ¨æ¸…é™¤æ‰€æœ‰æ‹‰ä¼¸/æ”¶ç¼©åŠ¨ä½œ â€”â€” å½“ PlayMaker çŠ¶æ€ä¸º FishOnSetTheHook æ—¶è§¦å‘
+        if (playerFsm != null && playerFsm.Fsm.ActiveStateName == "FishOnSetTheHook")
         {
-            StopAllActions(); // Í£Ö¹ËùÓĞ¶¯×÷
+            StopAllActions();
         }
     }
 
-    // ÍÏ¶¯Éş×Ó
-    public void StartDragging()
-    {
-        isDragging = true;
-    }
+    // å¼€å§‹/åœæ­¢å„åŠ¨ä½œ
+    public void StartDragging()    { isDragging = true; }
+    public void StopDragging()     { isDragging = false; }
 
-    public void StopDragging()
-    {
-        isDragging = false;
-    }
+    public void StartRetrieving()  { isRetrieving = true; }
+    public void StopRetrieving()   { isRetrieving = false; }
 
-    // ÊÕ»ØÉş×Ó
-    public void StartRetrieving()
-    {
-        isRetrieving = true;
-    }
+    public void StartStruggling()  { isStruggling = true; }
+    public void StopStruggling()   { isStruggling = false; }
 
-    public void StopRetrieving()
-    {
-        isRetrieving = false;
-    }
+    public void StartPulling()     { isPulling = true; }
+    public void StopPulling()      { isPulling = false; }
 
-    // ÕõÔú
-    public void StartStruggling()
-    {
-        isStruggling = true;
-    }
-
-    public void StopStruggling()
-    {
-        isStruggling = false;
-    }
-
-    // À­¶¯Éş×Ó
-    public void StartPulling()
-    {
-        isPulling = true;
-    }
-
-    public void StopPulling()
-    {
-        isPulling = false;
-    }
-
-    // Í£Ö¹ËùÓĞÉş×ÓµÄ²Ù×÷
+    // åœæ­¢æ‰€æœ‰çŠ¶æ€æ ‡è®°
     public void StopAllActions()
     {
         isDragging = false;
@@ -109,10 +82,10 @@ public class FishDragLine : MonoBehaviour
         isPulling = false;
     }
 
-    // Éş×ÓÑÓ³¤»òËõ¶ÌµÄÂß¼­
+    // è°ƒç”¨ ObiRopeCursor ä¿®æ”¹ç»³å­é•¿åº¦
     private void ExtendRope(float speed)
     {
-        ropeCursor.ChangeLength(speed * Time.deltaTime); // Ê¹ÓÃ ObiRopeCursor À´¸Ä±äÉş×ÓµÄ³¤¶È
-        Debug.Log("Éş×Ó×´Ì¬±ä»¯£¬µ±Ç°³¤¶È±ä»¯: " + speed * Time.deltaTime);
+        ropeCursor.ChangeLength(speed * Time.deltaTime);
+        Debug.Log("Rope extended by: " + (speed * Time.deltaTime));
     }
 }
