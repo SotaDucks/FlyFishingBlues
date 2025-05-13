@@ -1,5 +1,3 @@
-// (c) Copyright HutongGames, LLC 2021. All rights reserved.
-
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -23,15 +21,20 @@ namespace HutongGames.PlayMaker.Actions
 
         protected override void OnPerformed(InputAction.CallbackContext ctx)
         {
-            // Only fire when the fish has not bitten the hook
+            // 尝试查找鱼对象
             GameObject trout = GameObject.Find("TroutWithJawfbx");
-            if (trout != null)
+
+            // 如果没找到鱼，或者找到了但 FishBiteHook 为空/未咬钩，都算作“鱼还没咬”
+            if (trout == null)
             {
-                FishBiteHook biteHook = trout.GetComponent<FishBiteHook>();
-                if (biteHook != null && !biteHook.isFishBite)
-                {
-                    Fsm.Event(sendEvent);
-                }
+                Fsm.Event(sendEvent);
+                return;
+            }
+
+            FishBiteHook biteHook = trout.GetComponent<FishBiteHook>();
+            if (biteHook == null || !biteHook.isFishBite)
+            {
+                Fsm.Event(sendEvent);
             }
         }
     }
