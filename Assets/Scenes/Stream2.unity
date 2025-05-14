@@ -1321,7 +1321,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.85
+  m_Radius: 2.29
   m_Center: {x: -0.78356713, y: 0, z: 0.0000000025090885}
 --- !u!4 &232757160
 Transform:
@@ -7770,7 +7770,7 @@ MonoBehaviour:
   fishStaminaCanvas: {fileID: 1665744315}
   escapePoint: {fileID: 784200106}
   moveSpeed: 2
-  nextSceneName: Unhook Man
+  nextSceneName: UnhookTrout
 --- !u!114 &1041427324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9893,7 +9893,7 @@ PrefabInstance:
     - target: {fileID: 4635439909778529437, guid: 6477108124050a24d8c2827c130e5a6d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 199.86
+      value: 218.92
       objectReference: {fileID: 0}
     - target: {fileID: 4635439909778529437, guid: 6477108124050a24d8c2827c130e5a6d,
         type: 3}

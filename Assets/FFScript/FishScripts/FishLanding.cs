@@ -13,7 +13,7 @@ public class FishLanding : MonoBehaviour
     public float moveSpeed = 5f;              // 鱼的移动速度
 
     [Header("场景切换")]
-    [Tooltip("设置要加载的下一个场景名称，可在 Inspector 中修改")]  
+    [Tooltip("设置要加载的下一个场景名称，可在 Inspector 中修改")]
     public string nextSceneName = "Unhook Man";  // 新增：下一个场景名称
 
     private Rigidbody fishRigidbody;
@@ -30,7 +30,53 @@ public class FishLanding : MonoBehaviour
     {
         fishRigidbody = GetComponent<Rigidbody>();
         staminaBar = FishStaminaBar.instance;
-        // ...（省略原有查找组件逻辑，保持不变）
+        if (staminaBar == null)
+        {
+            Debug.LogError("FishStaminaBar instance is not found.");
+            return;
+        }
+
+        // FishDragLine 查找
+        GameObject flyLineGO = GameObject.Find("FlyLine");
+        if (flyLineGO != null)
+            fishDragLine = flyLineGO.GetComponent<FishDragLine>();
+        if (fishDragLine == null)
+            Debug.LogError("FishDragLine component not found on 'FlyLine'.");
+
+        // WaterSurfaceTrigger 查找
+        GameObject waterSurfaceTrigger = GameObject.Find("WaterSurfaceTrigger");
+        if (waterSurfaceTrigger != null)
+            waterSurfaceTriggerCollider = waterSurfaceTrigger.GetComponent<Collider>();
+        if (waterSurfaceTriggerCollider == null)
+            Debug.LogError("WaterSurfaceTrigger Collider 未找到或未设置 Is Trigger.");
+
+        // FishLandPoint 查找
+        GameObject fishLandPoint = GameObject.Find("FishLandPoint");
+        if (fishLandPoint != null)
+            fishLandPointCollider = fishLandPoint.GetComponent<Collider>();
+        if (fishLandPointCollider == null)
+            Debug.LogError("FishLandPoint Collider 未找到或未设置 Is Trigger.");
+
+        // FishStaminaCanvas Canvas 组件
+        if (fishStaminaCanvas != null)
+        {
+            canvasComponent = fishStaminaCanvas.GetComponent<Canvas>();
+            if (canvasComponent == null)
+                Debug.LogError("Canvas component not found on FishStaminaCanvas.");
+            else
+                canvasComponent.enabled = false;
+        }
+        else
+        {
+            Debug.LogError("FishStaminaCanvas 未在 Inspector 中赋值.");
+        }
+
+        // Character Animator 查找
+        GameObject character = GameObject.Find("autoriggedmainch");
+        if (character != null)
+            characterAnimator = character.GetComponent<Animator>();
+        if (characterAnimator == null)
+            Debug.LogError("Animator component not found on 'autoriggedmainch'.");
 
         // 开始延迟激活耐力条
         StartCoroutine(ActivateStaminaBar());
@@ -48,7 +94,30 @@ public class FishLanding : MonoBehaviour
     {
         while (true)
         {
-            // ...（省略原有耐力检测和移动逻辑）
+            if (staminaBar == null || fishDragLine == null)
+                yield break;
+
+            if (staminaBar.currentStamina > 0 && isInWater)
+            {
+                fishRigidbody.isKinematic = true;
+                fishDragLine.StartStruggling();
+
+                // 朝 escapePoint 方向移动
+                Vector3 dir = (escapePoint.position - transform.position).normalized;
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * 5f);
+                transform.position += dir * moveSpeed * Time.deltaTime;
+
+                if (characterAnimator != null)
+                    characterAnimator.SetBool("IsDraging", true);
+            }
+            else
+            {
+                fishRigidbody.isKinematic = false;
+                fishDragLine.StopStruggling();
+                if (characterAnimator != null)
+                    characterAnimator.SetBool("IsDraging", false);
+            }
+
             yield return null;
         }
     }
@@ -59,7 +128,7 @@ public class FishLanding : MonoBehaviour
             isInWater = true;
 
         if (other == fishLandPointCollider)
-            LoadNextScene();   // 触发场景切换
+            LoadNextScene();
     }
 
     private void OnTriggerExit(Collider other)
@@ -72,12 +141,8 @@ public class FishLanding : MonoBehaviour
     {
         Debug.Log("Done");
         if (!string.IsNullOrEmpty(nextSceneName))
-        {
             SceneManager.LoadScene(nextSceneName);
-        }
         else
-        {
-            Debug.LogError("Next scene name is empty. Please set nextSceneName in the Inspector.");
-        }
+            Debug.LogError("Next scene name is empty. 请在 Inspector 中设置 nextSceneName.");
     }
 }
