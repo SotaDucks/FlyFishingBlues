@@ -62,11 +62,6 @@ public class Unhook : MonoBehaviour
         HookPosition();
         ReadGamepadInput();
         MoveHook();
-
-
-
-
-
     }
   
     private void HookPosition()
