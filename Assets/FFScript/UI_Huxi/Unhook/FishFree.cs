@@ -16,9 +16,7 @@ public class FishFree : MonoBehaviour
     public NPCConversation FreeConversation;
 
     // Start is called before the first frame update
-    void Start()
-    {
-    }
+   
     private void OnEnable()
     {
         ConversationManager.Instance.StartConversation(FreeConversation);
@@ -44,11 +42,5 @@ public class FishFree : MonoBehaviour
            .SetEase(Ease.OutQuad);
     }
     // Update is called once per frame
-    private void Struggle()
-    {
-       
-      
-       
-      
-    }
+  
 }

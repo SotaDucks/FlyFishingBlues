@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DialogueEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using VHACD.Unity;
 
 public class GameController : MonoBehaviour
@@ -36,7 +37,7 @@ public class GameController : MonoBehaviour
     {
         if (fishmoving) 
         {
-            if (Input.GetKey(KeyCode.F))
+            if (Gamepad.current?.buttonEast.wasPressedThisFrame == true)
             {
                 fishmoving = false;
                
