@@ -293,7 +293,7 @@ MonoBehaviour:
   VertexCreationThreshold: 0
   DefaultMaterial: {fileID: 2100000, guid: 30d3bdcd8e9e6a947b19338f628af5b5, type: 2}
   DebugPlaneLength: 4.28
-  PickUpBTN: {fileID: 0}
+  PickUpBTN: {fileID: 1839430338}
   targetsToCut:
   - {fileID: 8180085750967518909}
   KnifeController: {fileID: 1757666133}
@@ -1528,7 +1528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: -99.7}
+  m_AnchoredPosition: {x: -25, y: -69.79997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876073344
@@ -2676,7 +2676,7 @@ GameObject:
   - component: {fileID: 1674179407}
   - component: {fileID: 1674179406}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Go Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2846,7 +2846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 55.6}
+  m_AnchoredPosition: {x: 0, y: 3}
   m_SizeDelta: {x: 686.87, y: 320.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1839430340
@@ -3265,7 +3265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 8.3}
+  m_AnchoredPosition: {x: 0, y: 38.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2079370510
@@ -3467,7 +3467,7 @@ GameObject:
   - component: {fileID: 2126229575}
   - component: {fileID: 2126229574}
   m_Layer: 5
-  m_Name: Button
+  m_Name: KeepOnFishing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
