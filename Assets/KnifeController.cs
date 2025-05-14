@@ -1,6 +1,7 @@
 using DynamicMeshCutter;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class KnifeController : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class KnifeController : MonoBehaviour
     {
         HandleMovement();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Gamepad.current?.buttonEast.wasPressedThisFrame == true)
         {
             isSpacePressed = true;
             StartCutAction();
@@ -40,33 +41,25 @@ public class KnifeController : MonoBehaviour
 
     // 处理W、A、S、D键的移动
     void HandleMovement()
-    {
+    {// 如果空格按下或动画正在执行，则禁用移动
         if (isSpacePressed || isAnimating)
-            return;  // 如果空格按下或动画正在执行，则禁用移动
+            return;
 
-        float moveX = 0f;
-        float moveZ = 0f;
+        var gamepad = Gamepad.current;
+        if (gamepad == null)
+            return;  // 没插手柄则不动
 
-        // 检查上下左右按键是否被按下
-        if (Input.GetKey(KeyCode.W))
-        {
-            moveZ += 1f;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            moveZ -= 1f;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            moveX -= 1f;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            moveX += 1f;
-        }
+        // 读左摇杆，x 对应水平，y 对应前后
+        Vector2 stick = gamepad.leftStick.ReadValue();
+        float moveX = stick.x;
+        float moveZ = stick.y;
 
-        // 执行移动操作
-        Vector3 move = new Vector3(moveX, 0, moveZ).normalized * moveSpeed * Time.deltaTime;
+        // 如果需要和原版一样强制单位速度一致
+        Vector3 raw = new Vector3(moveX, 0f, moveZ);
+        Vector3 dir = raw.sqrMagnitude > 1f ? raw.normalized : raw;
+
+        // 执行移动
+        Vector3 move = dir * moveSpeed * Time.deltaTime;
         transform.Translate(move, Space.World);
     }
 
