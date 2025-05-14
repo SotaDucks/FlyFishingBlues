@@ -14,7 +14,11 @@ public class I_LoadingScene : MonoBehaviour
             LoadScene();
         }
     }
+    public void LLoadScene(string scenename)
+    {
 
+        SceneManager.LoadScene(scenename);
+    }
     public void LoadScene()
     {
         if (!string.IsNullOrEmpty(sceneToLoad))
