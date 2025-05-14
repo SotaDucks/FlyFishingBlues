@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Unhook : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Unhook : MonoBehaviour
     private float screenCenterX;
     public float moveSpeed = 5f; // 移动速度
     private bool Fisdown;
-   
+    private Vector2 moveInput;
     void Start()
     {
     
@@ -23,14 +24,11 @@ public class Unhook : MonoBehaviour
     }
     void Update()
     {
-         HookPosition(); 
-        if (Input.GetKeyDown(KeyCode.F))
-        { Fisdown = true; }
+         HookPosition();
+        ReadGamepad();
+        MoveHook();
 
-       
-            if (Fisdown)
-        {
-
+        Debug.Log("Done");
        // 获取水平（A/D）和垂直（W/S）输入
         float moveX = 0f;
         float moveY = 0f;
@@ -62,8 +60,31 @@ public class Unhook : MonoBehaviour
 
         // 应用旋转，只允许 Z 轴旋转
         transform.rotation = Quaternion.Euler(0, 180, newZRotation);
-        }
+        
     }
+    private void ReadGamepad()
+    {
+        var pad = Gamepad.current;
+        if (pad == null)
+        {
+            moveInput = Vector2.zero;
+            return;
+        }
+
+        // 直接读取完整的 Vector2，x 对应左右，y 对应上下
+        moveInput = pad.leftStick.ReadValue();
+
+        // （可选）限制最大长度为 1，保持所有方向速度一致
+        if (moveInput.sqrMagnitude > 1f)
+            moveInput.Normalize();
+    }
+    private void MoveHook()
+    {
+        Vector3 delta = new Vector3(moveInput.x, moveInput.y, 0f)
+                        * moveSpeed * Time.deltaTime;
+        transform.Translate(delta, Space.World);
+    }
+
     private void HookPosition()
     {
 
