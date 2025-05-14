@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/3D/FisherMan3D/Materials/road_signs_baseColor.mat.meta
 guid: 41d2efdf4b0896844ae3c0a0baf2bcb0
 NativeFormatImporter:
+========
+guid: 2104a5f2ec7ac7e4bb0e20caf3300f9d
+DefaultImporter:
+>>>>>>>> 74a4f05a26ec4336ac7b8bd6ca13f37574e3a948:Assets/Scenes/ManuScene.unity.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 

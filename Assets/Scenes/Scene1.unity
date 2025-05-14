@@ -3221,7 +3221,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2375060326727744788, guid: 011b790ca932d4fc4af90dc4abe671c6, type: 3}
+  - {fileID: 2100000, guid: 382ae9bb87055cb4dbfb81cdfeb0042b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8175,6 +8175,7 @@ MonoBehaviour:
   fishStaminaCanvas: {fileID: 1665744315}
   escapePoint: {fileID: 784200106}
   moveSpeed: 2
+  nextSceneName: Unhook Man
 --- !u!114 &1041427324
 MonoBehaviour:
   m_ObjectHideFlags: 0

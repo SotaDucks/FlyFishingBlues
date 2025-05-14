@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class NewDialogueSystem : MonoBehaviour
 {
 
@@ -150,6 +151,7 @@ public class NewDialogueSystem : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
         Debug.Log("¶Ô»°½áÊø");
+        SceneManager.LoadScene("SceneTown");
     }
 
 }

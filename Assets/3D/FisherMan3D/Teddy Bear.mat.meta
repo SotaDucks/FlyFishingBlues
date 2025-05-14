@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/3D/FisherMan3D/Teddy Bear.mat.meta
 guid: c80ae95d5b5328c449c770f7b8715d67
 NativeFormatImporter:
+========
+guid: f30136af7ec4690418a33187fc522d3e
+DefaultImporter:
+>>>>>>>> 74a4f05a26ec4336ac7b8bd6ca13f37574e3a948:Assets/Scenes/Backup/Backup_SceneTown.unity.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 
