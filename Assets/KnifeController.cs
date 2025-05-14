@@ -1,6 +1,7 @@
 using DynamicMeshCutter;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class KnifeController : MonoBehaviour
 {
@@ -39,34 +40,25 @@ public class KnifeController : MonoBehaviour
     }
 
     // 处理W、A、S、D键的移动
-    void HandleMovement()
+    private void HandleMovement()
     {
-        if (isSpacePressed || isAnimating)
-            return;  // 如果空格按下或动画正在执行，则禁用移动
+        var gamepad = Gamepad.current;
+        if (gamepad == null)
+            return;                     // 没插手柄就跳过
 
-        float moveX = 0f;
-        float moveZ = 0f;
+        // 手柄的 South 键（一般对应 A 键或 X 键）
+        if (gamepad.buttonSouth.isPressed || isAnimating)
+            return;                     // 如果按下按钮或动画中，则不移动
 
-        // 检查上下左右按键是否被按下
-        if (Input.GetKey(KeyCode.W))
-        {
-            moveZ += 1f;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            moveZ -= 1f;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            moveX -= 1f;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            moveX += 1f;
-        }
+        // 读取左摇杆的值
+        Vector2 stick = gamepad.leftStick.ReadValue();
 
-        // 执行移动操作
-        Vector3 move = new Vector3(moveX, 0, moveZ).normalized * moveSpeed * Time.deltaTime;
+        // 构造世界坐标下的移动向量
+        Vector3 move = new Vector3(stick.x, 0f, stick.y)
+                       .normalized
+                       * moveSpeed
+                       * Time.deltaTime;
+
         transform.Translate(move, Space.World);
     }
 
