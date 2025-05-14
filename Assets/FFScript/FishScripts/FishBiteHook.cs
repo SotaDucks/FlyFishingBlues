@@ -1,28 +1,39 @@
 using UnityEngine;
 using Obi;
 using HutongGames.PlayMaker;
+using UnityEngine.Events;    // ← 新增
 
 public class FishBiteHook : MonoBehaviour
 {
-    public Transform flyhook;                // 钓饵 Transform 引用
-    public Transform exit1;                  // 逃离出口 Transform 引用
-    public float moveSpeed = 3f;             // 游向钩子的速度
-    public float maxChaseDistance = 5f;      // 攻击前最大追逐距离阈值
-    public float stopDistance = 0.5f;        // 停止移动的最小距离
-    public float waitTime = 1f;              // 等待上钩动作的时间
-    public float escapeSpeed = 5f;           // 逃离时的速度
-    public bool isFishBite = false;          // 是否已咬钩
+    [Header("Events")]
+    public UnityEvent BiteFailToEscape;    // ← 新增：当咬钩失败、超出范围逃跑时触发
 
-    private Animator fishAnimator;           // 鱼的 Animator
-    private Animator characterAnimator;      // 玩家角色的 Animator
-    private PlayMakerFSM playerFsm;          // 玩家角色上的 PlayMaker FSM
-    private bool isMovingToHook = true;      // 当前阶段：游向钩子
-    private float waitTimer = 0f;            // 等待计时器
-    private FishDragLine fishDragLine;       // 鱼线拖拽脚本
-    private ObiParticleAttachment[] attachments; // 鱼线上粒子附着组件数组
+    [Header("Target Settings")]
+    public Transform flyhook;              // 钓饵 Transform 引用
+    public Transform exit1;                // 逃离出口 Transform 引用
+
+    [Header("Movement Settings")]
+    public float moveSpeed = 3f;           
+    public float maxChaseDistance = 5f;    // 攻击前最大追逐距离阈值
+    public float stopDistance = 0.5f;      
+    public float waitTime = 1f;            
+    public float escapeSpeed = 5f;         
+    public bool isFishBite = false;        
+
+    private Animator fishAnimator;         
+    private Animator characterAnimator;    
+    private PlayMakerFSM playerFsm;        
+    private bool isMovingToHook = true;    
+    private float waitTimer = 0f;          
+    private FishDragLine fishDragLine;     
+    private ObiParticleAttachment[] attachments;
 
     void Start()
     {
+        // 确保事件实例化，防止为空
+        if (BiteFailToEscape == null)
+            BiteFailToEscape = new UnityEvent();
+
         // 查找钩饵
         var flyhookObj = GameObject.Find("flyhook");
         if (flyhookObj != null)
@@ -84,9 +95,12 @@ public class FishBiteHook : MonoBehaviour
     private void MoveToHook()
     {
         float dist = Vector3.Distance(transform.position, flyhook.position);
+
+        // ← 新增：当超过最大追逐距离，触发咬钩失败逃跑事件
         if (dist > maxChaseDistance)
         {
-            // 超出追逐范围，放弃攻击
+            Debug.Log("鱼因超出追逐范围而放弃攻击并逃跑");
+            BiteFailToEscape.Invoke();
             isMovingToHook = false;
             return;
         }

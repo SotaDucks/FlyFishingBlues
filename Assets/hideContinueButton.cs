@@ -33,8 +33,6 @@ public class hideContinueButton : MonoBehaviour
             if (!btn.gameObject.name.Contains("ConversationButton"))
                 continue;
 
-            // 1. 让它不可点击
-            btn.interactable = false;
 
             // 2. 隐藏它自己的 Image（背景）
             var bg = btn.GetComponent<Image>();

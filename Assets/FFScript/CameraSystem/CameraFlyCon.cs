@@ -1,72 +1,85 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class CameraFlyCon : MonoBehaviour
 {
-    public Transform target; // ¸úËæµÄÄ¿±ê£¨Óã£©
-    public float smoothSpeed = 0.125f;
-    public Vector3 offset;
+    [Header("Target Settings")]
+    public Transform target;              // è¦è§‚å¯Ÿçš„å¯¹è±¡ï¼Œå¦‚é±¼
+    public float smoothSpeed = 0.125f;    // å¹³æ»‘è·Ÿéšé€Ÿåº¦
+    public Vector3 offset;                // ç›¸æœºåç§»é‡
 
-    // Viewport Rect ¶¯»­Ïà¹Ø²ÎÊı
     [Header("Viewport Rect Animation Settings")]
-    public float initialViewportX = 0.99f; // ³õÊ¼XÖµ
-    public float initialViewportY = 0.99f; // ³õÊ¼YÖµ
-    public float finalViewportX = 0.6f;    // ×îÖÕXÖµ
-    public float finalViewportY = 0.6f;    // ×îÖÕYÖµ
-    public float viewportAnimationDuration = 1.0f; // ¶¯»­³ÖĞøÊ±¼ä£¨Ãë£©
+    public float initialViewportX = 0.99f;
+    public float initialViewportY = 0.99f;
+    public float finalViewportX = 0.6f;
+    public float finalViewportY = 0.6f;
+    public float viewportAnimationDuration = 1.0f;
 
-    private Camera targetCamera; // ÉãÏñ»ú×é¼ş
-    private FishAttraction fishAttraction; // FishAttraction×é¼ş
+    [Header("Camera Close Delay")]
+    [Tooltip("é±¼é€ƒè·‘åï¼Œå»¶è¿Ÿå¤šä¹…å…³é—­æ‘„åƒæœºï¼ˆç§’ï¼‰")]
+    public float escapeCameraDelay = 2f;
+
+    private Camera targetCamera;
+    private FishAttraction fishAttraction;
+    private FishBiteHook fishBiteHook;              // â† æ–°å¢ï¼šå¼•ç”¨ FishBiteHook
     private bool isCameraActivated = false;
 
-    private void Start()
+    void Start()
     {
-        // »ñÈ¡ÉãÏñ»ú×é¼ş
+        // è·å– Camera ç»„ä»¶å¹¶åˆå§‹ç¦ç”¨
         targetCamera = GetComponent<Camera>();
         if (targetCamera == null)
         {
-            Debug.LogError("Î´ÔÚ¸ÃÓÎÏ·¶ÔÏóÉÏÕÒµ½Camera×é¼ş¡£");
+            Debug.LogError("æœªæ‰¾åˆ° Camera ç»„ä»¶ã€‚");
+            return;
+        }
+        targetCamera.enabled = false;
+
+        // åˆå§‹åŒ– Viewport Rect
+        targetCamera.rect = new Rect(initialViewportX, initialViewportY, targetCamera.rect.width, targetCamera.rect.height);
+
+        if (target == null)
+        {
+            Debug.LogError("æœªè®¾ç½®ç›®æ ‡ Transformã€‚");
             return;
         }
 
-        // ³õÊ¼Ê±½ûÓÃÉãÏñ»ú×é¼ş
-        targetCamera.enabled = false;
-
-        // ÉèÖÃÉãÏñ»úµÄ³õÊ¼ Viewport Rect
-        targetCamera.rect = new Rect(initialViewportX, initialViewportY, targetCamera.rect.width, targetCamera.rect.height);
-
-        // ¼ì²éÄ¿±êÊÇ·ñÒÑÉèÖÃ
-        if (target != null)
+        // è·å– FishAttraction å¹¶è®¢é˜…é€ƒè·‘äº‹ä»¶
+        fishAttraction = target.GetComponent<FishAttraction>();
+        if (fishAttraction == null)
         {
-            // »ñÈ¡FishAttraction×é¼ş
-            fishAttraction = target.GetComponent<FishAttraction>();
-            if (fishAttraction == null)
-            {
-                Debug.LogError("Î´ÔÚÄ¿±êÉÏÕÒµ½FishAttraction×é¼ş¡£");
-                return;
-            }
+            Debug.LogError("æœªåœ¨ç›®æ ‡ä¸Šæ‰¾åˆ° FishAttraction ç»„ä»¶ã€‚");
+            return;
+        }
+        fishAttraction.onEscape.AddListener(OnFishEscape);
+
+        // â† æ–°å¢ï¼šè·å– FishBiteHook å¹¶è®¢é˜… BiteFailToEscape äº‹ä»¶
+        fishBiteHook = target.GetComponent<FishBiteHook>();
+        if (fishBiteHook == null)
+        {
+            Debug.LogError("æœªåœ¨ç›®æ ‡ä¸Šæ‰¾åˆ° FishBiteHook ç»„ä»¶ã€‚");
         }
         else
         {
-            Debug.LogError("Î´ÉèÖÃÄ¿±ê¡£");
+            fishBiteHook.BiteFailToEscape.AddListener(OnFishEscape);
         }
     }
 
-    private void LateUpdate()
+    void LateUpdate()
     {
         if (target == null || fishAttraction == null) return;
 
-        // µ±Óã±»ÎüÒıÊ±¼¤»îÉãÏñ»ú
+        // é±¼è¢«å¸å¼•æ—¶æ¿€æ´»æ‘„åƒæœº
         if (fishAttraction.isAttracted && !isCameraActivated)
         {
             ActivateCamera();
         }
 
-        // Æ½»¬¸úËæÄ¿±ê²¢ÃæÏòÄ¿±ê
+        // å¹³æ»‘è·Ÿéšå’Œæœå‘ç›®æ ‡
         Vector3 desiredPosition = target.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
-
         transform.LookAt(target);
     }
 
@@ -74,42 +87,41 @@ public class CameraFlyCon : MonoBehaviour
     {
         targetCamera.enabled = true;
         isCameraActivated = true;
-        Debug.Log("ÉãÏñ»úÒÑ¼¤»î¡£");
-
-        // Æô¶¯ Viewport Rect ¶¯»­Ğ­³Ì
+        Debug.Log("æ‘„åƒæœºå·²æ¿€æ´»ã€‚");
         StartCoroutine(AnimateViewportRect());
+    }
+
+    private void OnFishEscape()
+    {
+        // é±¼é€ƒè·‘æˆ–å’¬é’©å¤±è´¥åå»¶è¿Ÿå…³é—­æ‘„åƒæœº
+        fishAttraction.isAttracted = false;
+    StartCoroutine(DeactivateCameraAfterDelay());
+    }
+
+    private IEnumerator DeactivateCameraAfterDelay()
+    {
+        yield return new WaitForSeconds(escapeCameraDelay);
+        targetCamera.enabled = false;
+        isCameraActivated = false;
+        Debug.Log("æ‘„åƒæœºå·²å…³é—­ (å»¶è¿Ÿå)ã€‚");
     }
 
     private IEnumerator AnimateViewportRect()
     {
         float elapsedTime = 0f;
-
-        // »ñÈ¡µ±Ç° Viewport Rect
         Rect startRect = targetCamera.rect;
-
-        // ¶¨ÒåÄ¿±ê Viewport Rect
         Rect endRect = new Rect(finalViewportX, finalViewportY, startRect.width, startRect.height);
 
         while (elapsedTime < viewportAnimationDuration)
         {
-            // ¼ÆËã²åÖµÒò×Ó
             float t = elapsedTime / viewportAnimationDuration;
-
-            // Æ½»¬²åÖµ Viewport Rect µÄ X ºÍ Y
             float currentX = Mathf.Lerp(initialViewportX, finalViewportX, t);
             float currentY = Mathf.Lerp(initialViewportY, finalViewportY, t);
-
-            // ÉèÖÃĞÂµÄ Viewport Rect
             targetCamera.rect = new Rect(currentX, currentY, startRect.width, startRect.height);
-
-            // Ôö¼ÓÒÑÓÃÊ±¼ä
             elapsedTime += Time.deltaTime;
-
-            // µÈ´ıÏÂÒ»Ö¡
             yield return null;
         }
 
-        // È·±£×îÖÕ Viewport Rect ´ïµ½Ä¿±êÖµ
         targetCamera.rect = new Rect(finalViewportX, finalViewportY, targetCamera.rect.width, targetCamera.rect.height);
     }
 }

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DialogueEditor;
+using System.Collections;
+using System.Collections.Generic;
 
 public class DialogueInputHandler : MonoBehaviour
 {
@@ -49,11 +51,20 @@ public class DialogueInputHandler : MonoBehaviour
         switchToNoRod.Disable();
     }
 
+    // 修改DialogueInputHandler.cs中的OnAction方法
+    // 修改后的OnAction方法
     private void OnAction(string paramName)
     {
-        // 设置 Dialogue 参数
+        Debug.Log($"设置参数: {paramName} = true");
         ConversationManager.Instance.SetBool(paramName, true);
-        // 模拟 “Continue” 推进对话
+
+        // 等待短暂时间确保参数生效
+        Invoke("PushDialogue", 0.5f);
+    }
+
+    private void PushDialogue()
+    {
+        Debug.Log("推进对话");
         ConversationManager.Instance.PressSelectedOption();
     }
 }
