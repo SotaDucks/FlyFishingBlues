@@ -8,49 +8,49 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ManuScene.unity
     guid: 2104a5f2ec7ac7e4bb0e20caf3300f9d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/FFInstructionScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/TransferScene.unity
     guid: 9a0d297ba60a7f24c93724be2ba3b07a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Backup/FishingScene.unity
     guid: 636c284945290a84ea46f17b8cb90e4d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LandScene.unity
     guid: c8d28d0075f1f0f41852550d47e71baf
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Unhook.unity
     guid: cd4839cf53b23474fbf90889b2f665e2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/CuttingFish.unity
     guid: 385012da4b821234a92cc6d597bffcfd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Backup/Unhook Man.unity
     guid: f610f4ec179909e4193241627cfc51a1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Backup/CuttingDianMan.unity
     guid: d5a6e2213cd46c54891e096625eae1db
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Backup/WakeUp.unity
     guid: fbab7c5d2675c674f9beb346ce76848e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Backup/SharkScene.unity
     guid: 4d6a5226bfa0363488b82dd32588db93
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Backup/LureScene.unity
     guid: f32e6ce102101ce49aa58ce4d873253c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Backup/EndScene.unity
     guid: 8fab489b347584141a02b1fc7cfba088
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneTown.unity
     guid: 96d6b7b83644d784ca84b82c3a002988
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Backup/SceneTownNext.unity
     guid: 70d401d6191d54048b0ad2123d9ff997
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene1.unity
     guid: c90e9a0672656c24d82dd211d217a9d6
   - enabled: 1

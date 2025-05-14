@@ -882,29 +882,8 @@
         {
             "name": "UI",
             "id": "e90ffbe4-bc8b-479b-9de8-3959b3828605",
-            "actions": [
-                {
-                    "name": "Confirm",
-                    "type": "Button",
-                    "id": "1d233d2e-b8fa-4845-b729-cc063811e056",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
+            "actions": [],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "94fdf33c-2161-46f4-a823-98c93c331c07",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Confirm",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "up",
                     "id": "2fff422a-49ed-41be-bc60-2996526d3b31",

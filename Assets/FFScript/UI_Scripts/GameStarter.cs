@@ -60,7 +60,7 @@ public class GameStarter : MonoBehaviour
 
     void Update()
     {
-        bool ps5XPressed  = Input.GetKeyDown(KeyCode.JoystickButton15);
+        bool ps5XPressed  = Input.GetKeyDown(KeyCode.JoystickButton1);
         bool enterPressed = Input.GetKeyDown(KeyCode.Return);
         bool keyPressed   = ps5XPressed || enterPressed;
 
