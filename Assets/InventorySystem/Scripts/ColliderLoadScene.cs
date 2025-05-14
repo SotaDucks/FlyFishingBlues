@@ -11,7 +11,9 @@ public class ColliderLoadScene : MonoBehaviour
     {
 
 
-        if (other.CompareTag("Player")) { SceneManager.LoadScene(sceneName); }
+        if (other.CompareTag("Player")) { SceneManager.LoadScene(sceneName);
+            Debug.Log("123123");
+        }
  
         
     }
