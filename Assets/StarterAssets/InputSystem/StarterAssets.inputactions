@@ -138,7 +138,20 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< Updated upstream
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "CuttingFish",
+                    "type": "Value",
+                    "id": "b3c65297-ebb1-42b4-9e7b-25d7ddc0767a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+>>>>>>> Stashed changes
                 }
             ],
             "bindings": [
@@ -895,6 +908,119 @@
                     "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
+<<<<<<< Updated upstream
+=======
+                },
+                {
+                    "name": "up",
+                    "id": "2fff422a-49ed-41be-bc60-2996526d3b31",
+                    "path": "<Gamepad>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ControlHook",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "394324a2-3eec-4c98-8d55-61a09805bdf9",
+                    "path": "<Gamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ControlHook",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "66134609-39cb-4b33-9807-a9ab0ae2abda",
+                    "path": "<Gamepad>/rightStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ControlHook",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "9d463611-8b1d-4a62-bef8-70673403f0d5",
+                    "path": "<Gamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ControlHook",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "285d1543-b447-4bab-a1e6-585031779d9b",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CuttingFish",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "9f91e843-5453-462f-9c32-308138b1ab58",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CuttingFish",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "b33fdef9-2f80-415c-bf5d-a860e3685aa4",
+                    "path": "<Gamepad>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CuttingFish",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "353aba53-c5cf-4bd6-a400-75b886728621",
+                    "path": "<Gamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CuttingFish",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "34be6b60-adea-4c24-8287-911e35186ba5",
+                    "path": "<Gamepad>/rightStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CuttingFish",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "ccba1e45-d153-4e85-99f7-fef0af680954",
+                    "path": "<Gamepad>/rightStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CuttingFish",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+>>>>>>> Stashed changes
                 }
             ]
         }
