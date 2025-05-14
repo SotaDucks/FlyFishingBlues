@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Opsive.Shared.Input;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using static Opsive.UltimateInventorySystem.UI.Item.ItemViewSlotDragHandler;
 
 public class Unhook : MonoBehaviour
 {
@@ -14,6 +17,10 @@ public class Unhook : MonoBehaviour
     public float moveSpeed = 5f; // 移动速度
     private bool Fisdown;
    
+
+    private Vector2 moveInput;    // 存摇杆读数
+
+
     void Start()
     {
     
@@ -21,49 +28,47 @@ public class Unhook : MonoBehaviour
         screenCenterX = Screen.width / 2; // 获取屏幕中心 X 坐标
        
     }
+   
+    private void ReadGamepadInput()
+    {
+        var gamepad = Gamepad.current;
+        if (gamepad == null)
+        {
+            moveInput = Vector2.zero;
+            return;
+        }
+
+        // 直接读左摇杆，x 是左右，y 是上下
+        moveInput = gamepad.leftStick.ReadValue();
+
+        // 如果想确保在所有方向速度一致，可以归一化一下：
+        if (moveInput.sqrMagnitude > 1f)
+            moveInput.Normalize();
+    }
+
+    /// <summary>
+    /// 根据 moveInput 驱动钩子移动
+    /// </summary>
+    private void MoveHook()
+    {
+        // 在二维平面内移动（Z 轴不动）
+        Vector3 delta = new Vector3(moveInput.x, moveInput.y, 0f)
+                        * moveSpeed * Time.deltaTime;
+        transform.Translate(delta, Space.World);
+    }
+
     void Update()
     {
-         HookPosition(); 
-        if (Input.GetKeyDown(KeyCode.F))
-        { Fisdown = true; }
+        HookPosition();
+        ReadGamepadInput();
+        MoveHook();
 
-       
-            if (Fisdown)
-        {
 
-       // 获取水平（A/D）和垂直（W/S）输入
-        float moveX = 0f;
-        float moveY = 0f;
 
-        if (Input.GetKey(KeyCode.A)) moveX = -1f; // 按下 A 向左
-        if (Input.GetKey(KeyCode.D)) moveX = 1f;  // 按下 D 向右
-        if (Input.GetKey(KeyCode.W)) moveY = 1f;  // 按下 W 向上
-        if (Input.GetKey(KeyCode.S)) moveY = -1f; // 按下 S 向下
 
-        // 计算移动向量
-        Vector3 moveDirection = new Vector3(moveX, moveY, 0).normalized;
 
-        // 使用世界坐标进行移动
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
-
-        if (Input.GetKey(KeyCode.Space)) return;
-        float mouseX = Input.mousePosition.x; // 获取鼠标 X 位置
-        float distanceFromCenter = mouseX - screenCenterX; // 计算鼠标偏移量
-        float percentFromCenter = Mathf.Clamp(distanceFromCenter / screenCenterX, -1f, 1f); // 归一化到 [-1, 1]
-
-        // 计算目标旋转角度（最大 ±40°）
-        float targetRotation = percentFromCenter * maxRotation;
-
-        // 计算旋转速度，鼠标越远，旋转越快（最大 maxSpeed）
-        float rotationSpeed = Mathf.Abs(percentFromCenter) * maxSpeed * Time.deltaTime;
-
-        // 平滑插值旋转（限制在 Z 轴）
-        float newZRotation = Mathf.LerpAngle(transform.eulerAngles.z, targetRotation, rotationSpeed);
-
-        // 应用旋转，只允许 Z 轴旋转
-        transform.rotation = Quaternion.Euler(0, 180, newZRotation);
-        }
     }
+  
     private void HookPosition()
     {
 
