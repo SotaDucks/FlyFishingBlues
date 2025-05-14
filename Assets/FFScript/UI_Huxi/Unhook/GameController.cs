@@ -21,10 +21,13 @@ public class GameController : MonoBehaviour
     private Rigidbody rb;
     private Rigidbody Hookrb;
     private ComplexCollider Hookcollider;
+    private bool bVal;
     private void Start()
-    {
+    {  
+      
         Hookcollider = Hook.GetComponent<ComplexCollider>();
        ConversationManager.Instance.StartConversation(Conversation);
+        bVal = ConversationManager.Instance.GetBool("CanShowHook");
         rb = Fish.GetComponent<Rigidbody>();
         Hookrb=Hook.GetComponent<Rigidbody>();
         if (EnableStruggleWhileUnhook)
@@ -33,11 +36,17 @@ public class GameController : MonoBehaviour
         }// 开始协程
         
     }
+
+    public void SetHookTrue()
+    {
+        bVal=true;
+    }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.X)) { Debug.LogError(bVal); }
         if (fishmoving) 
         {
-            if (Gamepad.current?.buttonEast.wasPressedThisFrame == true)
+            if (Gamepad.current?.buttonEast.wasPressedThisFrame == true&& bVal)
             {
                 fishmoving = false;
                
