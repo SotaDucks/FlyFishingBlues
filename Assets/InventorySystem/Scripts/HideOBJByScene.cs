@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class HideOBJByScene : MonoBehaviour
 {
-    [Header("要判断的上一个场景名")]
+    [Header("要判断的上上一个场景名")]
     [Tooltip("如果上一个场景名与此字段一致，则隐藏 targetObject")]
     public string previousSceneName;
 
@@ -16,7 +16,7 @@ public class HideOBJByScene : MonoBehaviour
     private void Start()
     {
         // 1. 读取上一个场景名（第一次运行会返回空字符串）
-        string lastScene = PlayerPrefs.GetString("LastScene", "");
+        string lastScene = A_GlobalDatalogger.GetPrePreviousSceneName();
 
         // 2. 如果匹配，就隐藏目标物体
         if (!string.IsNullOrEmpty(lastScene)
@@ -24,7 +24,7 @@ public class HideOBJByScene : MonoBehaviour
             && targetObject != null)
         {
             targetObject.SetActive(false);
-            Debug.Log($"[PreviousSceneHide] 因为上个场景是 “{lastScene}”，隐藏了 {targetObject.name}");
+            Debug.Log($"[PreviousSceneHide] 因为上上个场景是 “{lastScene}”，隐藏了 {targetObject.name}");
         }
 
         // 3. 存储当前场景名，供下一次场景加载判断用

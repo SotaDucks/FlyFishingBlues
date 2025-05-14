@@ -16,7 +16,7 @@ namespace DynamicMeshCutter
         private CanvasGroup _canvasGroup;
         private Vector3 _originalScale;
         public float DebugPlaneLength = 2;
-        public Button PickUpBTN;
+        public GameObject PickUpBTN;
         public MeshTarget[] targetsToCut;
         public KnifeController KnifeController;
 
