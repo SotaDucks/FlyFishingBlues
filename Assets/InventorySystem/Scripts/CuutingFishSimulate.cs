@@ -1,37 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CuutingFishSimulate : MonoBehaviour
 {
-    public Material selectedMaterial; // 选中时的材质
-    private Material normalMaterial;  // 原始材质
-    private Renderer rend;            // 渲染器组件
+    [Tooltip("场景中要被 LB “按住/松开” 的按钮对象")]
+    public GameObject leftBtnObj;
+    [Tooltip("场景中要被 RB “按住/松开” 的按钮对象")]
+    public GameObject rightBtnObj;
 
-    void Start()
+    void Update()
     {
-        rend = GetComponent<Renderer>();
-        if (rend != null)
-        {
-            normalMaterial = rend.material; // 存储原始材质
-        }
-    }
+        // LB 按住
+        if (Input.GetKeyDown(KeyCode.JoystickButton4))
+            ExecuteEvents.Execute(leftBtnObj,
+                new PointerEventData(EventSystem.current),
+                ExecuteEvents.pointerDownHandler);
 
-    public void Select()
-    {
-        if (rend != null)
-        {
-            rend.material = selectedMaterial; // 应用选中材质
-        }
-        // 可以添加其他选中逻辑，例如播放音效
-    }
+        // LB 松开
+        if (Input.GetKeyUp(KeyCode.JoystickButton4))
+            ExecuteEvents.Execute(leftBtnObj,
+                new PointerEventData(EventSystem.current),
+                ExecuteEvents.pointerUpHandler);
 
-    public void Deselect()
-    {
-        if (rend != null)
-        {
-            rend.material = normalMaterial; // 恢复原始材质
-        }
-        // 可以添加其他取消选中逻辑
+        // RB 按住
+        if (Input.GetKeyDown(KeyCode.JoystickButton5))
+            ExecuteEvents.Execute(rightBtnObj,
+                new PointerEventData(EventSystem.current),
+                ExecuteEvents.pointerDownHandler);
+
+        // RB 松开
+        if (Input.GetKeyUp(KeyCode.JoystickButton5))
+            ExecuteEvents.Execute(rightBtnObj,
+                new PointerEventData(EventSystem.current),
+                ExecuteEvents.pointerUpHandler);
+
+        // A 键（JoystickButton0）→ 确认（一次性点击 LeftBtnObj 举例）
+        if (Input.GetKeyDown(KeyCode.JoystickButton0))
+            ExecuteEvents.Execute(leftBtnObj,
+                new PointerEventData(EventSystem.current),
+                ExecuteEvents.pointerClickHandler);
     }
 }
