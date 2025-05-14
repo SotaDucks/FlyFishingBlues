@@ -132,12 +132,13 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ControlHook",
-                    "type": "Value",
-                    "id": "611e4a7a-7281-40c8-9c61-fa0f89f63ec2",
-                    "expectedControlType": "Vector2",
+                    "name": "ChopFish",
+                    "type": "Button",
+                    "id": "5e7aa8d7-79a2-4925-8301-4f3810a8d118",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": true
                 },
                 {
@@ -148,6 +149,9 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+=======
+                    "initialStateCheck": false
+>>>>>>> 74a4f05a26ec4336ac7b8bd6ca13f37574e3a948
                 }
             ],
             "bindings": [
@@ -868,25 +872,43 @@
                 },
                 {
                     "name": "",
-                    "id": "ea078616-b5ce-4b67-a694-8497546af731",
-                    "path": "",
+                    "id": "50f442a5-e1c1-41dd-8ab1-9e40a98f0669",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ControlHook",
+                    "action": "ChopFish",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "e90ffbe4-bc8b-479b-9de8-3959b3828605",
+            "actions": [
                 {
-                    "name": "2D Vector",
-                    "id": "fbd2d827-5717-42fa-8efb-c80d6c36b5e7",
-                    "path": "2DVector",
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "1d233d2e-b8fa-4845-b729-cc063811e056",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "94fdf33c-2161-46f4-a823-98c93c331c07",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "ControlHook",
-                    "isComposite": true,
+                    "groups": "Gamepad",
+                    "action": "Confirm",
+                    "isComposite": false,
                     "isPartOfComposite": false
+<<<<<<< HEAD
                 },
                 {
                     "name": "up",
@@ -997,6 +1019,8 @@
                     "action": "CuttingFish",
                     "isComposite": false,
                     "isPartOfComposite": true
+=======
+>>>>>>> 74a4f05a26ec4336ac7b8bd6ca13f37574e3a948
                 }
             ]
         }
