@@ -138,9 +138,6 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-<<<<<<< Updated upstream
-                    "initialStateCheck": false
-=======
                     "initialStateCheck": true
                 },
                 {
@@ -151,7 +148,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
->>>>>>> Stashed changes
                 }
             ],
             "bindings": [
@@ -908,8 +904,6 @@
                     "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
-<<<<<<< Updated upstream
-=======
                 },
                 {
                     "name": "up",
@@ -1020,7 +1014,6 @@
                     "action": "CuttingFish",
                     "isComposite": false,
                     "isPartOfComposite": true
->>>>>>> Stashed changes
                 }
             ]
         }
