@@ -138,7 +138,6 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-<<<<<<< HEAD
                     "initialStateCheck": true
                 },
                 {
@@ -149,9 +148,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-=======
-                    "initialStateCheck": false
->>>>>>> 74a4f05a26ec4336ac7b8bd6ca13f37574e3a948
                 }
             ],
             "bindings": [
@@ -908,7 +904,6 @@
                     "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
-<<<<<<< HEAD
                 },
                 {
                     "name": "up",
@@ -1019,8 +1014,6 @@
                     "action": "CuttingFish",
                     "isComposite": false,
                     "isPartOfComposite": true
-=======
->>>>>>> 74a4f05a26ec4336ac7b8bd6ca13f37574e3a948
                 }
             ]
         }

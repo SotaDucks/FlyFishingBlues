@@ -42,7 +42,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneTown.unity
     guid: 96d6b7b83644d784ca84b82c3a002988
   - enabled: 0
-    path: Assets/Scenes/SceneTownNext.unity
+    path: Assets/Scenes/Backup/SceneTownNext.unity
     guid: 70d401d6191d54048b0ad2123d9ff997
   - enabled: 1
     path: Assets/Scenes/Scene1.unity
