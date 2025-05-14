@@ -7,6 +7,7 @@ TagManager:
   - Flyhook
   - fish
   - CinemachineTarget
+  - Bear
   layers:
   - Default
   - TransparentFX

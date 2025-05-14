@@ -1,21 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
+using System.Collections;
+using UnityEngine.UI;
+using TMPro;
 
 public class hideContinueButton : MonoBehaviour
 {
-   
-    void Update()
+    private void OnEnable()
     {
+        ConversationManager.OnConversationStarted += OnConversationStarted;
+    }
 
-        // 找到即时生成的 ConversationButton 并隐藏
-        var btn = GameObject.Find("ConversationButton(Clone)");
-        if (btn != null)
+    private void OnDisable()
+    {
+        ConversationManager.OnConversationStarted -= OnConversationStarted;
+    }
+
+    private void OnConversationStarted()
+    {
+        // 等一帧让对话 UI 都生成完
+        StartCoroutine(HideGraphicsNextFrame());
+    }
+
+    private IEnumerator HideGraphicsNextFrame()
+    {
+        yield return null;
+
+        // 找到场景中所有 Button，针对名称包含 ConversationButton 的那几个
+        var allButtons = FindObjectsOfType<Button>(true);
+        foreach (var btn in allButtons)
         {
-            btn.SetActive(false);
-       
+            if (!btn.gameObject.name.Contains("ConversationButton"))
+                continue;
+
+            // 1. 让它不可点击
+            btn.interactable = false;
+
+            // 2. 隐藏它自己的 Image（背景）
+            var bg = btn.GetComponent<Image>();
+            if (bg)
+            {
+                bg.enabled = false;
+                bg.raycastTarget = false;
+            }
+
+            // 3. 隐藏它子物体里的所有 Image（可能还有装饰）和 Text / TMP_Text
+            foreach (var img in btn.GetComponentsInChildren<Image>(true))
+                img.enabled = false;
+            foreach (var txt in btn.GetComponentsInChildren<Text>(true))
+                txt.enabled = false;
+            foreach (var tmp in btn.GetComponentsInChildren<TMP_Text>(true))
+                tmp.enabled = false;
         }
-    
     }
 }
