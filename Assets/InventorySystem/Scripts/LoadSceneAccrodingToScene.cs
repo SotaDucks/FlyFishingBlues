@@ -37,5 +37,6 @@ public class LoadSceneAccrodingToScene : MonoBehaviour
             SceneManager.LoadScene("Scene1");
         }
         SceneManager.LoadScene("SceneTown");
+        Debug.Log(prePrevName);
     }
 }

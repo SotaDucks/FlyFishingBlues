@@ -21155,79 +21155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 490e5e9cc3941dd488c07062639ce3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 361004055}
-  backgroundImage: {fileID: 361004057}
-  characterImage: {fileID: 635007924}
-  dialogueText: {fileID: 345645999}
-  dialogueNodes:
-  - text: '[Take out] the rod'
-    background: {fileID: 21300000, guid: 4296ea4dd5c545f4ea1d4ff7012cf425, type: 3}
-    characterImage: {fileID: 21300000, guid: 7523220c7bb65af419557f9f30d92d6b, type: 3}
-    progressType: 0
-    actionName: SwitchToRod
-    collisionTag: 
-    autoDelay: 0
-  - text: Cast it [back]. Let the line load with the swing.
-    background: {fileID: 21300000, guid: 4296ea4dd5c545f4ea1d4ff7012cf425, type: 3}
-    characterImage: {fileID: 21300000, guid: 3e375f2140530bb448d3fb1d7a11f98f, type: 3}
-    progressType: 0
-    actionName: CastBack
-    collisionTag: 
-    autoDelay: 0
-  - text: 'Cast the rod [forward]. '
-    background: {fileID: 21300000, guid: 4296ea4dd5c545f4ea1d4ff7012cf425, type: 3}
-    characterImage: {fileID: 21300000, guid: 6f9b58d67bb27e8458212091770e9a8a, type: 3}
-    progressType: 0
-    actionName: CastForward
-    collisionTag: 
-    autoDelay: 0
-  - text: To the teddy! You do know you can still walk when casting right?
-    background: {fileID: 21300000, guid: 4296ea4dd5c545f4ea1d4ff7012cf425, type: 3}
-    characterImage: {fileID: 21300000, guid: 67aec94749f69154fbfda488b170812c, type: 3}
-    progressType: 1
-    actionName: 
-    collisionTag: Bear
-    autoDelay: 0
-  - text: 'Good! Let''s pull it to the sign. '
-    background: {fileID: 21300000, guid: 4296ea4dd5c545f4ea1d4ff7012cf425, type: 3}
-    characterImage: {fileID: 21300000, guid: a5d782b36b9b0034c920bd4e2aa20feb, type: 3}
-    progressType: 1
-    actionName: 
-    collisionTag: Sign
-    autoDelay: 0
-  - text: When the hook is empty, you can quickly [reel in] your line.
-    background: {fileID: 21300000, guid: 4296ea4dd5c545f4ea1d4ff7012cf425, type: 3}
-    characterImage: {fileID: 21300000, guid: 18aa3ec0d3caf184bba87493b9fdf74d, type: 3}
-    progressType: 0
-    actionName: EndFishing
-    collisionTag: 
-    autoDelay: 0
-  - text: '[Put away] the rod'
-    background: {fileID: 21300000, guid: 4296ea4dd5c545f4ea1d4ff7012cf425, type: 3}
-    characterImage: {fileID: 21300000, guid: 10d96879b39305140a9e64fb7fd4c2cf, type: 3}
-    progressType: 0
-    actionName: SwitchToNoRod
-    collisionTag: 
-    autoDelay: 0
-  - text: "Go check the trouts\u2014sea to the north, stream to the east of the town."
-    background: {fileID: 21300000, guid: 4296ea4dd5c545f4ea1d4ff7012cf425, type: 3}
-    characterImage: {fileID: 21300000, guid: 10d96879b39305140a9e64fb7fd4c2cf, type: 3}
-    progressType: 2
-    actionName: 
-    collisionTag: 
-    autoDelay: 0
-  playerInput: {fileID: 8119966058644733228}
-  currentNodeIndex: -1
-  waitingForCollision: 0
-  boundAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: b5284a88-65ce-42ca-b7ce-a79f0349f13e
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!4 &645799985
 Transform:
   m_ObjectHideFlags: 0
@@ -21283,7 +21210,7 @@ MonoBehaviour:
     autoDelay: 0
   - text: Repeat casting while walking to hit the Teddy.
     background: {fileID: 21300000, guid: 4296ea4dd5c545f4ea1d4ff7012cf425, type: 3}
-    characterImage: {fileID: 21300000, guid: 1a793aed1dbf9ae45a018816d1de77d1, type: 3}
+    characterImage: {fileID: 21300000, guid: e8a3c3afe1fb0164281afff13e29dd36, type: 3}
     progressType: 1
     actionName: 
     collisionTag: Teddy
@@ -28393,52 +28320,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &884529199
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 884529201}
-  - component: {fileID: 884529200}
-  m_Layer: 0
-  m_Name: BurstCollisionWorld
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &884529200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884529199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1a161c4294214a4fbcb7e9e94800494, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cellSpans:
-    m_AlignBytes: 16
---- !u!4 &884529201
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884529199}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &888956638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60311,6 +60192,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 736535368}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2002061457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2002061459}
+  - component: {fileID: 2002061458}
+  m_Layer: 0
+  m_Name: BurstCollisionWorld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2002061458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002061457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a161c4294214a4fbcb7e9e94800494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellSpans:
+    m_AlignBytes: 16
+--- !u!4 &2002061459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002061457}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2002862701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4992185335454518, guid: b8fb0afcd4d42684e9189575ea8e6b68,
@@ -66988,9 +66915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1ad8564d5f2db45ab94c81939951e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TheIdentifierTag: 
-  triggerTag: Sign
-  dialogueSystem: {fileID: 0}
 --- !u!1 &4329753052840577294
 GameObject:
   m_ObjectHideFlags: 0
@@ -69770,7 +69694,7 @@ Transform:
   m_GameObject: {fileID: 4145171222775601745}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -6.4304047, y: 0.33568287, z: 17.83}
+  m_LocalPosition: {x: -5.919235, y: 0.33568287, z: 17.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -75708,7 +75632,7 @@ Transform:
   m_GameObject: {fileID: 2593061085722437378}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -6.4304047, y: 0.33568287, z: 17.83}
+  m_LocalPosition: {x: -5.919235, y: 0.33568287, z: 17.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76789,4 +76713,4 @@ SceneRoots:
   - {fileID: 156713219}
   - {fileID: 645799985}
   - {fileID: 848902810}
-  - {fileID: 884529201}
+  - {fileID: 2002061459}
