@@ -51,6 +51,13 @@ public class A_Global : MonoBehaviour
     /// <summary>
     /// 获取上上个场景的名字（可能为 null，表示还没加载过两次）
     /// </summary>
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
     public static string GetPrePreviousSceneName()
     {
         return PrePreviousSceneName;

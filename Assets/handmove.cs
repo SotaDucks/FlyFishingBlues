@@ -36,7 +36,7 @@ public class handmove : MonoBehaviour
        
 
         // 检测鼠标左键按下
-        if (Input.GetMouseButtonDown(0)|| Gamepad.current.rightTrigger.ReadValue() ==1&& !isTweening)
+        if (Gamepad.current.rightTrigger.ReadValue() ==1 && !isTweening)
         {
          PlayTriggerTween();
             // 播放抓的动画
@@ -56,7 +56,7 @@ public class handmove : MonoBehaviour
         }
 
         // 检测鼠标左键松开
-        if (Input.GetMouseButtonUp(0) || Gamepad.current.rightTrigger.ReadValue() == 0)
+        if ( Gamepad.current.rightTrigger.ReadValue() == 0)
         {
             // 播放放手的动画
             animator.Play("GrabRelease");
@@ -96,7 +96,7 @@ public class handmove : MonoBehaviour
                 var pos = transform.position;
                 pos.y = originalY;
                 transform.position = pos;
-
+                Debug.LogError(transform.position.y);
                 isTweening = false;
             });
     }
