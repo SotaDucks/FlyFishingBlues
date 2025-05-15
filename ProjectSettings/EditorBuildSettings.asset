@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Backup/CuttingDianMan.unity
     guid: d5a6e2213cd46c54891e096625eae1db
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Backup/WakeUp.unity
     guid: fbab7c5d2675c674f9beb346ce76848e
   - enabled: 1
