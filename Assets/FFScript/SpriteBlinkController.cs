@@ -25,6 +25,7 @@ public class SpriteBlinkController : MonoBehaviour
     private float timer = 0f;
     private bool increasing = true;
     private Color originalColor;
+    private float originalAlpha;
 
     private void Start()
     {
@@ -41,8 +42,9 @@ public class SpriteBlinkController : MonoBehaviour
             }
         }
 
-        // Store the original color
+        // Store the original color and alpha
         originalColor = targetRenderer.color;
+        originalAlpha = originalColor.a;
     }
 
     private void Update()
@@ -57,10 +59,13 @@ public class SpriteBlinkController : MonoBehaviour
         float t = Mathf.PingPong(timer / blinkSpeed, 1.0f);
         float alpha = Mathf.Lerp(minAlpha, maxAlpha, t);
 
-        // Apply alpha to color
-        Color newColor = originalColor;
-        newColor.a = alpha;
-        targetRenderer.color = newColor;
+        // Only change the alpha component, preserve the original RGB
+        targetRenderer.color = new Color(
+            originalColor.r, 
+            originalColor.g, 
+            originalColor.b, 
+            alpha
+        );
     }
 
     /// <summary>
@@ -74,9 +79,12 @@ public class SpriteBlinkController : MonoBehaviour
         // Reset to full opacity when not blinking
         if (!isBlinking && targetRenderer != null)
         {
-            Color resetColor = originalColor;
-            resetColor.a = maxAlpha;
-            targetRenderer.color = resetColor;
+            targetRenderer.color = new Color(
+                originalColor.r, 
+                originalColor.g, 
+                originalColor.b, 
+                maxAlpha
+            );
         }
     }
 
