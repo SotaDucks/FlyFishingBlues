@@ -141,7 +141,7 @@ public class FishLanding : MonoBehaviour
     {
         Debug.Log("Done");
         if (!string.IsNullOrEmpty(nextSceneName))
-            TransferSceneLoader.Instance.LoadWithTransfer(nextSceneName);
+            SceneManager.LoadScene(nextSceneName);
         else
             Debug.LogError("Next scene name is empty. 请在 Inspector 中设置 nextSceneName.");
     }
