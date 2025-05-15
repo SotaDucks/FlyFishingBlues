@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
-using Opsive.Shared.Input;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static Opsive.UltimateInventorySystem.UI.Item.ItemViewSlotDragHandler;
 
 public class Unhook : MonoBehaviour
 {

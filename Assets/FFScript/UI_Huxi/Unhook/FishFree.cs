@@ -4,6 +4,7 @@ using DG.Tweening;
 using DialogueEditor;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FishFree : MonoBehaviour
@@ -16,9 +17,15 @@ public class FishFree : MonoBehaviour
     public NPCConversation FreeConversation;
 
     // Start is called before the first frame update
-   
+    IEnumerator EnableLoadScene()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("LandScene");
+        // 关键：加这一句！
+    }
     private void OnEnable()
     {
+        StartCoroutine(EnableLoadScene());
         ConversationManager.Instance.StartConversation(FreeConversation);
         StuggleBone.GetComponent<NewStrug>().enabled = false;
      StuggleBone.GetComponent<FishPath>().enabled=true;

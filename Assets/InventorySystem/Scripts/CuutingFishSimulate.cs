@@ -18,7 +18,7 @@ public class CuutingFishSimulate : MonoBehaviour
         
         var pad = Gamepad.current;
 
-        if (pad.dpad.left.wasPressedThisFrame)
+        if (pad.dpad.up.wasPressedThisFrame)
         {
             
             if (prePrevName == "Stream1") 
@@ -34,7 +34,7 @@ public class CuutingFishSimulate : MonoBehaviour
 
         }
 
-        if (pad.dpad.right.wasPressedThisFrame)
+        if (pad.dpad.down.wasPressedThisFrame)
         {
             SceneManager.LoadScene("SceneTown");
         }
