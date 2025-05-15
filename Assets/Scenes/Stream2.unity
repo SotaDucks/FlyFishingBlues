@@ -7953,7 +7953,7 @@ MonoBehaviour:
   fishStaminaCanvas: {fileID: 1665744315}
   escapePoint: {fileID: 784200106}
   moveSpeed: 2
-  nextSceneName: Stream1
+  nextSceneName: Unhook
 --- !u!114 &1041427324
 MonoBehaviour:
   m_ObjectHideFlags: 0

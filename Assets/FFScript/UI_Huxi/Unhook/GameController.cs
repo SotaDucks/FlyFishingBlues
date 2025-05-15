@@ -46,7 +46,7 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X)) { Debug.LogError(bVal); }
         if (fishmoving) 
         {
-            if (Gamepad.current?.buttonEast.wasPressedThisFrame == true&& bVal)
+            if (Gamepad.current.rightTrigger.ReadValue() == 1 && bVal)
             {
                 fishmoving = false;
                

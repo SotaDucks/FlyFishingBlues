@@ -26,15 +26,15 @@ public class LoadSceneAccrodingToScene : MonoBehaviour
         // 根据名称来决定加载哪个场景
         if ( prePrevName == "Stream1")
         {
-            SceneManager.LoadScene("Stream1");
+            SceneManager.LoadScene("Stream2");
         }
         else if(prePrevName =="Stream2")
         {
-            SceneManager.LoadScene("Stream2");
-        }
-        else if (prePrevName == "SeaScene")
-        {
             SceneManager.LoadScene("SeaScene");
+        }
+        else if (prePrevName == "Scene1")
+        {
+            SceneManager.LoadScene("Scene1");
         }
         SceneManager.LoadScene("SceneTown");
     }
