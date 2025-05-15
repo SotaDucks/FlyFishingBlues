@@ -49,7 +49,7 @@ public class KnifeController : MonoBehaviour
     {
         HandleMovement();
 
-        if (Gamepad.current.rightTrigger.ReadValue() > threshold && prevTrigger <= threshold)
+        if (Gamepad.current.leftTrigger.ReadValue() > threshold && prevTrigger <= threshold)
         {
             StartCoroutine(DoVibration(Gamepad.current));
             isSpacePressed = true;
