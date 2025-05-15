@@ -14832,7 +14832,7 @@ Transform:
   m_GameObject: {fileID: 414154826}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -5.717832, y: 0.33568287, z: 13.030001}
+  m_LocalPosition: {x: -5.325874, y: 0.33568287, z: 13.030001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35756,7 +35756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167602723ec2f6449b671f83eb078207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: FFInstructionScene
+  sceneName: 1Instruction 1
 --- !u!54 &958018761
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -64721,7 +64721,7 @@ Transform:
   m_GameObject: {fileID: 1603183150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -5.717832, y: 0.33568287, z: 13.030001}
+  m_LocalPosition: {x: -5.325874, y: 0.33568287, z: 13.030001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -40,15 +40,10 @@ public class StaminaSuggestionBlinker : MonoBehaviour
             }
         }
 
-        // Ensure there's a sprite renderer
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        if (renderer == null)
+        // No need to get a SpriteRenderer here - spriteController already has one
+        if (spriteController != null && spriteController.targetRenderer == null)
         {
-            Debug.LogError("StaminaSuggestionBlinker: No SpriteRenderer component found on this GameObject.");
-        }
-        else
-        {
-            spriteController.targetRenderer = renderer;
+            Debug.LogError("StaminaSuggestionBlinker: No targetRenderer set on the spriteController. Please ensure it's properly assigned.");
         }
 
         // Initial update
