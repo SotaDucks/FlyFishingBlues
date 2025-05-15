@@ -96,7 +96,6 @@ public class handmove : MonoBehaviour
                 var pos = transform.position;
                 pos.y = originalY;
                 transform.position = pos;
-                Debug.LogError(transform.position.y);
                 isTweening = false;
             });
     }

@@ -23,10 +23,14 @@ public class CuutingFishSimulate : MonoBehaviour
             
             if (prePrevName == "Stream1") 
             {
-
+              
                 SceneManager.LoadScene("Stream2");
             }
-            SceneManager.LoadScene("Stream1");
+            else if(prePrevName== "SeaScene")
+            {
+                SceneManager.LoadScene("SeaScene");
+            }
+            SceneManager.LoadScene("Stream2");
 
         }
 
