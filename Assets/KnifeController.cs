@@ -5,9 +5,16 @@ using UnityEngine.InputSystem;
 
 public class KnifeController : MonoBehaviour
 {
+    [Header("震动参数")]
+    [Tooltip("低频马达速度，范围 0–1")]
+    public float lowFrequency = 0.5f;
+    [Tooltip("高频马达速度，范围 0–1")]
+    public float highFrequency = 0.5f;
+    [Tooltip("震动持续时长（秒）")]
+    public float duration = 0.2f;
     [Header("移动设置")]
     public float moveSpeed = 5f;          // W、A、S、D键的移动速度
-
+    public float threshold = 0.1f;
     [Header("位移设置")]
     public float moveDownDistance = 0.8f; // 按下空格时沿世界Y轴下移的距离
     public float moveDownDuration = 0.4f; // 下移的持续时间
@@ -19,7 +26,7 @@ public class KnifeController : MonoBehaviour
 
     private Coroutine currentCoroutine = null;  // 当前运行的协程
     private PlaneBehaviour planeBehaviour;
-
+    private float prevTrigger = 0f;
     void Start()
     {
         // 存储刀的原始位置
@@ -27,13 +34,24 @@ public class KnifeController : MonoBehaviour
 
         planeBehaviour = GetComponentInChildren<PlaneBehaviour>(); // 获取子对象中的PlaneBehaviour组件
     }
+    private IEnumerator DoVibration(Gamepad pad)
+    {
+        // 开始震动
+        pad.SetMotorSpeeds(lowFrequency, highFrequency);
 
+        // 持续一段时间
+        yield return new WaitForSeconds(duration);
+
+        // 停止震动
+        pad.SetMotorSpeeds(0f, 0f);
+    }
     void Update()
     {
         HandleMovement();
 
-        if (Gamepad.current?.buttonEast.wasPressedThisFrame == true)
+        if (Gamepad.current.rightTrigger.ReadValue() > threshold && prevTrigger <= threshold)
         {
+            StartCoroutine(DoVibration(Gamepad.current));
             isSpacePressed = true;
             StartCutAction();
         }
