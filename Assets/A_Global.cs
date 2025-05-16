@@ -57,7 +57,22 @@ public class A_Global : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1)) // Êý×Ö¼ü1
+        {
+            SceneManager.LoadScene("Stream1");
+        } if (Input.GetKeyDown(KeyCode.Alpha2)) // Êý×Ö¼ü1
+        {
+            SceneManager.LoadScene("Stream2");
+        } if (Input.GetKeyDown(KeyCode.Alpha3)) // Êý×Ö¼ü1
+        {
+            SceneManager.LoadScene("Scene1");
+        }if (Input.GetKeyDown(KeyCode.Alpha4)) // Êý×Ö¼ü1
+        {
+            SceneManager.LoadScene("Unhook");
+        }
     }
+
+    
     public static string GetPrePreviousSceneName()
     {
         return PrePreviousSceneName;

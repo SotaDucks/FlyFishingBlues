@@ -14832,7 +14832,7 @@ Transform:
   m_GameObject: {fileID: 414154826}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -5.3353505, y: 0.33568287, z: 13.030001}
+  m_LocalPosition: {x: -5.184479, y: 0.33568287, z: 13.030001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48731,53 +48731,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.82, y: 1.84, z: 1}
   m_Center: {x: -1.43, y: 0.87, z: 3.73}
---- !u!114 &1338235975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052137383887414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bcd4fc02560fce4d9ee6b87734270f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_BuyAttributeName: BuyPrice
-  m_BuyModifier: 0.5
-  m_SellAttributeName: SellPrice
-  m_SellModifier: 0
-  m_AddItemWithCallback: 0
-  m_RemoveItemWithCallback: 0
-  m_Inventory: {fileID: 1338235978}
-  m_DefaultItemCollectionToAddOnBuy:
-    m_Name: 
-    m_Purpose: 1
-  m_ItemCollectionToAddOnBuyByCategory: []
---- !u!114 &1338235978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052137383887414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7540d24761b4f024d8d8a6014f93d9f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ItemCollectionRestrictionObjects: []
-  m_ItemCollectionData:
-  - m_ObjectType: Opsive.UltimateInventorySystem.Core.InventoryCollections.ItemCollection
-    m_ValueHashes: 
-    m_LongValueHashes: 0d00eb254f8d1b29b769d11dc3e477ff5030ac3e5febf136f1f5543f3d512d18666e77ffb2d00a8c063d5314a435cf41aacf0d9965f975d03edd133125d4485e719c8809cfab0a4bffab97cf7a3470d434df945e2edc1868aa135182f676c90c6791e7bf01f176fdaf7e503207f176fdc9f13d9193da0d6add6f4cf489f9a9877a52e37d7f6acb20619c5106fa41607a62a997cf7a3470d4bdc9905e2edc186823055582f676c90c821884b501f176fd4af7333807f176fd2c785e9b93da0d6a38e62ffe89f9a9879fdb80777f6acb20c0ee036de041607ad1a897cf7a3470d45aa9915e2edc1868c4655482f676c90c313fbdb401f176fdf9d00a3907f176fd9f5f679a93da0d6a8bc116ff89f9a9872cfcb9767f6acb206f6bbb21e741607a
-    m_ValuePositions: 000000001100000011000000150000001500000016000000170000001b0000001b0000001f0000001f0000002300000023000000270000002b0000002f000000330000003300000037000000370000003b0000003b0000003f00000043000000470000004b0000004b0000004f0000004f00000053000000530000005700000061000000650000006900000069000000
-    m_Values: 4e65774974656d436f6c6c656374696f6e010000000001ffffffff03000000010000005e0b33f9526f643146b7dca8000000000000000001000000dc6168ce526f643260f88ace0100000000000000010000004d95fad154726f757420466973689f5a89020200000000000000
-    m_UnityObjects:
-    - {fileID: 11400000, guid: e9c8253eb234fbc4a86986feb5152663, type: 2}
-    - {fileID: 11400000, guid: 0ca2fa20f4941e4489fb2d17bfc73979, type: 2}
-    - {fileID: 11400000, guid: 7c6544547c192fe4180d9e78fcdafc31, type: 2}
-    m_Version: 3.4
 --- !u!54 &1338235979
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -64721,7 +64674,7 @@ Transform:
   m_GameObject: {fileID: 1603183150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -5.3353505, y: 0.33568287, z: 13.030001}
+  m_LocalPosition: {x: -5.184479, y: 0.33568287, z: 13.030001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -86576,15 +86529,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4330087948279268}
   - component: {fileID: 95270915116500554}
-  - component: {fileID: 1338235975}
   - component: {fileID: 1338235974}
   - component: {fileID: 1338235979}
-  - component: {fileID: 1338235978}
-  - component: {fileID: 95270915116500555}
-  - component: {fileID: 95270915116500557}
-  - component: {fileID: 95270915116500556}
-  - component: {fileID: 95270915116500558}
-  - component: {fileID: 95270915116500559}
   m_Layer: 0
   m_Name: Merchant
   m_TagString: Untagged
@@ -88890,101 +88836,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &95270915116500555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052137383887414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2533fa00d71f26f4fb327721da656da4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptBtn: {fileID: 0}
-  shopPanel: {fileID: 0}
---- !u!114 &95270915116500556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052137383887414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8406d965d03ec9140ad61f8bda4ec013, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PanelManagerIndex: 1
-  m_PanelName: Shop Menu
-  m_ClientInventoryIdentifierIndex: 0
-  m_ClientInventory: {fileID: 1338235978}
-  m_Menu: {fileID: 0}
-  m_Shop: {fileID: 1338235975}
---- !u!114 &95270915116500557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052137383887414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 176215d6f5dc7d6439ae4e5225cbd075, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractorLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsInteractable: 1
-  m_AutoInteract: 0
-  m_2D: 0
-  m_3D: 1
-  m_OnInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelect:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeselect:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &95270915116500558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052137383887414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dc8f34ad158de14aa7ec08654f6e04b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CurrencyAmount:
-    m_CurrencyAmountData:
-      m_ObjectType: Opsive.Shared.Utility.ResizableArray`1[[Opsive.UltimateInventorySystem.Exchange.CurrencyAmount,
-        Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
-      m_ValueHashes: 
-      m_LongValueHashes: 4c1e4f8e62aa191a813e2157ef858ea545dd7594e0f9a8654641698a1b3f12bdd05643c8cbf76a58
-      m_ValuePositions: 000000000400000008000000080000000c000000
-      m_Values: 01000000010000002c01000000000000
-      m_UnityObjects:
-      - {fileID: 11400000, guid: a10dd6e3caa75274cb9e6d2cabf11250, type: 2}
-      m_Version: 3.4
---- !u!114 &95270915116500559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052137383887414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d31a878824f4546498d08e0ff70d8fc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!137 &137026961423966732
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

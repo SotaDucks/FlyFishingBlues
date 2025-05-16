@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,11 +25,12 @@ public class LoadSceneAccrodingToScene : MonoBehaviour
         Debug.Log($"[SceneLoadTrigger] 上上个场景: {prePrevName}");
 
         // 根据名称来决定加载哪个场景
-        if ( prePrevName == "Stream1")
+        if (prePrevName == "Stream1")
         {
+            Debug.LogError("Worng");
             SceneManager.LoadScene("Stream2");
         }
-        else if(prePrevName =="Stream2")
+        else if (prePrevName == "Stream2")
         {
             SceneManager.LoadScene("SeaScene");
         }
@@ -36,7 +38,11 @@ public class LoadSceneAccrodingToScene : MonoBehaviour
         {
             SceneManager.LoadScene("Scene1");
         }
-        SceneManager.LoadScene("SceneTown");
-        Debug.Log(prePrevName);
+        else if (!string.IsNullOrEmpty(prePrevName))
+        {
+            SceneManager.LoadScene("SceneTown");
+        }
+
+            
     }
 }
