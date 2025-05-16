@@ -11114,7 +11114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab68f4d163552a49a03513f7f374651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Stream1
+  nextSceneName: 1Instruction 1
   virtualCamera: {fileID: 2357079673265634988}
   targetScreenY: 0.8
   adjustSpeed: 0.2
